@@ -79,6 +79,7 @@ const I18N = {
     "catalog.expand": "Показати всі",
     "catalog.collapse": "Згорнути",
     "catalog.empty": "Скоро тут з'являться нові вироби.",
+    "lightbox.close": "Закрити",
 
     "buy.eyebrow": "Приймаю все",
     "buy.title": "Що я купую",
@@ -176,6 +177,7 @@ const I18N = {
     "catalog.expand": "Показать все",
     "catalog.collapse": "Свернуть",
     "catalog.empty": "Скоро здесь появятся новые изделия.",
+    "lightbox.close": "Закрыть",
 
     "buy.eyebrow": "Принимаю всё",
     "buy.title": "Что я покупаю",

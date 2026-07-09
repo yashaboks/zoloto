@@ -295,6 +295,67 @@
     }
   }
 
+  /* ---------- photo lightbox (tap a catalog photo → fullscreen) ---------- */
+  function initLightbox() {
+    var grid = $("#catalogGrid");
+    if (!grid) return;
+
+    var overlay = null, imgEl = null, lastFocus = null, hideTimer = null;
+
+    function build() {
+      overlay = document.createElement("div");
+      overlay.className = "lightbox";
+      overlay.setAttribute("role", "dialog");
+      overlay.setAttribute("aria-modal", "true");
+      overlay.hidden = true;
+      overlay.innerHTML =
+        '<button class="lightbox-close" type="button" aria-label="' +
+          t("lightbox.close", activeLang) + '">&times;</button>' +
+        '<img class="lightbox-img" src="" alt="" />';
+      document.body.appendChild(overlay);
+      imgEl = overlay.querySelector(".lightbox-img");
+
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay || e.target.classList.contains("lightbox-close")) close();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (overlay && !overlay.hidden && (e.key === "Escape" || e.key === "Esc")) close();
+      });
+    }
+
+    function open(src, alt) {
+      if (!overlay) build();
+      if (hideTimer) { window.clearTimeout(hideTimer); hideTimer = null; }
+      lastFocus = document.activeElement;
+      imgEl.src = src;
+      imgEl.alt = alt || "";
+      overlay.hidden = false;
+      document.body.classList.add("lb-open");
+      void overlay.offsetWidth; // force reflow so the transition plays (rAF is throttled in bg tabs)
+      overlay.classList.add("is-open");
+      var btn = overlay.querySelector(".lightbox-close");
+      if (btn) btn.focus();
+    }
+
+    function close() {
+      if (!overlay) return;
+      overlay.classList.remove("is-open");
+      document.body.classList.remove("lb-open");
+      hideTimer = window.setTimeout(function () {
+        overlay.hidden = true;
+        imgEl.src = "";
+      }, 240);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    /* delegated: grid stays put, only innerHTML changes on re-render */
+    grid.addEventListener("click", function (e) {
+      var img = e.target.closest ? e.target.closest(".item-media img") : null;
+      if (!img) return;
+      open(img.getAttribute("src"), img.getAttribute("alt"));
+    });
+  }
+
   /* ---------- payout calculator ---------- */
   var calc = {};
   function initCalc() {
@@ -493,6 +554,7 @@
     initLangSwitch();
     initScrollTop();
     initCatalogMore();
+    initLightbox();
     initReveals();
 
     var phNum = $(".ph-num[data-count]");
