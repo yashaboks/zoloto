@@ -1,13 +1,13 @@
 {
   "items": [
     {
-      "photo": "/assets/img/Снимок экрана 2026-06-27 в 08.51.03.png",
+      "photo": "/assets/img/IMG_6596.webp",
       "type": "chain",
       "name_ru": "Цепочка",
       "name_uk": "Ланцюг",
       "proba": 585,
       "weight": 15,
-      "price": 60001,
+      "price": 61000,
       "status": "available"
     }
   ]
