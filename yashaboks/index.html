@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">yashaboks — скупка золота в Харкові</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.desc" content="" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="yashaboks" />
+  <meta property="og:title" data-i18n-attr="content" data-i18n="meta.title" content="yashaboks" />
+  <meta property="og:description" data-i18n-attr="content" data-i18n="meta.desc" content="" />
+  <meta name="theme-color" content="#14110e" />
+
+  <!-- Favicon: gold ingot mark on espresso-black -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2314110e'/%3E%3Cpath d='M27 62 L34 40 H66 L73 62 Z' fill='none' stroke='%23e7c261' stroke-width='5' stroke-linejoin='round'/%3E%3Cpath d='M34 40 L40 33 H60 L66 40' fill='none' stroke='%23e7c261' stroke-width='5' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <!-- Fonts: Playfair Display (elegant Cyrillic display) + Manrope (UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contact" data-i18n="nav.contact">Контакти</a>
+
+  <!-- ambient gold field -->
+  <div class="aura" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="yashaboks">
+        <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M27 62 L34 40 H66 L73 62 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M34 40 L40 33 H60 L66 40" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-words">
+          <span class="brand-name gold-foil">yashaboks</span>
+          <span class="brand-sub" data-i18n="brand.sub">Скупка золота · Харків</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main">
+        <a href="#catalog" data-i18n="nav.catalog">В наявності</a>
+        <a href="#price" data-i18n="nav.price">Ціна</a>
+        <a href="#how" data-i18n="nav.how">Як це працює</a>
+        <a href="#contact" data-i18n="nav.contact">Контакти</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="uk" class="is-active">UA</button>
+          <button type="button" data-lang="ru">RU</button>
+        </div>
+        <a href="#contact" class="btn btn-gold btn-sm" data-i18n="nav.write">Написати</a>
+        <button type="button" class="nav-toggle" aria-controls="mobileMenu" aria-expanded="false" data-i18n-attr="aria-label" data-i18n="nav.menu_toggle" aria-label="Меню">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile" hidden>
+      <a href="#catalog" data-i18n="nav.catalog">В наявності</a>
+      <a href="#price" data-i18n="nav.price">Ціна</a>
+      <a href="#how" data-i18n="nav.how">Як це працює</a>
+      <a href="#contact" data-i18n="nav.contact">Контакти</a>
+      <a href="#contact" class="btn btn-gold mobile-write" data-i18n="nav.write">Написати</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Приватна скупка і продаж золота · Харків і область</p>
+        <h1 class="hero-title" data-i18n="hero.title">Скуповую золото дорожче за ломбард</h1>
+
+        <div class="price-hero" aria-hidden="false">
+          <span class="ph-from" data-i18n="hero.from">від</span>
+          <span class="ph-amount gold-foil"><span class="ph-num" data-count="3500">3500</span>&nbsp;₴</span>
+          <span class="ph-unit" data-i18n="hero.per_gram">за&nbsp;грам</span>
+        </div>
+        <p class="ph-note" data-i18n="hero.price_note">і більше — за унікальні та антикварні вироби</p>
+
+        <p class="hero-sub" data-i18n="hero.sub">Приїжджаю особисто по Харкову й області. Перевіряю при вас — ваги, реагенти, кислота. Розрахунок готівкою одразу.</p>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-gold" data-i18n="hero.cta_write">Зв'язатися зараз</a>
+          <a href="#catalog" class="btn btn-gold-soft" data-i18n="hero.cta_catalog">Вироби в наявності</a>
+          <a href="#price" class="btn btn-ghost" data-i18n="hero.cta_calc">Порахувати суму</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ИЗДЕЛИЯ В НАЛИЧИИ (catalog) ============ -->
+    <section class="section catalog" id="catalog">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="catalog.eyebrow">Вироби в наявності</p>
+          <h2 class="section-title" data-i18n="catalog.title">Що зараз є</h2>
+          <p class="section-note" data-i18n="catalog.note">Свіжі надходження — купую, викуповую та продаю. Оновлюється.</p>
+        </header>
+        <div class="catalog-grid" id="catalogGrid"></div>
+        <div class="catalog-more" id="catalogMore" hidden>
+          <button type="button" class="btn btn-ghost" id="catalogMoreBtn"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICE / CALCULATOR ============ -->
+    <section class="section price" id="price">
+      <div class="container price-grid">
+        <div class="price-copy">
+          <p class="eyebrow" data-i18n="price.eyebrow">Чесна ціна</p>
+          <h2 class="section-title" data-i18n="price.title">Більше, ніж у ломбарді</h2>
+          <p class="lede" data-i18n="price.lede">У ломбарді за грам дають близько 2900–3000&nbsp;₴. Я плачу від 3500&nbsp;₴ — це на 500–600&nbsp;₴ більше з кожного грама.</p>
+
+          <div class="compare">
+            <div class="cmp cmp-them">
+              <span class="cmp-label" data-i18n="price.pawn">Ломбард</span>
+              <span class="cmp-val">≈ 2900–3000 <i data-i18n="price.uah_g">₴/г</i></span>
+            </div>
+            <div class="cmp-vs" aria-hidden="true">→</div>
+            <div class="cmp cmp-me">
+              <span class="cmp-label">yashaboks</span>
+              <span class="cmp-val gold-foil">від 3500 <i data-i18n="price.uah_g">₴/г</i></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc" id="calc">
+          <h3 class="calc-title" data-i18n="calc.title">Порахуйте свою суму</h3>
+          <label class="calc-field" for="calcGrams">
+            <span data-i18n="calc.weight">Вага виробу, грам</span>
+            <input id="calcGrams" type="number" inputmode="decimal" min="0" step="0.1" value="10" />
+          </label>
+          <div class="calc-slider">
+            <input id="calcRange" type="range" min="0" max="100" step="0.5" value="10" aria-label="грам" />
+          </div>
+          <div class="calc-result">
+            <span class="calc-r-label" data-i18n="calc.you_get">Ви отримаєте</span>
+            <span class="calc-r-amount gold-foil"><span id="calcPayout">35&nbsp;000</span>&nbsp;₴</span>
+          </div>
+          <p class="calc-save"><span data-i18n="calc.more">Це на</span> <b id="calcSave">5&nbsp;000&nbsp;₴</b> <span data-i18n="calc.than_pawn">більше, ніж у ломбарді</span></p>
+          <p class="calc-note" data-i18n="calc.note">Орієнтовно, за ставкою 3500&nbsp;₴/г. Точна ціна — після перевірки проби й ваги.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT I BUY ============ -->
+    <section class="section buy" id="buy">
+      <div class="container">
+        <header class="section-head center">
+          <p class="eyebrow" data-i18n="buy.eyebrow">Приймаю все</p>
+          <h2 class="section-title" data-i18n="buy.title">Що я купую</h2>
+        </header>
+        <ul class="buy-chips" id="buyChips"></ul>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section how" id="how">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="how.eyebrow">Просто і швидко</p>
+          <h2 class="section-title" data-i18n="how.title">Як це працює</h2>
+        </header>
+        <ol class="steps" id="steps"></ol>
+      </div>
+    </section>
+
+    <!-- ============ TRUST ============ -->
+    <section class="section trust" id="trust">
+      <div class="container">
+        <header class="section-head center">
+          <p class="eyebrow" data-i18n="trust.eyebrow">Без ризику</p>
+          <h2 class="section-title" data-i18n="trust.title">Чому мені довіряють</h2>
+        </header>
+        <div class="trust-grid" id="trustGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-copy">
+            <p class="eyebrow" data-i18n="contact.eyebrow">Зв'язок</p>
+            <h2 class="section-title" data-i18n="contact.title">Напишіть або зателефонуйте</h2>
+            <p class="lede" data-i18n="contact.lede">Киньте фото виробу — швидко оціню й назву ціну. Відповідаю щодня.</p>
+            <ul class="contact-meta">
+              <li><span class="cm-label" data-i18n="contact.area_label">Працюю</span><span class="cm-val" data-i18n="contact.area">Харків та область · виїзд безкоштовно</span></li>
+              <li><span class="cm-label" data-i18n="contact.hours_label">Час</span><span class="cm-val" data-i18n="contact.hours">Щодня, 9:00 – 21:00</span></li>
+            </ul>
+          </div>
+          <div class="contact-actions" id="contactActions"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand brand-footer" href="#top" aria-label="yashaboks">
+        <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M27 62 L34 40 H66 L73 62 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M34 40 L40 33 H60 L66 40" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-words">
+          <span class="brand-name gold-foil">yashaboks</span>
+          <span class="brand-sub" data-i18n="footer.person">Олександр Харківський</span>
+        </span>
+      </a>
+      <p class="footer-tagline" data-i18n="footer.tagline">Скупка золота · Харків і область</p>
+      <div class="footer-socials" id="footerSocials"></div>
+      <p class="footer-meta">
+        <span>© <span id="year"></span> yashaboks.</span>
+        <span data-i18n="footer.demo">Демо-сайт для презентації.</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

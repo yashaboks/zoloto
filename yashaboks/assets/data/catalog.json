@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "photo": "",
+      "type": "chain",
+      "name_ru": "Цепочка «Бисмарк»",
+      "name_uk": "Ланцюжок «Бісмарк»",
+      "proba": 585,
+      "weight": 11.8,
+      "price": 26900,
+      "status": "available"
+    },
+    {
+      "photo": "",
+      "type": "ring",
+      "name_ru": "Кольцо с фианитами",
+      "name_uk": "Каблучка з фіанітами",
+      "proba": 585,
+      "weight": 3.4,
+      "price": 7200,
+      "status": "available"
+    },
+    {
+      "photo": "",
+      "type": "earrings",
+      "name_ru": "Серьги «Конго»",
+      "name_uk": "Сережки «Конго»",
+      "proba": 750,
+      "weight": 4.1,
+      "price": 13500,
+      "status": "available"
+    },
+    {
+      "photo": "",
+      "type": "bracelet",
+      "name_ru": "Браслет плетёный",
+      "name_uk": "Браслет плетений",
+      "proba": 585,
+      "weight": 7.6,
+      "price": 16800,
+      "status": "sold"
+    },
+    {
+      "photo": "",
+      "type": "pendant",
+      "name_ru": "Кулон «Икона»",
+      "name_uk": "Кулон «Ікона»",
+      "proba": 585,
+      "weight": 2.2,
+      "price": 4900,
+      "status": "available"
+    },
+    {
+      "photo": "",
+      "type": "coin",
+      "name_ru": "Монета «Дукат»",
+      "name_uk": "Монета «Дукат»",
+      "proba": 986,
+      "weight": 3.49,
+      "price": null,
+      "status": "available"
+    }
+  ]
+}

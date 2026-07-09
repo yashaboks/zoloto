@@ -1,0 +1,115 @@
+# ============================================================
+# yashaboks — конфиг панели управления (Sveltia CMS)
+#
+# ВАЖНО (делаю я на шаге подключения):
+#   ниже в repo: заменить OWNER/REPO на реальный GitHub-репозиторий,
+#   например:  repo: ivan-gold/yashaboks
+#   Пока это заглушка — вход работать не будет, это нормально.
+# ============================================================
+
+backend:
+  name: github
+  repo: OWNER/REPO        # <-- заменить на реальный "пользователь/репозиторий"
+  branch: main
+
+# Куда панель кладёт загруженные фотографии
+media_folder: "assets/img"
+public_folder: "assets/img"
+
+# Язык самой панели
+locale: "ru"
+
+# Публикуем сразу, без черновиков-модерации
+publish_mode: simple
+
+collections:
+  # ---------------- ИЗДЕЛИЯ ----------------
+  - name: "catalog"
+    label: "Изделия в наличии"
+    label_singular: "изделие"
+    delete: false
+    files:
+      - name: "items"
+        label: "Список изделий"
+        file: "assets/data/catalog.json"
+        format: "json"
+        description: >-
+          Добавляйте, редактируйте и удаляйте изделия.
+          Порядок меняется перетаскиванием. Фото не обязательно —
+          без него покажется иконка по типу изделия.
+        fields:
+          - name: "items"
+            label: "Изделия"
+            label_singular: "изделие"
+            widget: "list"
+            summary: "{{fields.name_ru}} · {{fields.weight}} г"
+            fields:
+              - name: "photo"
+                label: "Фото"
+                widget: "image"
+                required: false
+                hint: "Квадратное фото смотрится лучше всего."
+              - name: "type"
+                label: "Тип (для иконки, если без фото)"
+                widget: "select"
+                default: "chain"
+                options:
+                  - { label: "Цепочка", value: "chain" }
+                  - { label: "Кольцо", value: "ring" }
+                  - { label: "Серьги", value: "earrings" }
+                  - { label: "Браслет", value: "bracelet" }
+                  - { label: "Кулон / подвеска", value: "pendant" }
+                  - { label: "Монета", value: "coin" }
+              - { name: "name_ru", label: "Название (рус)", widget: "string" }
+              - { name: "name_uk", label: "Название (укр)", widget: "string" }
+              - name: "proba"
+                label: "Проба (585, 750, 999…)"
+                widget: "number"
+                value_type: "int"
+                default: 585
+              - name: "weight"
+                label: "Вес, грамм"
+                widget: "number"
+                value_type: "float"
+                step: 0.01
+              - name: "price"
+                label: "Цена, ₴ (оставить пустым = «по договорённости»)"
+                widget: "number"
+                value_type: "int"
+                required: false
+              - name: "status"
+                label: "Статус"
+                widget: "select"
+                default: "available"
+                options:
+                  - { label: "В наличии", value: "available" }
+                  - { label: "Продано", value: "sold" }
+
+  # ---------------- НАСТРОЙКИ / КОНТАКТЫ ----------------
+  - name: "settings"
+    label: "Настройки"
+    delete: false
+    files:
+      - name: "main"
+        label: "Цена и контакты"
+        file: "assets/data/settings.json"
+        format: "json"
+        description: "Ставка за грамм и все контакты, которые показываются на сайте."
+        fields:
+          - name: "rate"
+            label: "Моя ставка, ₴ за грамм"
+            widget: "number"
+            value_type: "int"
+            default: 3500
+          - name: "pawnRate"
+            label: "Ставка ломбарда (для сравнения), ₴"
+            widget: "number"
+            value_type: "int"
+            default: 3000
+          - { name: "phone", label: "Телефон для ссылки (только +380 и цифры)", widget: "string" }
+          - { name: "phoneDisplay", label: "Телефон как показывать (+380 00 000 00 00)", widget: "string" }
+          - { name: "telegram", label: "Telegram — ссылка (https://t.me/имя)", widget: "string" }
+          - { name: "whatsapp", label: "WhatsApp — ссылка (https://wa.me/380…)", widget: "string" }
+          - { name: "viber", label: "Viber — ссылка (viber://chat?number=%2B380…)", widget: "string" }
+          - { name: "tiktok", label: "TikTok — ссылка", widget: "string" }
+          - { name: "instagram", label: "Instagram — ссылка", widget: "string" }
