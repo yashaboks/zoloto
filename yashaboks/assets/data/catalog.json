@@ -1,7 +1,7 @@
 {
   "items": [
     {
-      "photo": "",
+      "photo": "/assets/img/IMG_6597.jpeg",
       "type": "chain",
       "name_ru": "Цепочка «Бисмарк»",
       "name_uk": "Ланцюжок «Бісмарк»",
@@ -11,7 +11,7 @@
       "status": "available"
     },
     {
-      "photo": "",
+      "photo": "/assets/img/IMG_6596.webp",
       "type": "ring",
       "name_ru": "Кольцо с фианитами",
       "name_uk": "Каблучка з фіанітами",
