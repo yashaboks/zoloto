@@ -13,8 +13,8 @@ backend:
   branch: main
 
 # Куда панель кладёт загруженные фотографии
-media_folder: "assets/img"
-public_folder: "assets/img"
+media_folder: "yashaboks/assets/img"
+public_folder: "/assets/img"
 
 # Язык самой панели
 locale: "ru"
@@ -31,7 +31,7 @@ collections:
     files:
       - name: "items"
         label: "Список изделий"
-        file: "assets/data/catalog.json"
+        file: "yashaboks/assets/data/catalog.json"
         format: "json"
         description: >-
           Добавляйте, редактируйте и удаляйте изделия.
@@ -92,7 +92,7 @@ collections:
     files:
       - name: "main"
         label: "Цена и контакты"
-        file: "assets/data/settings.json"
+        file: "yashaboks/assets/data/settings.json"
         format: "json"
         description: "Ставка за грамм и все контакты, которые показываются на сайте."
         fields:
