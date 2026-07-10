@@ -197,6 +197,18 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_3903.jpeg"
+      ],
+      "name_ru": "Монеты",
+      "name_uk": "Монети",
+      "proba": 900,
+      "weight": "31.1",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
