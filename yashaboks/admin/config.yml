@@ -9,11 +9,13 @@
 
 backend:
   name: github
-  repo: yashaboks/zoloto        # <-- заменить на реальный "пользователь/репозиторий"
+  repo: yashaboks/zoloto
   branch: main
   base_url: https://sveltia-cms-auth.crushingex8.workers.dev
 
-# Куда панель кладёт загруженные фотографии
+# Куда панель кладёт загруженные фотографии.
+# Сайт опубликован из подпапки yashaboks/, поэтому физически файлы
+# должны лежать в yashaboks/assets/img, а на сайте они доступны по /assets/img.
 media_folder: "yashaboks/assets/img"
 public_folder: "/assets/img"
 
@@ -58,10 +60,14 @@ collections:
                 value_type: "int"
                 default: 585
               - name: "weight"
-                label: "Вес, грамм"
-                widget: "number"
-                value_type: "float"
-                step: 0.01
+                label: "Вес, грамм (можно с запятой: 13,33)"
+                widget: "string"
+                hint: "Например: 13,33 или 13.33"
+              - name: "length"
+                label: "Длина (необязательно, напр. 50 см)"
+                widget: "string"
+                required: false
+                hint: "Только для цепочек и браслетов. Можно оставить пустым."
               - name: "price"
                 label: "Цена, ₴ (оставить пустым = «по договорённости»)"
                 widget: "number"
