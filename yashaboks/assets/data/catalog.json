@@ -172,6 +172,18 @@
       "length": "",
       "price": 27000,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_3896.jpeg"
+      ],
+      "name_ru": "Колько",
+      "name_uk": "Каблучка",
+      "proba": 585,
+      "weight": "5.05",
+      "length": "19.5",
+      "price": 20000,
+      "status": "available"
     }
   ]
 }
