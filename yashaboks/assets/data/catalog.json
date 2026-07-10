@@ -1,12 +1,12 @@
 {
   "items": [
     {
-      "photo": "/assets/img/IMG_3861.jpeg",
+      "photo": "/assets/img/IMG_3865.jpeg",
       "name_ru": "Цепочка",
       "name_uk": "Ланцюг",
       "proba": 585,
-      "weight": "169.43",
-      "length": "68",
+      "weight": "12.33",
+      "length": "46",
       "price": null,
       "status": "available"
     }
