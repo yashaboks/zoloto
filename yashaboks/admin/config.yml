@@ -47,11 +47,13 @@ collections:
             widget: "list"
             summary: "{{fields.name_ru}} · {{fields.weight}} г"
             fields:
-              - name: "photo"
-                label: "Фото"
-                widget: "image"
+              - name: "photos"
+                label: "Фото (до 3-х; первое — обложка)"
+                widget: "list"
                 required: false
-                hint: "Квадратное фото смотрится лучше всего."
+                max: 3
+                field: { name: "image", label: "Фото", widget: "image" }
+                hint: "Первое фото — обложка карточки. Можно 1, 2 или 3. Перетаскиванием меняется порядок."
               - { name: "name_ru", label: "Название (рус)", widget: "string" }
               - { name: "name_uk", label: "Название (укр)", widget: "string" }
               - name: "proba"
