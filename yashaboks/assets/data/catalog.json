@@ -35,6 +35,19 @@
       "length": "46",
       "price": 50000,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_3867.jpeg",
+        "/assets/img/IMG_3868.jpeg"
+      ],
+      "name_ru": "Монета",
+      "name_uk": "Монета",
+      "proba": 900,
+      "weight": "8.6",
+      "length": "",
+      "price": 77000,
+      "status": "available"
     }
   ]
 }
