@@ -1,14 +1,13 @@
 {
   "items": [
     {
-      "photo": "/assets/img/IMG_6596.webp",
+      "photo": "/assets/img/IMG_3859.jpeg",
       "name_ru": "Цепочка",
-      "name_uk": "Лвнцюг",
+      "name_uk": "Ланцюг",
       "proba": 585,
-      "weight": 13.4,
-      "price": 37200,
-      "status": "available",
-      "type": "ring"
+      "weight": 170,
+      "price": null,
+      "status": "available"
     }
   ]
 }
