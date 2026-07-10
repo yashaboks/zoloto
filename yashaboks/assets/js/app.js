@@ -23,9 +23,12 @@
     return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
 
-  /* weight: keep decimals, trim trailing zeros → "3.49", "11.8", "7" */
+  /* weight: accepts number or "13,33"/"13.33" string → shows "13,33" */
   function fmtWeight(n) {
-    return (Math.round(n * 100) / 100).toString().replace(".", ",");
+    if (n == null || n === "") return "";
+    var num = parseFloat(String(n).replace(",", "."));
+    if (isNaN(num)) return String(n);
+    return (Math.round(num * 100) / 100).toString().replace(".", ",");
   }
 
   function getStoredLang() {
@@ -146,6 +149,7 @@
       name: name,
       proba: it.proba,
       weight: it.weight,
+      length: it.length || "",
       price: price,
       status: it.status || "available",
       photo: it.photo || ""
@@ -203,6 +207,7 @@
             '<div class="item-meta">' +
               "<span>" + t("catalog.proba", lang) + " <b>" + it.proba + "</b></span>" +
               "<span>" + t("catalog.weight", lang) + " <b>" + fmtWeight(it.weight) + " г</b></span>" +
+              (it.length ? "<span>" + t("catalog.length", lang) + " <b>" + it.length + "</b></span>" : "") +
             "</div>" +
             priceHTML +
           "</div>" +
