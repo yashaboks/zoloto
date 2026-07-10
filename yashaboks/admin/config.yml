@@ -50,17 +50,6 @@ collections:
                 widget: "image"
                 required: false
                 hint: "Квадратное фото смотрится лучше всего."
-              - name: "type"
-                label: "Тип (для иконки, если без фото)"
-                widget: "select"
-                default: "chain"
-                options:
-                  - { label: "Цепочка", value: "chain" }
-                  - { label: "Кольцо", value: "ring" }
-                  - { label: "Серьги", value: "earrings" }
-                  - { label: "Браслет", value: "bracelet" }
-                  - { label: "Кулон / подвеска", value: "pendant" }
-                  - { label: "Монета", value: "coin" }
               - { name: "name_ru", label: "Название (рус)", widget: "string" }
               - { name: "name_uk", label: "Название (укр)", widget: "string" }
               - name: "proba"
