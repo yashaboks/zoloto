@@ -9,15 +9,6 @@
       "price": 37200,
       "status": "available",
       "type": "ring"
-    },
-    {
-      "photo": "/assets/img/IMG_6601.jpeg",
-      "name_ru": "Цепочка",
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": 12,
-      "price": 20000,
-      "status": "available"
     }
   ]
 }
