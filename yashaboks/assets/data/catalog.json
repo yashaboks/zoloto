@@ -2,22 +2,31 @@
   "items": [
     {
       "photo": "/assets/img/IMG_6597.jpeg",
-      "type": "chain",
       "name_ru": "Цепочка",
       "name_uk": "Ланцюжок",
       "proba": 585,
       "weight": 11.8,
       "price": 43000,
-      "status": "available"
+      "status": "available",
+      "type": "chain"
     },
     {
       "photo": "/assets/img/IMG_6596.webp",
-      "type": "ring",
       "name_ru": "Цепочка",
       "name_uk": "Лвнцюг",
       "proba": 585,
       "weight": 13.4,
       "price": 37200,
+      "status": "available",
+      "type": "ring"
+    },
+    {
+      "photo": "/assets/img/IMG_6601.jpeg",
+      "name_ru": "Цепочка",
+      "name_uk": "Ланцюг",
+      "proba": 585,
+      "weight": 11,
+      "price": 25000,
       "status": "available"
     }
   ]
