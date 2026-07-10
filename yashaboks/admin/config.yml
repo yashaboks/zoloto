@@ -11,6 +11,7 @@ backend:
   name: github
   repo: yashaboks/zoloto        # <-- заменить на реальный "пользователь/репозиторий"
   branch: main
+  base_url: https://sveltia-cms-auth.crushingex8.workers.dev
 
 # Куда панель кладёт загруженные фотографии
 media_folder: "yashaboks/assets/img"
