@@ -19,16 +19,6 @@
       "weight": 3.4,
       "price": 7200,
       "status": "available"
-    },
-    {
-      "photo": "/assets/img/IMG_6597.jpeg",
-      "type": "chain",
-      "name_ru": "Цепочка",
-      "name_uk": "Ланцюгг",
-      "proba": 585,
-      "weight": 20,
-      "price": 20000,
-      "status": "available"
     }
   ]
 }
