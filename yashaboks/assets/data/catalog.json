@@ -48,6 +48,19 @@
       "length": "",
       "price": 77000,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_3871.jpeg",
+        "/assets/img/IMG_3872.jpeg"
+      ],
+      "name_ru": "Часы",
+      "name_uk": "Годинник",
+      "proba": 750,
+      "weight": "55",
+      "length": "19",
+      "price": 270000,
+      "status": "available"
     }
   ]
 }
