@@ -204,6 +204,8 @@ input { font: inherit; }
 .price-hero { display: flex; align-items: baseline; justify-content: center; gap: .5rem; margin-top: .8rem; flex-wrap: wrap; line-height: .9; }
 .price-hero .ph-from { font-family: var(--font-display); font-style: italic; font-size: clamp(1.1rem, 3vw, 1.9rem); color: var(--muted); }
 .price-hero .ph-amount { font-family: var(--font-display); font-weight: 800; font-size: var(--fs-price); letter-spacing: -.02em;
+  /* background-clip:text paints only inside the box — give the glyphs full vertical room so tops/bottoms aren't cut */
+  line-height: 1.08; padding-block: .1em .14em;
   filter: drop-shadow(0 4px 26px rgba(212, 175, 55, .3)); }
 .price-hero .ph-unit { font-family: var(--font-display); font-style: italic; font-size: clamp(1.1rem, 3vw, 1.9rem); color: var(--muted); }
 .ph-note { color: var(--muted-2); font-size: .92rem; margin-top: .5rem; letter-spacing: .01em; }
