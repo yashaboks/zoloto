@@ -144,6 +144,12 @@
     var name = (it.name && typeof it.name === "object")
       ? it.name
       : { uk: it.name_uk || it.name_ru || "", ru: it.name_ru || it.name_uk || "" };
+    var photos = [];
+    if (Array.isArray(it.photos)) {
+      photos = it.photos.filter(function (p) { return !!p; });
+    } else if (it.photo) {
+      photos = [it.photo];
+    }
     return {
       type: it.type || "coin",
       name: name,
@@ -152,7 +158,8 @@
       length: it.length || "",
       price: price,
       status: it.status || "available",
-      photo: it.photo || ""
+      photos: photos,
+      photo: photos[0] || ""
     };
   }
 
@@ -187,9 +194,15 @@
       var statusKey = isSold ? "catalog.sold" : "catalog.available";
       var statusCls = isSold ? "sold" : "available";
 
+      var altText = it.name[lang] || it.name.uk;
+      var multi = it.photos && it.photos.length > 1;
       var media = it.photo
-        ? '<img src="' + it.photo + '" alt="' + (it.name[lang] || it.name.uk) + '" loading="lazy" />'
+        ? '<img src="' + it.photo + '" alt="' + altText + '" loading="lazy"' +
+            (multi ? ' data-photos="' + it.photos.join("|") + '"' : "") + " />"
         : lineIcon(it.type);
+      var countBadge = multi
+        ? '<span class="item-count">' + it.photos.length + ' фото</span>'
+        : "";
 
       var priceHTML = (it.price == null)
         ? '<div class="item-price deal">' + t("catalog.deal", lang) + "</div>"
@@ -200,6 +213,7 @@
           '<div class="item-media">' +
             '<span class="item-proba">' + it.proba + "</span>" +
             '<span class="item-status ' + statusCls + '">' + t(statusKey, lang) + "</span>" +
+            countBadge +
             media +
           "</div>" +
           '<div class="item-body">' +
@@ -305,7 +319,9 @@
     var grid = $("#catalogGrid");
     if (!grid) return;
 
-    var overlay = null, imgEl = null, lastFocus = null, hideTimer = null;
+    var overlay = null, imgEl = null, prevBtn = null, nextBtn = null, counterEl = null;
+    var lastFocus = null, hideTimer = null;
+    var list = [], idx = 0, curAlt = "";
 
     function build() {
       overlay = document.createElement("div");
@@ -316,24 +332,53 @@
       overlay.innerHTML =
         '<button class="lightbox-close" type="button" aria-label="' +
           t("lightbox.close", activeLang) + '">&times;</button>' +
-        '<img class="lightbox-img" src="" alt="" />';
+        '<button class="lightbox-nav lightbox-prev" type="button" aria-label="&#8249;">&#8249;</button>' +
+        '<img class="lightbox-img" src="" alt="" />' +
+        '<button class="lightbox-nav lightbox-next" type="button" aria-label="&#8250;">&#8250;</button>' +
+        '<span class="lightbox-counter"></span>';
       document.body.appendChild(overlay);
       imgEl = overlay.querySelector(".lightbox-img");
+      prevBtn = overlay.querySelector(".lightbox-prev");
+      nextBtn = overlay.querySelector(".lightbox-next");
+      counterEl = overlay.querySelector(".lightbox-counter");
 
       overlay.addEventListener("click", function (e) {
         if (e.target === overlay || e.target.classList.contains("lightbox-close")) close();
       });
+      prevBtn.addEventListener("click", function (e) { e.stopPropagation(); nav(-1); });
+      nextBtn.addEventListener("click", function (e) { e.stopPropagation(); nav(1); });
       document.addEventListener("keydown", function (e) {
-        if (overlay && !overlay.hidden && (e.key === "Escape" || e.key === "Esc")) close();
+        if (!overlay || overlay.hidden) return;
+        if (e.key === "Escape" || e.key === "Esc") close();
+        else if (e.key === "ArrowLeft") nav(-1);
+        else if (e.key === "ArrowRight") nav(1);
       });
     }
 
-    function open(src, alt) {
+    function render() {
+      imgEl.src = list[idx];
+      imgEl.alt = curAlt;
+      var multi = list.length > 1;
+      prevBtn.hidden = !multi;
+      nextBtn.hidden = !multi;
+      counterEl.hidden = !multi;
+      if (multi) counterEl.textContent = (idx + 1) + " / " + list.length;
+    }
+
+    function nav(dir) {
+      if (list.length < 2) return;
+      idx = (idx + dir + list.length) % list.length;
+      render();
+    }
+
+    function open(photos, startIdx, alt) {
       if (!overlay) build();
       if (hideTimer) { window.clearTimeout(hideTimer); hideTimer = null; }
       lastFocus = document.activeElement;
-      imgEl.src = src;
-      imgEl.alt = alt || "";
+      list = photos && photos.length ? photos : [""];
+      idx = startIdx || 0;
+      curAlt = alt || "";
+      render();
       overlay.hidden = false;
       document.body.classList.add("lb-open");
       void overlay.offsetWidth; // force reflow so the transition plays (rAF is throttled in bg tabs)
@@ -357,7 +402,9 @@
     grid.addEventListener("click", function (e) {
       var img = e.target.closest ? e.target.closest(".item-media img") : null;
       if (!img) return;
-      open(img.getAttribute("src"), img.getAttribute("alt"));
+      var data = img.getAttribute("data-photos");
+      var photos = data ? data.split("|") : [img.getAttribute("src")];
+      open(photos, 0, img.getAttribute("alt"));
     });
   }
 
