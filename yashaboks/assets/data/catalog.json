@@ -148,6 +148,18 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_3887.jpeg"
+      ],
+      "name_ru": "Перстень",
+      "name_uk": "Печатка",
+      "proba": 583,
+      "weight": "10,68",
+      "length": "22",
+      "price": null,
+      "status": "available"
     }
   ]
 }
