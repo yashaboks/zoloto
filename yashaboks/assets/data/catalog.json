@@ -3,21 +3,21 @@
     {
       "photo": "/assets/img/IMG_6597.jpeg",
       "type": "chain",
-      "name_ru": "Цепочка «Бисмарк»",
-      "name_uk": "Ланцюжок «Бісмарк»",
+      "name_ru": "Цепочка",
+      "name_uk": "Ланцюжок",
       "proba": 585,
       "weight": 11.8,
-      "price": 26900,
+      "price": 43000,
       "status": "available"
     },
     {
       "photo": "/assets/img/IMG_6596.webp",
       "type": "ring",
-      "name_ru": "Кольцо с фианитами",
-      "name_uk": "Каблучка з фіанітами",
+      "name_ru": "Цепочка",
+      "name_uk": "Лвнцюг",
       "proba": 585,
-      "weight": 3.4,
-      "price": 7200,
+      "weight": 13.4,
+      "price": 37200,
       "status": "available"
     }
   ]
