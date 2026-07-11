@@ -220,6 +220,18 @@
       "length": "65",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_3980.jpeg"
+      ],
+      "name_ru": "Кольцо",
+      "name_uk": "Каблучка",
+      "proba": 585,
+      "weight": "6.93",
+      "length": "17.5",
+      "price": 30000,
+      "status": "available"
     }
   ]
 }
