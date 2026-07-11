@@ -244,6 +244,18 @@
       "length": "",
       "price": 25000,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_3982.jpeg"
+      ],
+      "name_ru": "Кулон",
+      "name_uk": "Підвіска",
+      "proba": 585,
+      "weight": "1.94",
+      "length": "",
+      "price": 8000,
+      "status": "available"
     }
   ]
 }
