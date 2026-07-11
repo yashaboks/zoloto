@@ -256,6 +256,18 @@
       "length": "",
       "price": 8000,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_3983.jpeg"
+      ],
+      "name_ru": "Кольца",
+      "name_uk": "Обручки",
+      "proba": 585,
+      "weight": "3",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
