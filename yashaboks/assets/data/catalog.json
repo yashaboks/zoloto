@@ -269,6 +269,18 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4067.jpeg"
+      ],
+      "name_ru": "Браслет женс",
+      "name_uk": "Браслет жіноч",
+      "proba": 585,
+      "weight": "4.3",
+      "length": "19",
+      "price": 18000,
+      "status": "available"
     }
   ]
 }
