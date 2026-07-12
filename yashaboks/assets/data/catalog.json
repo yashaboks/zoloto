@@ -223,18 +223,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_3980.jpeg"
-      ],
-      "name_ru": "Кольцо",
-      "name_uk": "Каблучка",
-      "proba": 585,
-      "weight": "6.93",
-      "length": "17.5",
-      "price": 30000,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_3981.jpeg"
       ],
       "name_ru": "Кулон",
@@ -247,18 +235,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_3982.jpeg"
-      ],
-      "name_ru": "Кулон",
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "1.94",
-      "length": "",
-      "price": 8000,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_3983.jpeg"
       ],
       "name_ru": "Кольца",
@@ -266,18 +242,6 @@
       "proba": 585,
       "weight": "3",
       "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4005.jpeg"
-      ],
-      "name_ru": "Браслет",
-      "name_uk": "Брослет",
-      "proba": 583,
-      "weight": "29,04",
-      "length": "25",
       "price": null,
       "status": "available"
     }
