@@ -244,6 +244,19 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4066.jpeg",
+        "/assets/img/IMG_4065.jpeg"
+      ],
+      "name_ru": "Кольцо барака",
+      "name_uk": "Каблучка барака",
+      "proba": 585,
+      "weight": "5.63",
+      "length": "17",
+      "price": null,
+      "status": "available"
     }
   ]
 }
