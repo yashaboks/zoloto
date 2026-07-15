@@ -530,6 +530,18 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4336.jpeg"
+      ],
+      "name_ru": "Сережки версач",
+      "name_uk": "Сережки версач",
+      "proba": 585,
+      "weight": "2.69",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
