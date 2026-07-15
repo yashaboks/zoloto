@@ -482,6 +482,18 @@
       "length": "19",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4340.jpeg"
+      ],
+      "name_ru": "Крест",
+      "name_uk": "Хрест",
+      "proba": 585,
+      "weight": "1.51",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
