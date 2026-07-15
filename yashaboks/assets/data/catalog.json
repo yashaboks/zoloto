@@ -602,6 +602,18 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4338.jpeg"
+      ],
+      "name_ru": "Сережки нитка",
+      "name_uk": "Сережки нитка",
+      "proba": 585,
+      "weight": "1.69",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
