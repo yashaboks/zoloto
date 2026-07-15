@@ -373,6 +373,55 @@
       "length": "16",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4350.jpeg"
+      ],
+      "name_ru": "Подвеска",
+      "name_uk": "Підвіска",
+      "proba": 585,
+      "weight": "0.59",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4349.jpeg"
+      ],
+      "name_ru": "Крест",
+      "name_uk": "Хрест",
+      "proba": 585,
+      "weight": "1.23",
+      "length": "2.8",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4348.jpeg"
+      ],
+      "name_ru": "Ладанка",
+      "name_uk": "Ладанка",
+      "proba": 583,
+      "weight": "5.65",
+      "length": "3.7",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4345.jpeg",
+        "/assets/img/IMG_4344.jpeg"
+      ],
+      "name_ru": "Подвеска",
+      "name_uk": "Підвіска",
+      "proba": 750,
+      "weight": "11.37",
+      "length": "5.6",
+      "price": null,
+      "status": "available"
     }
   ]
 }
