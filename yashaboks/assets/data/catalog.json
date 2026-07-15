@@ -211,43 +211,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_3981.jpeg"
-      ],
-      "name_ru": "Кулон",
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "6.25",
-      "length": "",
-      "price": 25000,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_3983.jpeg"
-      ],
-      "name_ru": "Кольца",
-      "name_uk": "Обручки",
-      "proba": 585,
-      "weight": "3",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4066.jpeg",
-        "/assets/img/IMG_4065.jpeg"
-      ],
-      "name_ru": "Кольцо барака",
-      "name_uk": "Каблучка барака",
-      "proba": 585,
-      "weight": "5.63",
-      "length": "17",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4068.jpeg"
       ],
       "name_ru": "Серьги",
