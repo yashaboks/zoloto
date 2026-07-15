@@ -301,6 +301,66 @@
       "length": "19",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4355.jpeg"
+      ],
+      "name_ru": "Кольцо",
+      "name_uk": "Обручка",
+      "proba": 583,
+      "weight": "5.86",
+      "length": "19",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4354.jpeg"
+      ],
+      "name_ru": "Печатка",
+      "name_uk": "Перстень",
+      "proba": 585,
+      "weight": "4.73",
+      "length": "21",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4353.jpeg"
+      ],
+      "name_ru": "Печатка",
+      "name_uk": "Перстень",
+      "proba": 585,
+      "weight": "10.57",
+      "length": "21",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4352.jpeg"
+      ],
+      "name_ru": "Печатка",
+      "name_uk": "Перстень",
+      "proba": 583,
+      "weight": "10.67",
+      "length": "22",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4351.jpeg"
+      ],
+      "name_ru": "Печатка",
+      "name_uk": "Перстень",
+      "proba": 585,
+      "weight": "8.5",
+      "length": "22",
+      "price": null,
+      "status": "available"
     }
   ]
 }
