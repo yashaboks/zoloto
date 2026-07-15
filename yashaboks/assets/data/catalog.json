@@ -530,6 +530,42 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4335.jpeg"
+      ],
+      "name_ru": "Сережки",
+      "name_uk": "Сережки",
+      "proba": 585,
+      "weight": "6.04",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4334.jpeg"
+      ],
+      "name_ru": "Набор",
+      "name_uk": "Намисто",
+      "proba": 585,
+      "weight": "11",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4333.jpeg"
+      ],
+      "name_ru": "Сережки",
+      "name_uk": "Сережки",
+      "proba": 585,
+      "weight": "3",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
