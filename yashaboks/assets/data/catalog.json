@@ -590,6 +590,54 @@
       "length": "6",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4329.jpeg"
+      ],
+      "name_ru": "Браслет",
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "3.87",
+      "length": "19",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4328.jpeg"
+      ],
+      "name_ru": "Браслет",
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "7.1",
+      "length": "21",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4327.jpeg"
+      ],
+      "name_ru": "Цепочка",
+      "name_uk": "Ланцюг",
+      "proba": 585,
+      "weight": "38.67",
+      "length": "64",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4326.jpeg"
+      ],
+      "name_ru": "Цепочка",
+      "name_uk": "Ланцюг",
+      "proba": 585,
+      "weight": "12.33",
+      "length": "46",
+      "price": null,
+      "status": "available"
     }
   ]
 }
