@@ -650,6 +650,18 @@
       "length": "19",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/6834FB1E-08B4-46F0-BA8F-AFA0152ABCA7.png"
+      ],
+      "name_ru": "Кольцо рубин",
+      "name_uk": "Обручка рубін",
+      "proba": 583,
+      "weight": "4.79",
+      "length": "18",
+      "price": null,
+      "status": "available"
     }
   ]
 }
