@@ -554,6 +554,18 @@
       "length": "3.7",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4342.jpeg"
+      ],
+      "name_ru": "Подвеска серд",
+      "name_uk": "Підвіска сердце",
+      "proba": 585,
+      "weight": "1.94",
+      "length": "2",
+      "price": null,
+      "status": "available"
     }
   ]
 }
