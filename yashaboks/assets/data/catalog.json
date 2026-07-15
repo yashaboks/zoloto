@@ -626,6 +626,18 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4339.jpeg"
+      ],
+      "name_ru": "Сережки детские",
+      "name_uk": "Сережки дитячі",
+      "proba": 585,
+      "weight": "0.62",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
