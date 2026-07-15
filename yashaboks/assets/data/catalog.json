@@ -662,6 +662,18 @@
       "length": "18",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4357.jpeg"
+      ],
+      "name_ru": "Кольцо жук",
+      "name_uk": "Обручка жук",
+      "proba": 583,
+      "weight": "5.96",
+      "length": "20.5",
+      "price": null,
+      "status": "available"
     }
   ]
 }
