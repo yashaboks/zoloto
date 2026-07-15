@@ -542,6 +542,18 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4343.jpeg"
+      ],
+      "name_ru": "Ладанка",
+      "name_uk": "Ладанка",
+      "proba": 585,
+      "weight": "2.39",
+      "length": "3.7",
+      "price": null,
+      "status": "available"
     }
   ]
 }
