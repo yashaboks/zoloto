@@ -253,6 +253,54 @@
       "length": "18.5",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4359.jpeg"
+      ],
+      "name_ru": "Кольцо",
+      "name_uk": "Обручка",
+      "proba": 583,
+      "weight": "4.77",
+      "length": "17.5",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4358.jpeg"
+      ],
+      "name_ru": "Кольцо",
+      "name_uk": "Обручка",
+      "proba": 585,
+      "weight": "3.31",
+      "length": "20",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4357.jpeg"
+      ],
+      "name_ru": "Кольцо",
+      "name_uk": "Обручка",
+      "proba": 583,
+      "weight": "5.96",
+      "length": "20.5",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4356.jpeg"
+      ],
+      "name_ru": "Кольцо",
+      "name_uk": "Обручка",
+      "proba": 585,
+      "weight": "4.68",
+      "length": "19",
+      "price": null,
+      "status": "available"
     }
   ]
 }
