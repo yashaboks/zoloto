@@ -361,6 +361,18 @@
       "length": "22",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4337.jpeg"
+      ],
+      "name_ru": "Кольцо",
+      "name_uk": "Обручка",
+      "proba": 585,
+      "weight": "1.09",
+      "length": "16",
+      "price": null,
+      "status": "available"
     }
   ]
 }
