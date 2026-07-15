@@ -686,6 +686,18 @@
       "length": "20",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4356.jpeg"
+      ],
+      "name_ru": "Кольцо круг",
+      "name_uk": "Обручка круг",
+      "proba": 585,
+      "weight": "4.69",
+      "length": "19",
+      "price": null,
+      "status": "available"
     }
   ]
 }
