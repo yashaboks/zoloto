@@ -578,6 +578,18 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4332.jpeg"
+      ],
+      "name_ru": "Сережки ракуш",
+      "name_uk": "Сережки ракуш",
+      "proba": 585,
+      "weight": "3.12",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
