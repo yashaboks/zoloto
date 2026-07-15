@@ -138,18 +138,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_3914.jpeg"
-      ],
-      "name_ru": "Подвеска",
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "1",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_3887.jpeg"
       ],
       "name_ru": "Перстень",
