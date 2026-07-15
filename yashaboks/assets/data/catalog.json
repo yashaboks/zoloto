@@ -590,6 +590,18 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4333.jpeg"
+      ],
+      "name_ru": "Сережки капля",
+      "name_uk": "Сережки капля",
+      "proba": 585,
+      "weight": "3",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
