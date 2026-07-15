@@ -494,6 +494,42 @@
       "length": "1.7",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4339.jpeg"
+      ],
+      "name_ru": "Сережки",
+      "name_uk": "Сережки",
+      "proba": 585,
+      "weight": "0.64",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4338.jpeg"
+      ],
+      "name_ru": "Сережки",
+      "name_uk": "Сережки",
+      "proba": 585,
+      "weight": "3.44",
+      "length": "8",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4336.jpeg"
+      ],
+      "name_ru": "Сережки",
+      "name_uk": "Сережки",
+      "proba": 585,
+      "weight": "2.7",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
