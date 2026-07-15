@@ -518,6 +518,18 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4331.jpeg"
+      ],
+      "name_ru": "Сережки",
+      "name_uk": "Сережки",
+      "proba": 585,
+      "weight": "4.6",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
