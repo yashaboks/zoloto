@@ -674,6 +674,18 @@
       "length": "20.5",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4358.jpeg"
+      ],
+      "name_ru": "Кольцо лист",
+      "name_uk": "Обручка ліст",
+      "proba": 585,
+      "weight": "3.3",
+      "length": "20",
+      "price": null,
+      "status": "available"
     }
   ]
 }
