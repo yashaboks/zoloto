@@ -9,7 +9,7 @@
   "use strict";
 
   var LANG_KEY = "yashaboks.lang";
-  var SUPPORTED = ["uk", "ru"];
+  var SUPPORTED = ["uk"];
   var DEFAULT_LANG = "uk";
 
   /* ---------- tiny helpers ---------- */

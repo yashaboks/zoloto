@@ -57,24 +57,24 @@ const TRUST = [
 
 /* what I buy — chips */
 const BUY = [
-  { uk: "Ланцюжки", ru: "Цепочки" },
-  { uk: "Каблучки", ru: "Кольца" },
-  { uk: "Сережки", ru: "Серьги" },
-  { uk: "Браслети", ru: "Браслеты" },
-  { uk: "Кулони та підвіски", ru: "Кулоны и подвески" },
-  { uk: "Монети", ru: "Монеты" },
-  { uk: "Зубне золото", ru: "Зубное золото" },
-  { uk: "Брухт і злам", ru: "Лом и обломки" },
-  { uk: "Антикваріат", ru: "Антиквариат" },
-  { uk: "Вироби з камінням", ru: "Изделия с камнями" }
+  { uk: "Ланцюжки" },
+  { uk: "Каблучки" },
+  { uk: "Сережки" },
+  { uk: "Браслети" },
+  { uk: "Кулони та підвіски" },
+  { uk: "Монети" },
+  { uk: "Зубне золото" },
+  { uk: "Брухт і злам" },
+  { uk: "Антикваріат" },
+  { uk: "Вироби з камінням" }
 ];
 
 /* showcase — demo items. Replace with real ones + add photo paths. */
 const CATALOG = [
-  { type: "chain",    name: { uk: "Ланцюжок «Бісмарк»", ru: "Цепочка «Бисмарк»" }, proba: 585, weight: 11.8, price: 26900, status: "available" },
-  { type: "ring",     name: { uk: "Каблучка з фіанітами", ru: "Кольцо с фианитами" }, proba: 585, weight: 3.4, price: 7200, status: "available" },
-  { type: "earrings", name: { uk: "Сережки «Конго»", ru: "Серьги «Конго»" }, proba: 750, weight: 4.1, price: 13500, status: "available" },
-  { type: "bracelet", name: { uk: "Браслет плетений", ru: "Браслет плетёный" }, proba: 585, weight: 7.6, price: 16800, status: "sold" },
-  { type: "pendant",  name: { uk: "Кулон «Ікона»", ru: "Кулон «Икона»" }, proba: 585, weight: 2.2, price: 4900, status: "available" },
-  { type: "coin",     name: { uk: "Монета «Дукат»", ru: "Монета «Дукат»" }, proba: 986, weight: 3.49, price: null, status: "available" }
+  { type: "chain",    name: { uk: "Ланцюжок «Бісмарк»" }, proba: 585, weight: 11.8, price: 26900, status: "available" },
+  { type: "ring",     name: { uk: "Каблучка з фіанітами" }, proba: 585, weight: 3.4, price: 7200, status: "available" },
+  { type: "earrings", name: { uk: "Сережки «Конго»" }, proba: 750, weight: 4.1, price: 13500, status: "available" },
+  { type: "bracelet", name: { uk: "Браслет плетений" }, proba: 585, weight: 7.6, price: 16800, status: "sold" },
+  { type: "pendant",  name: { uk: "Кулон «Ікона»" }, proba: 585, weight: 2.2, price: 4900, status: "available" },
+  { type: "coin",     name: { uk: "Монета «Дукат»" }, proba: 986, weight: 3.49, price: null, status: "available" }
 ];
