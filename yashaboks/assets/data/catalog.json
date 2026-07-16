@@ -2,19 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_3859.jpeg",
-        "/assets/img/ВЫБОР_IMG_3859_webp_2000_q94.webp"
-      ],
-      "name_ru": "Цепочка",
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "170",
-      "length": "68",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_3867.jpeg",
         "/assets/img/IMG_3868.jpeg"
       ],
