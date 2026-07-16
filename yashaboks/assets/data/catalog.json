@@ -686,6 +686,18 @@
       "length": "19",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/C9C45D5A-61E9-42E6-A6A5-8EA7509F60D2.png"
+      ],
+      "name_ru": "Сережки",
+      "name_uk": "Сережки",
+      "proba": 585,
+      "weight": "8",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
