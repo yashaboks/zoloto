@@ -64,18 +64,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4376.jpeg"
-      ],
-      "name_uk": "Шнурок",
-      "proba": 585,
-      "weight": "1.5",
-      "length": "50",
-      "price": null,
-      "status": "available",
-      "name_ru": "Шнурок"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4375.jpeg"
       ],
       "name_uk": "Ложка срібло",
@@ -244,18 +232,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4359.jpeg"
-      ],
-      "name_uk": "Обручка",
-      "proba": 583,
-      "weight": "4.77",
-      "length": "17.5",
-      "price": null,
-      "status": "available",
-      "name_ru": "Кольцо"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4358.jpeg"
       ],
       "name_uk": "Обручка",
@@ -292,18 +268,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4355.jpeg"
-      ],
-      "name_uk": "Обручка",
-      "proba": 583,
-      "weight": "5.86",
-      "length": "19",
-      "price": null,
-      "status": "available",
-      "name_ru": "Кольцо"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4354.jpeg"
       ],
       "name_uk": "Перстень",
@@ -322,18 +286,6 @@
       "proba": 585,
       "weight": "10.57",
       "length": "21",
-      "price": null,
-      "status": "available",
-      "name_ru": "Печатка"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4352.jpeg"
-      ],
-      "name_uk": "Перстень",
-      "proba": 583,
-      "weight": "10.67",
-      "length": "22",
       "price": null,
       "status": "available",
       "name_ru": "Печатка"
@@ -422,18 +374,6 @@
       "price": null,
       "status": "available",
       "name_ru": "Ладанка"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4347.jpeg"
-      ],
-      "name_uk": "Сережки",
-      "proba": 583,
-      "weight": "1.69",
-      "length": "1.5",
-      "price": null,
-      "status": "available",
-      "name_ru": "Сережки"
     },
     {
       "photos": [
@@ -557,18 +497,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4327.jpeg"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "38.67",
-      "length": "64",
-      "price": null,
-      "status": "available",
-      "name_ru": "Цепочка"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4326.jpeg"
       ],
       "name_uk": "Ланцюг",
@@ -614,18 +542,6 @@
       "price": null,
       "status": "available",
       "name_ru": "Цепочка"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4321.jpeg"
-      ],
-      "name_uk": "Браслет",
-      "proba": 585,
-      "weight": "10.19",
-      "length": "19",
-      "price": null,
-      "status": "available",
-      "name_ru": "Браслет"
     },
     {
       "photos": [
