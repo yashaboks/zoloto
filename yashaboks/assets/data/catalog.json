@@ -685,6 +685,17 @@
       "length": "16",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/B9C6DF60-00D8-46EE-87BC-FFF277AF46CA.png"
+      ],
+      "name_uk": "Підвіска",
+      "proba": 585,
+      "weight": "0,52",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
