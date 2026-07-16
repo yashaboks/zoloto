@@ -5,673 +5,684 @@
         "/assets/img/IMG_3867.jpeg",
         "/assets/img/IMG_3868.jpeg"
       ],
-      "name_ru": "Монета",
       "name_uk": "Монета",
       "proba": 900,
       "weight": "8.6",
       "length": "",
       "price": 77000,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Монета"
     },
     {
       "photos": [
         "/assets/img/IMG_3871.jpeg",
         "/assets/img/IMG_3872.jpeg"
       ],
-      "name_ru": "Часы",
       "name_uk": "Годинник",
       "proba": 750,
       "weight": "55",
       "length": "19",
       "price": 270000,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Часы"
     },
     {
       "photos": [
         "/assets/img/IMG_3884.jpeg"
       ],
-      "name_ru": "Часы",
       "name_uk": "Годинник",
       "proba": 585,
       "weight": "21.52",
       "length": "18",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Часы"
     },
     {
       "photos": [
         "/assets/img/IMG_3903.jpeg"
       ],
-      "name_ru": "Монеты",
       "name_uk": "Монети",
       "proba": 900,
       "weight": "31.1",
       "length": "",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Монеты"
     },
     {
       "photos": [
         "/assets/img/IMG_3915.jpeg"
       ],
-      "name_ru": "Цепочка",
       "name_uk": "Ланцюг",
       "proba": 585,
       "weight": "334",
       "length": "65",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Цепочка"
     },
     {
       "photos": [
         "/assets/img/IMG_4376.jpeg"
       ],
-      "name_ru": "Шнурок",
       "name_uk": "Шнурок",
       "proba": 585,
       "weight": "1.5",
       "length": "50",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Шнурок"
     },
     {
       "photos": [
         "/assets/img/IMG_4375.jpeg"
       ],
-      "name_ru": "Ложки серебро",
       "name_uk": "Ложка срібло",
       "proba": 585,
       "weight": "52,5",
       "length": "22",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Ложки серебро"
     },
     {
       "photos": [
         "/assets/img/IMG_4374.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 585,
       "weight": "1.64",
       "length": "16.5",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4373.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 583,
       "weight": "2.29",
       "length": "21",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4372.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 583,
       "weight": "5.35",
       "length": "18.5",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4371.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 585,
       "weight": "1.81",
       "length": "17.5",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4370.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 585,
       "weight": "2.82",
       "length": "19",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4369.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 750,
       "weight": "6.46",
       "length": "20",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4366.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 585,
       "weight": "3.83",
       "length": "21",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4365.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 585,
       "weight": "3.5",
       "length": "18.5",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4364.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 583,
       "weight": "3.61",
       "length": "19",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4363.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 585,
       "weight": "2.91",
       "length": "18.5",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4362.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 583,
       "weight": "4.31",
       "length": "18",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4361.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 583,
       "weight": "6.52",
       "length": "18.5",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4360.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 583,
       "weight": "5.65",
       "length": "18.5",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4359.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 583,
       "weight": "4.77",
       "length": "17.5",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4358.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 585,
       "weight": "3.31",
       "length": "20",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4357.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 583,
       "weight": "5.96",
       "length": "20.5",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4356.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 585,
       "weight": "4.68",
       "length": "19",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4355.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 583,
       "weight": "5.86",
       "length": "19",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4354.jpeg"
       ],
-      "name_ru": "Печатка",
       "name_uk": "Перстень",
       "proba": 585,
       "weight": "4.73",
       "length": "21",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Печатка"
     },
     {
       "photos": [
         "/assets/img/IMG_4353.jpeg"
       ],
-      "name_ru": "Печатка",
       "name_uk": "Перстень",
       "proba": 585,
       "weight": "10.57",
       "length": "21",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Печатка"
     },
     {
       "photos": [
         "/assets/img/IMG_4352.jpeg"
       ],
-      "name_ru": "Печатка",
       "name_uk": "Перстень",
       "proba": 583,
       "weight": "10.67",
       "length": "22",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Печатка"
     },
     {
       "photos": [
         "/assets/img/IMG_4351.jpeg"
       ],
-      "name_ru": "Печатка",
       "name_uk": "Перстень",
       "proba": 585,
       "weight": "8.5",
       "length": "22",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Печатка"
     },
     {
       "photos": [
         "/assets/img/IMG_4337.jpeg"
       ],
-      "name_ru": "Кольцо",
       "name_uk": "Обручка",
       "proba": 585,
       "weight": "1.09",
       "length": "16",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Кольцо"
     },
     {
       "photos": [
         "/assets/img/IMG_4350.jpeg"
       ],
-      "name_ru": "Подвеска",
       "name_uk": "Підвіска",
       "proba": 585,
       "weight": "0.59",
       "length": "",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Подвеска"
     },
     {
       "photos": [
         "/assets/img/IMG_4348.jpeg"
       ],
-      "name_ru": "Ладанка",
       "name_uk": "Ладанка",
       "proba": 583,
       "weight": "5.65",
       "length": "3.7",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Ладанка"
     },
     {
       "photos": [
         "/assets/img/IMG_4345.jpeg",
         "/assets/img/IMG_4344.jpeg"
       ],
-      "name_ru": "Подвеска",
       "name_uk": "Підвіска",
       "proba": 750,
       "weight": "11.37",
       "length": "5.6",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Подвеска"
     },
     {
       "photos": [
         "/assets/img/IMG_4342.jpeg"
       ],
-      "name_ru": "Подвеска",
       "name_uk": "Підвіска",
       "proba": 585,
       "weight": "1.93",
       "length": "2",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Подвеска"
     },
     {
       "photos": [
         "/assets/img/IMG_4343.jpeg"
       ],
-      "name_ru": "Ладанка",
       "name_uk": "Ладанка",
       "proba": 585,
       "weight": "2.39",
       "length": "3.7",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Ладанка"
     },
     {
       "photos": [
         "/assets/img/IMG_4347.jpeg"
       ],
-      "name_ru": "Сережки",
       "name_uk": "Сережки",
       "proba": 583,
       "weight": "1.69",
       "length": "1.5",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Сережки"
     },
     {
       "photos": [
         "/assets/img/IMG_4346.jpeg"
       ],
-      "name_ru": "Сережки",
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "1.18",
       "length": "1.7",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Сережки"
     },
     {
       "photos": [
         "/assets/img/IMG_4339.jpeg"
       ],
-      "name_ru": "Сережки",
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "0.64",
       "length": "",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Сережки"
     },
     {
       "photos": [
         "/assets/img/IMG_4336.jpeg"
       ],
-      "name_ru": "Сережки",
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "2.7",
       "length": "",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Сережки"
     },
     {
       "photos": [
         "/assets/img/IMG_4335.jpeg"
       ],
-      "name_ru": "Сережки",
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "6.04",
       "length": "",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Сережки"
     },
     {
       "photos": [
         "/assets/img/IMG_4334.jpeg"
       ],
-      "name_ru": "Набор",
       "name_uk": "Намисто",
       "proba": 585,
       "weight": "11",
       "length": "",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Набор"
     },
     {
       "photos": [
         "/assets/img/IMG_4333.jpeg"
       ],
-      "name_ru": "Сережки",
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "3",
       "length": "",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Сережки"
     },
     {
       "photos": [
         "/assets/img/IMG_4332.jpeg"
       ],
-      "name_ru": "Сережки",
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "3.13",
       "length": "",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Сережки"
     },
     {
       "photos": [
         "/assets/img/IMG_4331.jpeg"
       ],
-      "name_ru": "Сережки",
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "4.6",
       "length": "6",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Сережки"
     },
     {
       "photos": [
         "/assets/img/IMG_4329.jpeg"
       ],
-      "name_ru": "Браслет",
       "name_uk": "Браслет",
       "proba": 585,
       "weight": "3.87",
       "length": "19",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Браслет"
     },
     {
       "photos": [
         "/assets/img/IMG_4328.jpeg"
       ],
-      "name_ru": "Браслет",
       "name_uk": "Браслет",
       "proba": 585,
       "weight": "7.1",
       "length": "21",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Браслет"
     },
     {
       "photos": [
         "/assets/img/IMG_4327.jpeg"
       ],
-      "name_ru": "Цепочка",
       "name_uk": "Ланцюг",
       "proba": 585,
       "weight": "38.67",
       "length": "64",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Цепочка"
     },
     {
       "photos": [
         "/assets/img/IMG_4326.jpeg"
       ],
-      "name_ru": "Цепочка",
       "name_uk": "Ланцюг",
       "proba": 585,
       "weight": "12.33",
       "length": "46",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Цепочка"
     },
     {
       "photos": [
         "/assets/img/IMG_4325.jpeg"
       ],
-      "name_ru": "Цепочка",
       "name_uk": "Ланцюг",
       "proba": 585,
       "weight": "9.06",
       "length": "70",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Цепочка"
     },
     {
       "photos": [
         "/assets/img/IMG_4324.jpeg"
       ],
-      "name_ru": "Браслет",
       "name_uk": "Браслет",
       "proba": 585,
       "weight": "5.92",
       "length": "17",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Браслет"
     },
     {
       "photos": [
         "/assets/img/IMG_4323.jpeg"
       ],
-      "name_ru": "Цепочка",
       "name_uk": "Ланцюг",
       "proba": 585,
       "weight": "8.82",
       "length": "56",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Цепочка"
     },
     {
       "photos": [
         "/assets/img/IMG_4321.jpeg"
       ],
-      "name_ru": "Браслет",
       "name_uk": "Браслет",
       "proba": 585,
       "weight": "10.19",
       "length": "19",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Браслет"
     },
     {
       "photos": [
         "/assets/img/IMG_4320.jpeg"
       ],
-      "name_ru": "Браслет",
       "name_uk": "Браслет",
       "proba": 585,
       "weight": "14",
       "length": "19",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Браслет"
     },
     {
       "photos": [
         "/assets/img/C9C45D5A-61E9-42E6-A6A5-8EA7509F60D2.png"
       ],
-      "name_ru": "Сережки",
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "8",
       "length": "",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Сережки"
     },
     {
       "photos": [
         "/assets/img/6B4E13CC-8744-4421-A63B-2CEBFECEC51C.png"
       ],
-      "name_ru": "Цепочка",
       "name_uk": "Ланцюг",
       "proba": 585,
       "weight": "14.8",
       "length": "50",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Цепочка"
     },
     {
       "photos": [
         "/assets/img/8D7BF045-CE2C-4B6E-B90D-A579F75FF62A.png"
       ],
-      "name_ru": "Крест",
       "name_uk": "Хрест",
       "proba": 585,
       "weight": "1.51",
       "length": "",
+      "price": null,
+      "status": "available",
+      "name_ru": "Крест"
+    },
+    {
+      "photos": [
+        "/assets/img/21291840-30C9-470C-833C-0DA9A92D604D.png"
+      ],
+      "name_uk": "Обручка",
+      "proba": 585,
+      "weight": "1.28",
+      "length": "16",
       "price": null,
       "status": "available"
     }
