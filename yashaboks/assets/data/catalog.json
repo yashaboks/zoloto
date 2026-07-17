@@ -651,6 +651,17 @@
       "length": "55",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4618.jpeg"
+      ],
+      "name_uk": "Монета 10",
+      "proba": 900,
+      "weight": "8.6",
+      "length": "55",
+      "price": null,
+      "status": "available"
     }
   ]
 }
