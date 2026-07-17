@@ -618,6 +618,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4616.jpeg"
+      ],
+      "name_uk": "Ладонка діамант",
+      "proba": 585,
+      "weight": "14.92",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
