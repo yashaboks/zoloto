@@ -596,6 +596,17 @@
       "length": "5",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4614.jpeg"
+      ],
+      "name_uk": "Сережки мама",
+      "proba": 583,
+      "weight": "2.13",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
