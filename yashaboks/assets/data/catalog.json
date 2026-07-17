@@ -673,6 +673,17 @@
       "length": "17",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4630.jpeg"
+      ],
+      "name_uk": "Монета срібло",
+      "proba": 9999,
+      "weight": "31.1",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
