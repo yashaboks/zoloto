@@ -662,6 +662,17 @@
       "length": "55",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4625.jpeg"
+      ],
+      "name_uk": "Обручка діамант 0,52",
+      "proba": 900,
+      "weight": "2.54",
+      "length": "17",
+      "price": null,
+      "status": "available"
     }
   ]
 }
