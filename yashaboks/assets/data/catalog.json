@@ -585,6 +585,17 @@
       "length": "20",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4613.jpeg"
+      ],
+      "name_uk": "Сережки круг",
+      "proba": 750,
+      "weight": "4.82",
+      "length": "5",
+      "price": null,
+      "status": "available"
     }
   ]
 }
