@@ -607,6 +607,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4615.jpeg"
+      ],
+      "name_uk": "Ладонка",
+      "proba": 585,
+      "weight": "2.68",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
