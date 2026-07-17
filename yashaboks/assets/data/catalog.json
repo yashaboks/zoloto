@@ -684,6 +684,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4554.jpeg"
+      ],
+      "name_uk": "Ланцюг єгипіт",
+      "proba": 585,
+      "weight": "93.91",
+      "length": "62",
+      "price": null,
+      "status": "available"
     }
   ]
 }
