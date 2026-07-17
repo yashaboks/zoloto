@@ -475,6 +475,17 @@
       "length": "54",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4606.jpeg"
+      ],
+      "name_uk": "Обручка 18",
+      "proba": 585,
+      "weight": "4.31",
+      "length": "18",
+      "price": null,
+      "status": "available"
     }
   ]
 }
