@@ -519,6 +519,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4610.jpeg"
+      ],
+      "name_uk": "Сережки камня",
+      "proba": 585,
+      "weight": "6.67",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
