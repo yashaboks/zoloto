@@ -442,6 +442,17 @@
       "length": "21",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4603.jpeg"
+      ],
+      "name_uk": "Ланцюг бороко",
+      "proba": 583,
+      "weight": "28.47",
+      "length": "59",
+      "price": null,
+      "status": "available"
     }
   ]
 }
