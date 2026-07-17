@@ -530,6 +530,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4347.jpeg"
+      ],
+      "name_uk": "Сережки крила",
+      "proba": 585,
+      "weight": "1,68",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
