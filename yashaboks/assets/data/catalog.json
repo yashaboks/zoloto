@@ -563,6 +563,17 @@
       "length": "18",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4366.jpeg"
+      ],
+      "name_uk": "Обручалка",
+      "proba": 585,
+      "weight": "1.82",
+      "length": "17",
+      "price": null,
+      "status": "available"
     }
   ]
 }
