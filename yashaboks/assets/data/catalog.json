@@ -497,6 +497,17 @@
       "length": "19",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4607.jpeg"
+      ],
+      "name_uk": "Обручка куб",
+      "proba": 585,
+      "weight": "3.47",
+      "length": "18.5",
+      "price": null,
+      "status": "available"
     }
   ]
 }
