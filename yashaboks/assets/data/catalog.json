@@ -574,6 +574,17 @@
       "length": "17",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4355.jpeg"
+      ],
+      "name_uk": "Обручка камінь",
+      "proba": 583,
+      "weight": "5.88",
+      "length": "20",
+      "price": null,
+      "status": "available"
     }
   ]
 }
