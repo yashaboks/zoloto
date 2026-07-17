@@ -629,6 +629,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4354.jpeg"
+      ],
+      "name_uk": "Печатка діамант",
+      "proba": 585,
+      "weight": "4.74",
+      "length": "21",
+      "price": null,
+      "status": "available"
     }
   ]
 }
