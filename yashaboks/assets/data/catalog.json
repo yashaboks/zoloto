@@ -717,6 +717,17 @@
       "length": "17",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4709.jpeg"
+      ],
+      "name_uk": "Обручка венок м",
+      "proba": 583,
+      "weight": "4.36",
+      "length": "17",
+      "price": null,
+      "status": "available"
     }
   ]
 }
