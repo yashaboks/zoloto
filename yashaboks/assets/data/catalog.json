@@ -467,17 +467,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4605.jpeg"
-      ],
-      "name_uk": "Ланцюг жіноч",
-      "proba": 585,
-      "weight": "6.77",
-      "length": "54",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4606.jpeg"
       ],
       "name_uk": "Обручка 18",
@@ -610,17 +599,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4615.jpeg"
-      ],
-      "name_uk": "Ладонка",
-      "proba": 585,
-      "weight": "2.68",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4616.jpeg"
       ],
       "name_uk": "Ладонка діамант",
@@ -726,17 +704,6 @@
       "proba": 583,
       "weight": "4.36",
       "length": "17",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4710.jpeg"
-      ],
-      "name_uk": "Хрест синій",
-      "proba": 585,
-      "weight": "7",
-      "length": "5",
       "price": null,
       "status": "available"
     },
