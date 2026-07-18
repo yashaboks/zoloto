@@ -750,6 +750,17 @@
       "length": "17",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4732.jpeg"
+      ],
+      "name_uk": "Ланцюг барака",
+      "proba": 585,
+      "weight": "39",
+      "length": "60",
+      "price": null,
+      "status": "available"
     }
   ]
 }
