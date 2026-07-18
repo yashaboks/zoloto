@@ -695,6 +695,17 @@
       "length": "62",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4708.jpeg"
+      ],
+      "name_uk": "Браслет версач",
+      "proba": 585,
+      "weight": "28.7",
+      "length": "21",
+      "price": null,
+      "status": "available"
     }
   ]
 }
