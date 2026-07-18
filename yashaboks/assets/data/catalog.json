@@ -728,6 +728,17 @@
       "length": "60",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4733.jpeg"
+      ],
+      "name_uk": "Браслет",
+      "proba": 583,
+      "weight": "37.34",
+      "length": "20",
+      "price": null,
+      "status": "available"
     }
   ]
 }
