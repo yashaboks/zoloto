@@ -728,6 +728,17 @@
       "length": "17",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4710.jpeg"
+      ],
+      "name_uk": "Хрест синій",
+      "proba": 585,
+      "weight": "7",
+      "length": "5",
+      "price": null,
+      "status": "available"
     }
   ]
 }
