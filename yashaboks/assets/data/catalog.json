@@ -761,6 +761,17 @@
       "length": "17",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4850.jpeg"
+      ],
+      "name_uk": "Браслет без проб",
+      "proba": 585,
+      "weight": "13.85",
+      "length": "20",
+      "price": null,
+      "status": "available"
     }
   ]
 }
