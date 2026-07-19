@@ -783,6 +783,17 @@
       "length": "4.5",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4857.jpeg"
+      ],
+      "name_uk": "Ланцюг жіноч брак",
+      "proba": 585,
+      "weight": "8.66",
+      "length": "50",
+      "price": null,
+      "status": "available"
     }
   ]
 }
