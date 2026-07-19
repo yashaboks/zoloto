@@ -257,18 +257,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4343.jpeg"
-      ],
-      "name_uk": "Ладанка",
-      "proba": 585,
-      "weight": "2.39",
-      "length": "3.7",
-      "price": null,
-      "status": "available",
-      "name_ru": "Ладанка"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4346.jpeg"
       ],
       "name_uk": "Сережки",
@@ -408,7 +396,8 @@
       "weight": "1.28",
       "length": "16",
       "price": null,
-      "status": "available"
+      "status": "available",
+      "name_ru": "Крест"
     },
     {
       "photos": [
@@ -451,17 +440,6 @@
       "proba": 583,
       "weight": "28.47",
       "length": "59",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4602.jpeg"
-      ],
-      "name_uk": "Ланцюг бисмарк",
-      "proba": 583,
-      "weight": "37",
-      "length": "63",
       "price": null,
       "status": "available"
     },
@@ -566,17 +544,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4355.jpeg"
-      ],
-      "name_uk": "Обручка камінь",
-      "proba": 583,
-      "weight": "5.88",
-      "length": "20",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4613.jpeg"
       ],
       "name_uk": "Сережки круг",
@@ -665,45 +632,12 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4554.jpeg"
-      ],
-      "name_uk": "Ланцюг єгипіт",
-      "proba": 585,
-      "weight": "93.91",
-      "length": "62",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4708.jpeg"
       ],
       "name_uk": "Браслет версач",
       "proba": 585,
       "weight": "28.7",
       "length": "21",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4709.jpeg"
-      ],
-      "name_uk": "Обручка венок",
-      "proba": 583,
-      "weight": "4.25",
-      "length": "17",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4709.jpeg"
-      ],
-      "name_uk": "Обручка венок м",
-      "proba": 583,
-      "weight": "4.36",
-      "length": "17",
       "price": null,
       "status": "available"
     },
@@ -731,28 +665,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4733.jpeg"
-      ],
-      "name_uk": "Браслет",
-      "proba": 583,
-      "weight": "37.34",
-      "length": "20",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4734.jpeg"
-      ],
-      "name_uk": "Ланцюг якор",
-      "proba": 585,
-      "weight": "39.78",
-      "length": "56",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4735.jpeg"
       ],
       "name_uk": "Обручка сапфір",
@@ -775,12 +687,45 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4856.jpeg"
+        "/assets/img/IMG_4735.jpeg"
       ],
-      "name_uk": "Сережки круг ризка",
+      "name_uk": "Обручка сапфір",
+      "proba": 583,
+      "weight": "6.05",
+      "length": "17",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4857.jpeg"
+      ],
+      "name_uk": "Ланцюг жіноч брак",
       "proba": 585,
-      "weight": "4.23",
-      "length": "4.5",
+      "weight": "8.66",
+      "length": "50",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4858.jpeg"
+      ],
+      "name_uk": "Ланцюг жіноч",
+      "proba": 585,
+      "weight": "8.8",
+      "length": "52",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4850.jpeg"
+      ],
+      "name_uk": "Браслет без проб",
+      "proba": 585,
+      "weight": "13.85",
+      "length": "20",
       "price": null,
       "status": "available"
     },
