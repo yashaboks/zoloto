@@ -772,6 +772,17 @@
       "length": "20",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4856.jpeg"
+      ],
+      "name_uk": "Сережки круг ризка",
+      "proba": 585,
+      "weight": "4.23",
+      "length": "4.5",
+      "price": null,
+      "status": "available"
     }
   ]
 }
