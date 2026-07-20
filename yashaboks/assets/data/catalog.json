@@ -40,18 +40,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_3903.jpeg"
-      ],
-      "name_uk": "Монети",
-      "proba": 900,
-      "weight": "31.1",
-      "length": "",
-      "price": null,
-      "status": "available",
-      "name_ru": "Монеты"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4375.jpeg"
       ],
       "name_uk": "Ложка срібло",
@@ -377,18 +365,6 @@
     },
     {
       "photos": [
-        "/assets/img/8D7BF045-CE2C-4B6E-B90D-A579F75FF62A.png"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "1.51",
-      "length": "",
-      "price": null,
-      "status": "available",
-      "name_ru": "Крест"
-    },
-    {
-      "photos": [
         "/assets/img/21291840-30C9-470C-833C-0DA9A92D604D.png"
       ],
       "name_uk": "Обручка",
@@ -429,17 +405,6 @@
       "proba": 585,
       "weight": "22.27",
       "length": "21",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4603.jpeg"
-      ],
-      "name_uk": "Ланцюг бороко",
-      "proba": 583,
-      "weight": "28.47",
-      "length": "59",
       "price": null,
       "status": "available"
     },
@@ -588,28 +553,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4617.jpeg"
-      ],
-      "name_uk": "Монета 10",
-      "proba": 90,
-      "weight": "8.6",
-      "length": "55",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4618.jpeg"
-      ],
-      "name_uk": "Монета 10",
-      "proba": 900,
-      "weight": "8.6",
-      "length": "55",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4625.jpeg"
       ],
       "name_uk": "Обручка діамант 0,52",
@@ -627,17 +570,6 @@
       "proba": 9999,
       "weight": "31.1",
       "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4708.jpeg"
-      ],
-      "name_uk": "Браслет версач",
-      "proba": 585,
-      "weight": "28.7",
-      "length": "21",
       "price": null,
       "status": "available"
     },
@@ -687,17 +619,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4735.jpeg"
-      ],
-      "name_uk": "Обручка сапфір",
-      "proba": 583,
-      "weight": "6.05",
-      "length": "17",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4857.jpeg"
       ],
       "name_uk": "Ланцюг жіноч брак",
@@ -715,28 +636,6 @@
       "proba": 585,
       "weight": "8.8",
       "length": "52",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4850.jpeg"
-      ],
-      "name_uk": "Браслет без проб",
-      "proba": 585,
-      "weight": "13.85",
-      "length": "20",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4857.jpeg"
-      ],
-      "name_uk": "Ланцюг жіноч брак",
-      "proba": 585,
-      "weight": "8.66",
-      "length": "50",
       "price": null,
       "status": "available"
     },
