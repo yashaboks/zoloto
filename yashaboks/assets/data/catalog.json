@@ -704,6 +704,17 @@
       "length": "64",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4962.jpeg"
+      ],
+      "name_uk": "Ланцюг якір",
+      "proba": 583,
+      "weight": "201.6",
+      "length": "74",
+      "price": null,
+      "status": "available"
     }
   ]
 }
