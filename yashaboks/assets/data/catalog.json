@@ -671,6 +671,17 @@
       "length": "23",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4956.jpeg"
+      ],
+      "name_uk": "Браслет чоловічій якор двойн",
+      "proba": 583,
+      "weight": "39.6",
+      "length": "26",
+      "price": null,
+      "status": "available"
     }
   ]
 }
