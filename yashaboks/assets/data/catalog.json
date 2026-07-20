@@ -715,6 +715,17 @@
       "length": "74",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4963.jpeg"
+      ],
+      "name_uk": "Браслет чоловіч плитка",
+      "proba": 585,
+      "weight": "38.07",
+      "length": "23",
+      "price": null,
+      "status": "available"
     }
   ]
 }
