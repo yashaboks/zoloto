@@ -660,6 +660,17 @@
       "length": "48",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4939.jpeg"
+      ],
+      "name_uk": "Годинник Ролекс 41",
+      "proba": 750,
+      "weight": "1",
+      "length": "23",
+      "price": null,
+      "status": "available"
     }
   ]
 }
