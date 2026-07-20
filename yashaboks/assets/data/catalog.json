@@ -693,6 +693,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4961.jpeg"
+      ],
+      "name_uk": "Ланцюг Бисмарк чоловіч",
+      "proba": 583,
+      "weight": "94.55",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
