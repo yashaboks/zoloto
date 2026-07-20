@@ -649,6 +649,17 @@
       "length": "48",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4953.jpeg"
+      ],
+      "name_uk": "Ланцюг бисмарк",
+      "proba": 585,
+      "weight": "4.46",
+      "length": "48",
+      "price": null,
+      "status": "available"
     }
   ]
 }
