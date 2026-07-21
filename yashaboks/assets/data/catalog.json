@@ -749,6 +749,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5095.jpeg"
+      ],
+      "name_uk": "Ланцюг унісекс",
+      "proba": 585,
+      "weight": "11.13",
+      "length": "60",
+      "price": null,
+      "status": "available"
     }
   ]
 }
