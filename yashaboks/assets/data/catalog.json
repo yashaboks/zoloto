@@ -760,6 +760,17 @@
       "length": "60",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5097.jpeg"
+      ],
+      "name_uk": "Печатка чоловіч брак",
+      "proba": 585,
+      "weight": "2.31",
+      "length": "18",
+      "price": null,
+      "status": "available"
     }
   ]
 }
