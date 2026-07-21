@@ -737,6 +737,18 @@
       "length": "28",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5094.jpeg",
+        "/assets/img/IMG_5093.jpeg"
+      ],
+      "name_uk": "Монета червінець Миколай",
+      "proba": 900,
+      "weight": "8.6",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
