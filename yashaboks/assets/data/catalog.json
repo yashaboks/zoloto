@@ -726,6 +726,17 @@
       "length": "23",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5092.jpeg"
+      ],
+      "name_uk": "Браслет чоловіч коса",
+      "proba": 585,
+      "weight": "60.25",
+      "length": "28",
+      "price": null,
+      "status": "available"
     }
   ]
 }
