@@ -2,19 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_3867.jpeg",
-        "/assets/img/IMG_3868.jpeg"
-      ],
-      "name_uk": "Монета",
-      "proba": 900,
-      "weight": "8.6",
-      "length": "",
-      "price": 77000,
-      "status": "available",
-      "name_ru": "Монета"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_3871.jpeg",
         "/assets/img/IMG_3872.jpeg"
       ],
@@ -498,17 +485,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4366.jpeg"
-      ],
-      "name_uk": "Обручалка",
-      "proba": 585,
-      "weight": "1.82",
-      "length": "17",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4613.jpeg"
       ],
       "name_uk": "Сережки круг",
@@ -553,17 +529,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4625.jpeg"
-      ],
-      "name_uk": "Обручка діамант 0,52",
-      "proba": 900,
-      "weight": "2.54",
-      "length": "17",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4630.jpeg"
       ],
       "name_uk": "Монета срібло",
@@ -586,17 +551,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4732.jpeg"
-      ],
-      "name_uk": "Ланцюг барака",
-      "proba": 585,
-      "weight": "39",
-      "length": "60",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4735.jpeg"
       ],
       "name_uk": "Обручка сапфір",
@@ -614,17 +568,6 @@
       "proba": 585,
       "weight": "13.85",
       "length": "20",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4857.jpeg"
-      ],
-      "name_uk": "Ланцюг жіноч брак",
-      "proba": 585,
-      "weight": "8.66",
-      "length": "50",
       "price": null,
       "status": "available"
     },
@@ -680,17 +623,6 @@
       "proba": 583,
       "weight": "39.6",
       "length": "26",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4960.jpeg"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "8.21",
-      "length": "",
       "price": null,
       "status": "available"
     },
