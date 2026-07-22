@@ -769,6 +769,17 @@
       "length": "19",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5205.jpeg"
+      ],
+      "name_uk": "Обручка аист",
+      "proba": 585,
+      "weight": "1.82",
+      "length": "18.5",
+      "price": null,
+      "status": "available"
     }
   ]
 }
