@@ -758,6 +758,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5204.jpeg"
+      ],
+      "name_uk": "Обрука с камнем",
+      "proba": 585,
+      "weight": "3.48",
+      "length": "19",
+      "price": null,
+      "status": "available"
     }
   ]
 }
