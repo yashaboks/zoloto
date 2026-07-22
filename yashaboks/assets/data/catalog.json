@@ -714,6 +714,17 @@
       "length": "20.5",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5198.jpeg"
+      ],
+      "name_uk": "Підвіска серце ♥️",
+      "proba": 585,
+      "weight": "3",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
