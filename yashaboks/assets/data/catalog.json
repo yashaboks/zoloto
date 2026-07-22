@@ -725,6 +725,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5199.jpeg"
+      ],
+      "name_uk": "Сережки дитячі рожеві",
+      "proba": 585,
+      "weight": "1.9",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
