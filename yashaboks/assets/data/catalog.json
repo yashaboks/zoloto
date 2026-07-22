@@ -780,6 +780,17 @@
       "length": "18.5",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5207.jpeg"
+      ],
+      "name_uk": "Обручка тіпа Брюлик",
+      "proba": 585,
+      "weight": "2.43",
+      "length": "17.5",
+      "price": null,
+      "status": "available"
     }
   ]
 }
