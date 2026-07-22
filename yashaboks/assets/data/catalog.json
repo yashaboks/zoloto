@@ -736,6 +736,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5200.jpeg"
+      ],
+      "name_uk": "Браслет жіночій",
+      "proba": 585,
+      "weight": "5.92",
+      "length": "19.5",
+      "price": null,
+      "status": "available"
     }
   ]
 }
