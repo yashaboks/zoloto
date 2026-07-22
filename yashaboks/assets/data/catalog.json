@@ -703,6 +703,17 @@
       "length": "18",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4707.jpeg"
+      ],
+      "name_uk": "Браслет версачі",
+      "proba": 585,
+      "weight": "28.68",
+      "length": "20.5",
+      "price": null,
+      "status": "available"
     }
   ]
 }
