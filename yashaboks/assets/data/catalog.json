@@ -723,6 +723,17 @@
       "length": "4",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5327.jpeg"
+      ],
+      "name_uk": "Ланцюг Бісмарк",
+      "proba": 585,
+      "weight": "23.17",
+      "length": "64",
+      "price": null,
+      "status": "available"
     }
   ]
 }
