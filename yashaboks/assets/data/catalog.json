@@ -734,6 +734,17 @@
       "length": "64",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5328.jpeg"
+      ],
+      "name_uk": "Ланцюг удав жіноч",
+      "proba": 585,
+      "weight": "19.56",
+      "length": "45",
+      "price": null,
+      "status": "available"
     }
   ]
 }
