@@ -582,17 +582,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4962.jpeg"
-      ],
-      "name_uk": "Ланцюг якір",
-      "proba": 583,
-      "weight": "201.6",
-      "length": "74",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_5092.jpeg"
       ],
       "name_uk": "Браслет чоловіч коса",
@@ -611,17 +600,6 @@
       "proba": 900,
       "weight": "8.6",
       "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5097.jpeg"
-      ],
-      "name_uk": "Печатка чоловіч брак",
-      "proba": 585,
-      "weight": "2.31",
-      "length": "18",
       "price": null,
       "status": "available"
     },
@@ -666,17 +644,6 @@
       "proba": 585,
       "weight": "5.92",
       "length": "19.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5201.jpeg"
-      ],
-      "name_uk": "Сережки гвоздики",
-      "proba": 585,
-      "weight": "1.88",
-      "length": "",
       "price": null,
       "status": "available"
     },
