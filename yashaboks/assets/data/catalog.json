@@ -756,6 +756,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5429.jpeg"
+      ],
+      "name_uk": "Підвіска водолій",
+      "proba": 585,
+      "weight": "2.66",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
