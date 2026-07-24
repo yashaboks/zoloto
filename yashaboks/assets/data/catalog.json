@@ -855,6 +855,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5439.jpeg"
+      ],
+      "name_uk": "Сережки ромашка",
+      "proba": 585,
+      "weight": "3.55",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
