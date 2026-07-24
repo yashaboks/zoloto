@@ -866,6 +866,18 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5441.jpeg",
+        "/assets/img/IMG_5440.jpeg"
+      ],
+      "name_uk": "Монета Микола 10",
+      "proba": 900,
+      "weight": "8.6",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
