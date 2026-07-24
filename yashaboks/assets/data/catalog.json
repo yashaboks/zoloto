@@ -800,6 +800,17 @@
       "length": "50",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5433.jpeg"
+      ],
+      "name_uk": "Ланцюг",
+      "proba": 585,
+      "weight": "1.73",
+      "length": "54",
+      "price": null,
+      "status": "available"
     }
   ]
 }
