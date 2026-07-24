@@ -256,18 +256,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4332.jpeg"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "3.13",
-      "length": "",
-      "price": null,
-      "status": "available",
-      "name_ru": "Сережки"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4331.jpeg"
       ],
       "name_uk": "Сережки",
@@ -325,18 +313,6 @@
       "price": null,
       "status": "available",
       "name_ru": "Сережки"
-    },
-    {
-      "photos": [
-        "/assets/img/21291840-30C9-470C-833C-0DA9A92D604D.png"
-      ],
-      "name_uk": "Обручка",
-      "proba": 585,
-      "weight": "1.28",
-      "length": "16",
-      "price": null,
-      "status": "available",
-      "name_ru": "Крест"
     },
     {
       "photos": [
@@ -616,34 +592,12 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5198.jpeg"
-      ],
-      "name_uk": "Підвіска серце ♥️",
-      "proba": 585,
-      "weight": "3",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_5199.jpeg"
       ],
       "name_uk": "Сережки дитячі рожеві",
       "proba": 585,
       "weight": "1.9",
       "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5200.jpeg"
-      ],
-      "name_uk": "Браслет жіночій",
-      "proba": 585,
-      "weight": "5.92",
-      "length": "19.5",
       "price": null,
       "status": "available"
     },
@@ -666,39 +620,6 @@
       "proba": 585,
       "weight": "1.82",
       "length": "18.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5207.jpeg"
-      ],
-      "name_uk": "Обручка тіпа Брюлик",
-      "proba": 585,
-      "weight": "2.43",
-      "length": "17.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5326.jpeg"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "5.4",
-      "length": "4",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5327.jpeg"
-      ],
-      "name_uk": "Ланцюг Бісмарк",
-      "proba": 585,
-      "weight": "23.17",
-      "length": "64",
       "price": null,
       "status": "available"
     },
