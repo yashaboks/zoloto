@@ -844,6 +844,17 @@
       "length": "3.5",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5438.jpeg"
+      ],
+      "name_uk": "Сережки дитячі камні",
+      "proba": 585,
+      "weight": "1.8",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
