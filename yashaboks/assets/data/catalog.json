@@ -745,6 +745,17 @@
       "length": "40",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5428.jpeg"
+      ],
+      "name_uk": "Підвіска  баба",
+      "proba": 585,
+      "weight": "4.82",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
