@@ -789,6 +789,17 @@
       "length": "44",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5432.jpeg"
+      ],
+      "name_uk": "Ланцюг з підвіскою",
+      "proba": 585,
+      "weight": "4.37",
+      "length": "50",
+      "price": null,
+      "status": "available"
     }
   ]
 }
