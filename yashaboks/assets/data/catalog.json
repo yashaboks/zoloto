@@ -723,6 +723,17 @@
       "length": "52",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5425.jpeg"
+      ],
+      "name_uk": "Хрест білий",
+      "proba": 585,
+      "weight": "0.48",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
