@@ -778,6 +778,17 @@
       "length": "19.5",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5431.jpeg"
+      ],
+      "name_uk": "Ланцюг жіноч",
+      "proba": 585,
+      "weight": "3.76",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
