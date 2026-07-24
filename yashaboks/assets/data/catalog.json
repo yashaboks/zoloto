@@ -822,6 +822,17 @@
       "length": "20",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5435.jpeg"
+      ],
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "5",
+      "length": "18",
+      "price": null,
+      "status": "available"
     }
   ]
 }
