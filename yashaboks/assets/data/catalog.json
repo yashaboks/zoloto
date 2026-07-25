@@ -75,18 +75,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4366.jpeg"
-      ],
-      "name_uk": "Обручка",
-      "proba": 585,
-      "weight": "3.83",
-      "length": "21",
-      "price": null,
-      "status": "available",
-      "name_ru": "Кольцо"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4365.jpeg"
       ],
       "name_uk": "Обручка",
@@ -268,7 +256,7 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4329.jpeg"
+        "/assets/img/IMG_5530.jpeg"
       ],
       "name_uk": "Браслет",
       "proba": 585,
