@@ -833,6 +833,17 @@
       "length": "17",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5515.jpeg"
+      ],
+      "name_uk": "Ланцюг малий",
+      "proba": 585,
+      "weight": "1.72",
+      "length": "52",
+      "price": null,
+      "status": "available"
     }
   ]
 }
