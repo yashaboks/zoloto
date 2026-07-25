@@ -381,17 +381,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4611.jpeg"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "5.59",
-      "length": "50",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4612.jpeg"
       ],
       "name_uk": "Обручка",
@@ -463,17 +452,6 @@
       "name_uk": "Годинник жіночій вага 20 чист 16",
       "proba": 583,
       "weight": "16",
-      "length": "17",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4735.jpeg"
-      ],
-      "name_uk": "Обручка сапфір",
-      "proba": 583,
-      "weight": "6.05",
       "length": "17",
       "price": null,
       "status": "available"
@@ -558,39 +536,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4707.jpeg"
-      ],
-      "name_uk": "Браслет версачі",
-      "proba": 585,
-      "weight": "28.68",
-      "length": "20.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5199.jpeg"
-      ],
-      "name_uk": "Сережки дитячі рожеві",
-      "proba": 585,
-      "weight": "1.9",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5204.jpeg"
-      ],
-      "name_uk": "Обрука с камнем",
-      "proba": 585,
-      "weight": "3.48",
-      "length": "19",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_5205.jpeg"
       ],
       "name_uk": "Обручка аист",
@@ -602,23 +547,13 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5328.jpeg"
+        "/assets/img/IMG_5328.jpeg",
+        "/assets/img/IMG_5093.jpeg"
       ],
       "name_uk": "Ланцюг удав жіноч",
       "proba": 585,
       "weight": "19.56",
       "length": "45",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5424.jpeg"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "11.1",
-      "length": "52",
       "price": null,
       "status": "available"
     },
@@ -696,17 +631,6 @@
       "proba": 585,
       "weight": "2.2",
       "length": "20",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5435.jpeg"
-      ],
-      "name_uk": "Браслет",
-      "proba": 585,
-      "weight": "5",
-      "length": "18",
       "price": null,
       "status": "available"
     },
@@ -796,6 +720,85 @@
       "proba": 585,
       "weight": "6.85",
       "length": "4",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5526.jpeg"
+      ],
+      "name_uk": "Підвіска слон",
+      "proba": 585,
+      "weight": "1.83",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5527.jpeg"
+      ],
+      "name_uk": "Каблучка фронті",
+      "proba": 583,
+      "weight": "4.68",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5528.jpeg",
+        "/assets/img/IMG_5440.jpeg"
+      ],
+      "name_uk": "Ланцюг Бисмарк унісекс без проби",
+      "proba": 585,
+      "weight": "14.9",
+      "length": "48",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5529.jpeg"
+      ],
+      "name_uk": "Хрест",
+      "proba": 585,
+      "weight": "3.5",
+      "length": "4",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5509.jpeg",
+        "/assets/img/IMG_5511.jpeg"
+      ],
+      "name_uk": "Злиток",
+      "proba": 9999,
+      "weight": "2.5",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5533.jpeg"
+      ],
+      "name_uk": "Браслет на лом брак",
+      "proba": 585,
+      "weight": "8.5",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5534.jpeg"
+      ],
+      "name_uk": "Підвіска зайчиня",
+      "proba": 585,
+      "weight": "1.15",
+      "length": "",
       "price": null,
       "status": "available"
     },
