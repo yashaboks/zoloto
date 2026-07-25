@@ -822,6 +822,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5514.jpeg"
+      ],
+      "name_uk": "Каблучка діамант",
+      "proba": 583,
+      "weight": "2",
+      "length": "17",
+      "price": null,
+      "status": "available"
     }
   ]
 }
