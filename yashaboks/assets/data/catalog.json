@@ -855,6 +855,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5517.jpeg"
+      ],
+      "name_uk": "Сережки гвоздик",
+      "proba": 585,
+      "weight": "1.63",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
