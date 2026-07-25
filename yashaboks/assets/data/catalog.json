@@ -899,6 +899,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5528.jpeg"
+      ],
+      "name_uk": "Ланцюг Бисмарк унісекс без проби",
+      "proba": 585,
+      "weight": "14.9",
+      "length": "48",
+      "price": null,
+      "status": "available"
     }
   ]
 }
