@@ -810,6 +810,18 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5509.jpeg",
+        "/assets/img/IMG_5511.jpeg"
+      ],
+      "name_uk": "Злиток",
+      "proba": 9999,
+      "weight": "2.5",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
