@@ -854,6 +854,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5533.jpeg"
+      ],
+      "name_uk": "Браслет на лом брак",
+      "proba": 585,
+      "weight": "8.5",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
