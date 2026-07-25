@@ -844,6 +844,17 @@
       "length": "52",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5516.jpeg"
+      ],
+      "name_uk": "Сережки гвоздик мрія",
+      "proba": 585,
+      "weight": "1.67",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
