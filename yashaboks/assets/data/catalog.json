@@ -866,6 +866,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5525.jpeg"
+      ],
+      "name_uk": "Підвіска икона",
+      "proba": 585,
+      "weight": "6.85",
+      "length": "4",
+      "price": null,
+      "status": "available"
     }
   ]
 }
