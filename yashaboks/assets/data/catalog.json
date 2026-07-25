@@ -799,6 +799,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5508.jpeg"
+      ],
+      "name_uk": "Ложки чайні",
+      "proba": 875,
+      "weight": "30 одна",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
