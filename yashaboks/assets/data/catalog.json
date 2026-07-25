@@ -513,17 +513,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4953.jpeg"
-      ],
-      "name_uk": "Ланцюг бисмарк",
-      "proba": 585,
-      "weight": "4.46",
-      "length": "48",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4939.jpeg"
       ],
       "name_uk": "Годинник Ролекс 41",
@@ -690,34 +679,12 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5431.jpeg"
+        "/assets/img/IMG_5515.jpeg"
       ],
       "name_uk": "Ланцюг жіноч",
       "proba": 585,
-      "weight": "3.76",
+      "weight": "1.78",
       "length": "44",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5432.jpeg"
-      ],
-      "name_uk": "Ланцюг з підвіскою",
-      "proba": 585,
-      "weight": "4.37",
-      "length": "50",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5433.jpeg"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "1.73",
-      "length": "54",
       "price": null,
       "status": "available"
     },
@@ -801,18 +768,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5509.jpeg",
-        "/assets/img/IMG_5511.jpeg"
-      ],
-      "name_uk": "Злиток",
-      "proba": 9999,
-      "weight": "2.5",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_5514.jpeg"
       ],
       "name_uk": "Каблучка діамант",
@@ -824,33 +779,11 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5515.jpeg"
-      ],
-      "name_uk": "Ланцюг малий",
-      "proba": 585,
-      "weight": "1.72",
-      "length": "52",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_5516.jpeg"
       ],
       "name_uk": "Сережки гвоздик мрія",
       "proba": 585,
       "weight": "1.67",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5517.jpeg"
-      ],
-      "name_uk": "Сережки гвоздик",
-      "proba": 585,
-      "weight": "1.63",
       "length": "",
       "price": null,
       "status": "available"
