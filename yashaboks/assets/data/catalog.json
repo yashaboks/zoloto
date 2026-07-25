@@ -865,6 +865,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5534.jpeg"
+      ],
+      "name_uk": "Підвіска зайчиня",
+      "proba": 585,
+      "weight": "1.15",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
