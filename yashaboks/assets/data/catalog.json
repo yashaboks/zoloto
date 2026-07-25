@@ -888,6 +888,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5527.jpeg"
+      ],
+      "name_uk": "Каблучка фронті",
+      "proba": 583,
+      "weight": "4.68",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
