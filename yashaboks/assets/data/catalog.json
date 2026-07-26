@@ -901,6 +901,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5734.webp"
+      ],
+      "name_uk": "Ланцюг с крестом",
+      "proba": 583,
+      "weight": "7.62",
+      "length": "60",
+      "price": null,
+      "status": "available"
     }
   ]
 }
