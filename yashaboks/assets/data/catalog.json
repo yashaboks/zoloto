@@ -879,17 +879,6 @@
       "length": "",
       "price": null,
       "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_254411.webp"
-      ],
-      "name_uk": "Монетка",
-      "proba": 999,
-      "weight": "8",
-      "length": "",
-      "price": null,
-      "status": "available"
     }
   ]
 }
