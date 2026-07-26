@@ -923,6 +923,17 @@
       "length": "70",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5736.webp"
+      ],
+      "name_uk": "Каблучка  каратун",
+      "proba": 583,
+      "weight": "6.51",
+      "length": "18.5",
+      "price": null,
+      "status": "available"
     }
   ]
 }
