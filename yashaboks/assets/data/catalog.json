@@ -934,6 +934,17 @@
       "length": "18.5",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5737.webp"
+      ],
+      "name_uk": "Каблучка",
+      "proba": 585,
+      "weight": "6.61",
+      "length": "19",
+      "price": null,
+      "status": "available"
     }
   ]
 }
