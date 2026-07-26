@@ -956,6 +956,17 @@
       "length": "17",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5740.webp"
+      ],
+      "name_uk": "Печатка чоловіча",
+      "proba": 585,
+      "weight": "4",
+      "length": "21",
+      "price": null,
+      "status": "available"
     }
   ]
 }
