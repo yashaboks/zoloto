@@ -945,6 +945,17 @@
       "length": "19",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5738.webp"
+      ],
+      "name_uk": "Каблучка вінтаж",
+      "proba": 583,
+      "weight": "4.35",
+      "length": "17",
+      "price": null,
+      "status": "available"
     }
   ]
 }
