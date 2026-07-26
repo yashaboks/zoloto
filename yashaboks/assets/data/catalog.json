@@ -890,6 +890,17 @@
       "length": "18",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5733.webp"
+      ],
+      "name_uk": "Підвіска ніфертіті",
+      "proba": 750,
+      "weight": "3.29",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
