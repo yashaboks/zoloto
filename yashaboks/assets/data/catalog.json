@@ -912,6 +912,17 @@
       "length": "60",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5735.webp"
+      ],
+      "name_uk": "Ланцюг жіноч карте",
+      "proba": 583,
+      "weight": "4.85",
+      "length": "70",
+      "price": null,
+      "status": "available"
     }
   ]
 }
