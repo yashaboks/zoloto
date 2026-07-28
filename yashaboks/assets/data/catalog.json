@@ -1011,6 +1011,17 @@
       "length": "3",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5838.webp"
+      ],
+      "name_uk": "Підвіска Микола чуд",
+      "proba": 585,
+      "weight": "1.6",
+      "length": "2.5",
+      "price": null,
+      "status": "available"
     }
   ]
 }
