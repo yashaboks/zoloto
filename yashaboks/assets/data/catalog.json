@@ -1009,6 +1009,17 @@
       "length": "20",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5842.webp"
+      ],
+      "name_uk": "Годиник жіноч чайка",
+      "proba": 583,
+      "weight": "4.5",
+      "length": "17",
+      "price": null,
+      "status": "available"
     }
   ]
 }
