@@ -1042,6 +1042,17 @@
       "length": "20",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5932.webp"
+      ],
+      "name_uk": "Ланцюг якор",
+      "proba": 585,
+      "weight": "14.14",
+      "length": "50",
+      "price": null,
+      "status": "available"
     }
   ]
 }
