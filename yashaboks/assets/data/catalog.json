@@ -1031,6 +1031,17 @@
       "length": "20",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5931.webp"
+      ],
+      "name_uk": "Браслет ленград",
+      "proba": 585,
+      "weight": "30.91",
+      "length": "20",
+      "price": null,
+      "status": "available"
     }
   ]
 }
