@@ -184,10 +184,9 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4342.jpeg",
-        "/assets/img/IMG_4344.jpeg"
+        "/assets/img/IMG_4342.jpeg"
       ],
-      "name_uk": "Підвіска",
+      "name_uk": "Підвіска ♥️",
       "proba": 585,
       "weight": "1.93",
       "length": "2",
@@ -415,17 +414,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4354.jpeg"
-      ],
-      "name_uk": "Печатка діамант",
-      "proba": 585,
-      "weight": "4.74",
-      "length": "21",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4714.jpeg"
       ],
       "name_uk": "Годинник жіночій вага 20 чист 16",
@@ -526,28 +514,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5425.jpeg"
-      ],
-      "name_uk": "Хрест білий",
-      "proba": 585,
-      "weight": "0.48",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5427.jpeg"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "1.56",
-      "length": "40",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_5428.jpeg"
       ],
       "name_uk": "Підвіска  баба",
@@ -625,46 +591,12 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5439.jpeg"
-      ],
-      "name_uk": "Сережки ромашка",
-      "proba": 585,
-      "weight": "3.55",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5441.jpeg",
-        "/assets/img/IMG_5440.jpeg"
-      ],
-      "name_uk": "Монета Микола 10",
-      "proba": 900,
-      "weight": "8.6",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_5516.jpeg"
       ],
       "name_uk": "Сережки гвоздик мрія",
       "proba": 585,
       "weight": "1.67",
       "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5525.jpeg"
-      ],
-      "name_uk": "Підвіска икона",
-      "proba": 585,
-      "weight": "6.85",
-      "length": "4",
       "price": null,
       "status": "available"
     },
@@ -703,17 +635,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5529.jpeg"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "3.5",
-      "length": "4",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_5509.jpeg"
       ],
       "name_uk": "Злиток",
@@ -730,29 +651,6 @@
       "name_uk": "Браслет на лом брак",
       "proba": 585,
       "weight": "8.5",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5534.jpeg"
-      ],
-      "name_uk": "Підвіска зайчиня",
-      "proba": 585,
-      "weight": "1.15",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5526.jpeg",
-        "/assets/img/IMG_5440.jpeg"
-      ],
-      "name_uk": "Підвіска слон",
-      "proba": 585,
-      "weight": "1.83",
       "length": "",
       "price": null,
       "status": "available"
