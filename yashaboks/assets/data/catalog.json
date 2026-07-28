@@ -1020,6 +1020,17 @@
       "length": "17",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5930.webp"
+      ],
+      "name_uk": "Печатка",
+      "proba": 583,
+      "weight": "8.15",
+      "length": "20",
+      "price": null,
+      "status": "available"
     }
   ]
 }
