@@ -1131,6 +1131,15 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [],
+      "name_uk": "Хрест",
+      "proba": 585,
+      "weight": "1.56",
+      "length": "3",
+      "price": null,
+      "status": "available"
     }
   ]
 }
