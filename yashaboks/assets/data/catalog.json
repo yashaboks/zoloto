@@ -1120,6 +1120,17 @@
       "length": "",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5940.webp"
+      ],
+      "name_uk": "Хрест",
+      "proba": 585,
+      "weight": "1.55",
+      "length": "",
+      "price": null,
+      "status": "available"
     }
   ]
 }
