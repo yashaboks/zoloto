@@ -1000,6 +1000,17 @@
       "length": "60",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5837.webp"
+      ],
+      "name_uk": "Підвіска 7 стріл",
+      "proba": 585,
+      "weight": "1.42",
+      "length": "3",
+      "price": null,
+      "status": "available"
     }
   ]
 }
