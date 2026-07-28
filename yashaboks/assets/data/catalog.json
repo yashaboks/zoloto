@@ -1140,6 +1140,17 @@
       "length": "3",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5955.webp"
+      ],
+      "name_uk": "Годинник мак тайм",
+      "proba": 585,
+      "weight": "11",
+      "length": "22",
+      "price": null,
+      "status": "available"
     }
   ]
 }
