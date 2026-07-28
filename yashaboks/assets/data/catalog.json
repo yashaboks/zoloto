@@ -646,17 +646,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5533.jpeg"
-      ],
-      "name_uk": "Браслет на лом брак",
-      "proba": 585,
-      "weight": "8.5",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_5527.jpeg"
       ],
       "name_uk": "Каблучка фронті",
@@ -811,17 +800,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5836.webp"
-      ],
-      "name_uk": "Ланцюг унісекс",
-      "proba": 585,
-      "weight": "12.5",
-      "length": "60",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_5837.webp"
       ],
       "name_uk": "Підвіска 7 стріл",
@@ -905,17 +883,6 @@
       "proba": 583,
       "weight": "6.67",
       "length": "20",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5842.webp"
-      ],
-      "name_uk": "Годиник жіноч чайка",
-      "proba": 583,
-      "weight": "4.5",
-      "length": "17",
       "price": null,
       "status": "available"
     },
