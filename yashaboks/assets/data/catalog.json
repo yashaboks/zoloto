@@ -998,6 +998,17 @@
       "length": "2.5",
       "price": null,
       "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5841.webp"
+      ],
+      "name_uk": "Печатка",
+      "proba": 583,
+      "weight": "6.67",
+      "length": "20",
+      "price": null,
+      "status": "available"
     }
   ]
 }
