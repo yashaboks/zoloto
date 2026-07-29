@@ -190,6 +190,34 @@
     }
   }
 
+  /* Каталог разложен по разделам: assets/data/catalog/<раздел>.json.
+     Раздел товара задаётся тем, в каком файле он лежит, — поля
+     "category" внутри позиции больше нет. Панель управления при этом
+     открывает по одному короткому списку вместо всех 90 позиций сразу:
+     именно длина списка заставляла её вылетать на телефоне. */
+  function loadCatalogSections() {
+    return Promise.all(CATEGORIES.map(function (c) {
+      return loadJSON("assets/data/catalog/" + c.value + ".json")
+        .then(function (data) { return { category: c.value, data: data }; });
+    }));
+  }
+
+  /* склеиваем разделы в одну ленту в том же порядке, что и кнопки
+     фильтра; возвращаем число позиций, чтобы boot() понял, удалось ли */
+  function applyCatalogSections(parts) {
+    var merged = [];
+    parts.forEach(function (part) {
+      if (!part.data || !Array.isArray(part.data.items)) return;
+      part.data.items.forEach(function (it) {
+        var item = normItem(it);
+        item.category = part.category;
+        merged.push(item);
+      });
+    });
+    if (merged.length) catalogItems = merged;
+    return merged.length;
+  }
+
   function applySettings(data) {
     if (!data) return;
     if (typeof data.rate === "number") CONFIG.rate = data.rate;
@@ -727,10 +755,12 @@
   function boot() {
     Promise.all([
       loadJSON("assets/data/settings.json"),
-      loadJSON("assets/data/catalog.json")
+      loadCatalogSections()
     ]).then(function (res) {
       applySettings(res[0]);
-      applyCatalog(res[1]);
+      if (applyCatalogSections(res[1])) return null;
+      /* ни один раздел не открылся — берём старый общий файл */
+      return loadJSON("assets/data/catalog.json").then(applyCatalog);
     })["catch"](function () {})
       .then(function () { init(); }, function () { init(); });
   }
