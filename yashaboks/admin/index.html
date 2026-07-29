@@ -2,14 +2,107 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="robots" content="noindex" />
   <title>yashaboks — панель управления</title>
 </head>
 <body>
   <!-- Sveltia CMS — форк Decap CMS: быстрее и удобнее на телефоне.
        Ставить ничего не нужно, всё грузится из браузера.
-       Конфиг лежит рядом — admin/config.yml -->
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+       Конфиг лежит рядом — admin/config.yml
+
+       Версия закреплена намеренно. Sveltia выпускает обновления почти
+       каждый день; без номера версии панель тянула бы самую свежую и
+       могла бы измениться у клиента в любой момент сама по себе.
+       0.175.1 — та версия, на которой всё проверено вживую.
+       Обновлять только вручную и только после проверки. -->
+  <script src="https://unpkg.com/@sveltia/cms@0.175.1/dist/sveltia-cms.js"></script>
+
+  <!-- ------------------------------------------------------------------
+       Кнопка «Обновить».
+
+       Панель добавлена на экран «Домой» и открывается без адресной
+       строки Safari — а значит без кнопки перезагрузки. Перезагрузка при
+       этом единственное, что полностью очищает память вкладки: пока её
+       нет, расход за длинную сессию только растёт.
+
+       Кнопка живёт вне разметки самой панели и восстанавливает себя,
+       если панель перерисует страницу целиком.
+       ------------------------------------------------------------------ -->
+  <script>
+  (function () {
+    var ID = "ya-reload";
+
+    /* Открыт ли сейчас редактор — то есть можно ли что-то потерять.
+       Проверял: кнопка «Сохранить» активна всегда, даже когда правок
+       нет, поэтому по ней состояние не определить. А вот адрес честный:
+         #/collections               — список коллекций
+         #/collections/catalog       — список разделов
+         #/collections/catalog/entries/rings — открытый раздел
+       Внутри entries переспрашиваем, снаружи терять нечего. */
+    function inEditor() {
+      return /\/entries\//.test(location.hash || "");
+    }
+
+    function onTap() {
+      if (inEditor()) {
+        var ok = window.confirm(
+          "Сейчас открыт раздел. Если вы что-то правили и не нажали " +
+          "«Сохранить» — эти правки пропадут.\n\nВсё равно обновить?"
+        );
+        if (!ok) return;
+      }
+      location.reload();
+    }
+
+    function mount() {
+      if (document.getElementById(ID)) return;
+      var b = document.createElement("button");
+      b.id = ID;
+      b.type = "button";
+      b.textContent = "↻ Обновить";
+      b.title = "Перезагрузить панель — очищает память";
+      b.setAttribute("aria-label", "Обновить панель");
+      b.style.cssText = [
+        "position:fixed",
+        "right:10px",
+        /* 52px — чтобы не накрывать нижнюю панель навигации самой CMS:
+           она занимает нижние ~43px, и кнопка ложилась ровно на иконку
+           «меню» справа. Проверено линейкой, не на глаз. */
+        "bottom:calc(52px + env(safe-area-inset-bottom, 0px))",
+        "z-index:2147483647",
+        "margin:0",
+        "padding:7px 12px",
+        "font:500 13px/1 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif",
+        "color:#fff",
+        "background:rgba(28,28,30,.82)",
+        "border:1px solid rgba(255,255,255,.28)",
+        "border-radius:999px",
+        "box-shadow:0 2px 8px rgba(0,0,0,.35)",
+        "opacity:.62",
+        "cursor:pointer",
+        "-webkit-tap-highlight-color:transparent",
+        "-webkit-appearance:none",
+        "appearance:none",
+        "touch-action:manipulation"
+      ].join(";");
+      b.addEventListener("click", onTap);
+      /* подсветка на касании, чтобы было видно нажатие */
+      b.addEventListener("touchstart", function () { b.style.opacity = "1"; }, { passive: true });
+      b.addEventListener("touchend", function () { b.style.opacity = ".62"; }, { passive: true });
+      b.addEventListener("mouseenter", function () { b.style.opacity = "1"; });
+      b.addEventListener("mouseleave", function () { b.style.opacity = ".62"; });
+      (document.body || document.documentElement).appendChild(b);
+    }
+
+    mount();
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", mount);
+    }
+    /* панель монтируется не сразу и может переписать <body> целиком —
+       поэтому проверяем, что кнопка на месте */
+    setInterval(mount, 2000);
+  })();
+  </script>
 </body>
 </html>
