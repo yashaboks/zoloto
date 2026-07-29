@@ -1,10 +1,5 @@
 # ============================================================
 # yashaboks — конфиг панели управления (Sveltia CMS)
-#
-# ВАЖНО (делаю я на шаге подключения):
-#   ниже в repo: заменить OWNER/REPO на реальный GitHub-репозиторий,
-#   например:  repo: ivan-gold/yashaboks
-#   Пока это заглушка — вход работать не будет, это нормально.
 # ============================================================
 
 backend:
@@ -25,8 +20,7 @@ locale: "ru"
 # Автосжатие фотографий прямо в панели, ещё до отправки на сайт.
 # Что бы ни загрузили — телефонный оригинал на 5 МБ или что угодно —
 # панель сама уменьшит до 1600 px по длинной стороне и переведёт в WebP.
-# Итог: примерно 200-400 КБ вместо 3-5 МБ. Сайт и панель перестают
-# зависать на телефоне, фото долетают до сервера без обрывов.
+# Итог: примерно 200-400 КБ вместо 3-5 МБ.
 media_libraries:
   all:
     transformations:
@@ -41,29 +35,37 @@ publish_mode: simple
 
 collections:
   # ---------------- ИЗДЕЛИЯ ----------------
+  # Каждый раздел каталога — отдельный файл. Раздел изделия задаётся тем,
+  # в каком разделе оно лежит; отдельного выпадающего списка «Раздел» нет.
+  #
+  # Так сделано не для красоты: панель держит в памяти весь открытый список
+  # целиком, и цена одного удаления растёт примерно как квадрат длины списка.
+  # На 90 позициях одно удаление стоило ~32 МБ, на 21 позиции — ~1 МБ.
+  # Из-за этого телефон и выбрасывал панель. Короткие списки лечат причину.
   - name: "catalog"
     label: "Изделия в наличии"
     label_singular: "изделие"
     delete: false
     files:
-      - name: "items"
-        label: "Список изделий"
-        file: "yashaboks/assets/data/catalog.json"
+      - name: "rings"
+        label: "Каблучки — кольца, обручки, печатки"
+        file: "yashaboks/assets/data/catalog/rings.json"
         format: "json"
         description: >-
-          Добавляйте, редактируйте и удаляйте изделия.
-          Порядок меняется перетаскиванием. Фото не обязательно —
-          без него покажется иконка по типу изделия.
+          Раздел «Каблучки». Добавляйте, редактируйте и удаляйте изделия.
+          Порядок меняется перетаскиванием. Фото не обязательно.
         fields:
           - name: "items"
-            label: "Изделия"
+            label: "Каблучки"
             label_singular: "изделие"
             widget: "list"
             summary: "{{fields.name_uk}} · {{fields.weight}} г"
-            # Товары показываются свёрнутыми — одна строка на изделие.
-            # Фото подгружается только когда открываешь конкретный товар.
-            # Именно это спасает телефон от вылетов при листании списка.
+            # Список открывается свёрнутым целиком (minimize_collapsed),
+            # а каждое изделие — одной строкой (collapsed).
+            # Новое изделие добавляется наверх, чтобы не листать до конца.
             collapsed: true
+            minimize_collapsed: true
+            add_to_top: true
             fields:
               - name: "photos"
                 label: "Фото (до 3-х; первое — обложка)"
@@ -73,20 +75,391 @@ collections:
                 field: { name: "image", label: "Фото", widget: "image" }
                 hint: "Первое фото — обложка карточки. Можно 1, 2 или 3. Перетаскиванием меняется порядок."
               - { name: "name_uk", label: "Название", widget: "string" }
-              - name: "category"
-                label: "Раздел на сайте"
+              - name: "proba"
+                label: "Проба (585, 750, 999…)"
+                widget: "number"
+                value_type: "int"
+                default: 585
+              - name: "weight"
+                label: "Вес, грамм (можно с запятой: 13,33)"
+                widget: "string"
+                hint: "Например: 13,33 или 13.33"
+              - name: "length"
+                label: "Длина (необязательно, напр. 50 см)"
+                widget: "string"
+                required: false
+                hint: "Только для цепочек и браслетов. Можно оставить пустым."
+              - name: "price"
+                label: "Цена, ₴ (оставить пустым = «по договорённости»)"
+                widget: "number"
+                value_type: "int"
+                required: false
+              - name: "status"
+                label: "Статус"
                 widget: "select"
-                default: "other"
-                hint: "В каком разделе каталога показывать изделие. Если не подходит ничего — «Інше»."
+                default: "available"
                 options:
-                  - { label: "Каблучки (кольца, обручки, печатки)", value: "rings" }
-                  - { label: "Підвіски та кулони", value: "pendants" }
-                  - { label: "Ланцюжки", value: "chains" }
-                  - { label: "Браслети", value: "bracelets" }
-                  - { label: "Сережки", value: "earrings" }
-                  - { label: "Годинники", value: "watches" }
-                  - { label: "Монети та злитки", value: "coins" }
-                  - { label: "Інше", value: "other" }
+                  - { label: "В наличии", value: "available" }
+                  - { label: "Продано", value: "sold" }
+
+      - name: "pendants"
+        label: "Підвіски та кулони"
+        file: "yashaboks/assets/data/catalog/pendants.json"
+        format: "json"
+        description: >-
+          Раздел «Підвіски». Добавляйте, редактируйте и удаляйте изделия.
+          Порядок меняется перетаскиванием. Фото не обязательно.
+        fields:
+          - name: "items"
+            label: "Підвіски"
+            label_singular: "изделие"
+            widget: "list"
+            summary: "{{fields.name_uk}} · {{fields.weight}} г"
+            # Список открывается свёрнутым целиком (minimize_collapsed),
+            # а каждое изделие — одной строкой (collapsed).
+            # Новое изделие добавляется наверх, чтобы не листать до конца.
+            collapsed: true
+            minimize_collapsed: true
+            add_to_top: true
+            fields:
+              - name: "photos"
+                label: "Фото (до 3-х; первое — обложка)"
+                widget: "list"
+                required: false
+                max: 3
+                field: { name: "image", label: "Фото", widget: "image" }
+                hint: "Первое фото — обложка карточки. Можно 1, 2 или 3. Перетаскиванием меняется порядок."
+              - { name: "name_uk", label: "Название", widget: "string" }
+              - name: "proba"
+                label: "Проба (585, 750, 999…)"
+                widget: "number"
+                value_type: "int"
+                default: 585
+              - name: "weight"
+                label: "Вес, грамм (можно с запятой: 13,33)"
+                widget: "string"
+                hint: "Например: 13,33 или 13.33"
+              - name: "length"
+                label: "Длина (необязательно, напр. 50 см)"
+                widget: "string"
+                required: false
+                hint: "Только для цепочек и браслетов. Можно оставить пустым."
+              - name: "price"
+                label: "Цена, ₴ (оставить пустым = «по договорённости»)"
+                widget: "number"
+                value_type: "int"
+                required: false
+              - name: "status"
+                label: "Статус"
+                widget: "select"
+                default: "available"
+                options:
+                  - { label: "В наличии", value: "available" }
+                  - { label: "Продано", value: "sold" }
+
+      - name: "chains"
+        label: "Ланцюжки"
+        file: "yashaboks/assets/data/catalog/chains.json"
+        format: "json"
+        description: >-
+          Раздел «Ланцюжки». Добавляйте, редактируйте и удаляйте изделия.
+          Порядок меняется перетаскиванием. Фото не обязательно.
+        fields:
+          - name: "items"
+            label: "Ланцюжки"
+            label_singular: "изделие"
+            widget: "list"
+            summary: "{{fields.name_uk}} · {{fields.weight}} г"
+            # Список открывается свёрнутым целиком (minimize_collapsed),
+            # а каждое изделие — одной строкой (collapsed).
+            # Новое изделие добавляется наверх, чтобы не листать до конца.
+            collapsed: true
+            minimize_collapsed: true
+            add_to_top: true
+            fields:
+              - name: "photos"
+                label: "Фото (до 3-х; первое — обложка)"
+                widget: "list"
+                required: false
+                max: 3
+                field: { name: "image", label: "Фото", widget: "image" }
+                hint: "Первое фото — обложка карточки. Можно 1, 2 или 3. Перетаскиванием меняется порядок."
+              - { name: "name_uk", label: "Название", widget: "string" }
+              - name: "proba"
+                label: "Проба (585, 750, 999…)"
+                widget: "number"
+                value_type: "int"
+                default: 585
+              - name: "weight"
+                label: "Вес, грамм (можно с запятой: 13,33)"
+                widget: "string"
+                hint: "Например: 13,33 или 13.33"
+              - name: "length"
+                label: "Длина (необязательно, напр. 50 см)"
+                widget: "string"
+                required: false
+                hint: "Только для цепочек и браслетов. Можно оставить пустым."
+              - name: "price"
+                label: "Цена, ₴ (оставить пустым = «по договорённости»)"
+                widget: "number"
+                value_type: "int"
+                required: false
+              - name: "status"
+                label: "Статус"
+                widget: "select"
+                default: "available"
+                options:
+                  - { label: "В наличии", value: "available" }
+                  - { label: "Продано", value: "sold" }
+
+      - name: "bracelets"
+        label: "Браслети"
+        file: "yashaboks/assets/data/catalog/bracelets.json"
+        format: "json"
+        description: >-
+          Раздел «Браслети». Добавляйте, редактируйте и удаляйте изделия.
+          Порядок меняется перетаскиванием. Фото не обязательно.
+        fields:
+          - name: "items"
+            label: "Браслети"
+            label_singular: "изделие"
+            widget: "list"
+            summary: "{{fields.name_uk}} · {{fields.weight}} г"
+            # Список открывается свёрнутым целиком (minimize_collapsed),
+            # а каждое изделие — одной строкой (collapsed).
+            # Новое изделие добавляется наверх, чтобы не листать до конца.
+            collapsed: true
+            minimize_collapsed: true
+            add_to_top: true
+            fields:
+              - name: "photos"
+                label: "Фото (до 3-х; первое — обложка)"
+                widget: "list"
+                required: false
+                max: 3
+                field: { name: "image", label: "Фото", widget: "image" }
+                hint: "Первое фото — обложка карточки. Можно 1, 2 или 3. Перетаскиванием меняется порядок."
+              - { name: "name_uk", label: "Название", widget: "string" }
+              - name: "proba"
+                label: "Проба (585, 750, 999…)"
+                widget: "number"
+                value_type: "int"
+                default: 585
+              - name: "weight"
+                label: "Вес, грамм (можно с запятой: 13,33)"
+                widget: "string"
+                hint: "Например: 13,33 или 13.33"
+              - name: "length"
+                label: "Длина (необязательно, напр. 50 см)"
+                widget: "string"
+                required: false
+                hint: "Только для цепочек и браслетов. Можно оставить пустым."
+              - name: "price"
+                label: "Цена, ₴ (оставить пустым = «по договорённости»)"
+                widget: "number"
+                value_type: "int"
+                required: false
+              - name: "status"
+                label: "Статус"
+                widget: "select"
+                default: "available"
+                options:
+                  - { label: "В наличии", value: "available" }
+                  - { label: "Продано", value: "sold" }
+
+      - name: "earrings"
+        label: "Сережки"
+        file: "yashaboks/assets/data/catalog/earrings.json"
+        format: "json"
+        description: >-
+          Раздел «Сережки». Добавляйте, редактируйте и удаляйте изделия.
+          Порядок меняется перетаскиванием. Фото не обязательно.
+        fields:
+          - name: "items"
+            label: "Сережки"
+            label_singular: "изделие"
+            widget: "list"
+            summary: "{{fields.name_uk}} · {{fields.weight}} г"
+            # Список открывается свёрнутым целиком (minimize_collapsed),
+            # а каждое изделие — одной строкой (collapsed).
+            # Новое изделие добавляется наверх, чтобы не листать до конца.
+            collapsed: true
+            minimize_collapsed: true
+            add_to_top: true
+            fields:
+              - name: "photos"
+                label: "Фото (до 3-х; первое — обложка)"
+                widget: "list"
+                required: false
+                max: 3
+                field: { name: "image", label: "Фото", widget: "image" }
+                hint: "Первое фото — обложка карточки. Можно 1, 2 или 3. Перетаскиванием меняется порядок."
+              - { name: "name_uk", label: "Название", widget: "string" }
+              - name: "proba"
+                label: "Проба (585, 750, 999…)"
+                widget: "number"
+                value_type: "int"
+                default: 585
+              - name: "weight"
+                label: "Вес, грамм (можно с запятой: 13,33)"
+                widget: "string"
+                hint: "Например: 13,33 или 13.33"
+              - name: "length"
+                label: "Длина (необязательно, напр. 50 см)"
+                widget: "string"
+                required: false
+                hint: "Только для цепочек и браслетов. Можно оставить пустым."
+              - name: "price"
+                label: "Цена, ₴ (оставить пустым = «по договорённости»)"
+                widget: "number"
+                value_type: "int"
+                required: false
+              - name: "status"
+                label: "Статус"
+                widget: "select"
+                default: "available"
+                options:
+                  - { label: "В наличии", value: "available" }
+                  - { label: "Продано", value: "sold" }
+
+      - name: "watches"
+        label: "Годинники"
+        file: "yashaboks/assets/data/catalog/watches.json"
+        format: "json"
+        description: >-
+          Раздел «Годинники». Добавляйте, редактируйте и удаляйте изделия.
+          Порядок меняется перетаскиванием. Фото не обязательно.
+        fields:
+          - name: "items"
+            label: "Годинники"
+            label_singular: "изделие"
+            widget: "list"
+            summary: "{{fields.name_uk}} · {{fields.weight}} г"
+            # Список открывается свёрнутым целиком (minimize_collapsed),
+            # а каждое изделие — одной строкой (collapsed).
+            # Новое изделие добавляется наверх, чтобы не листать до конца.
+            collapsed: true
+            minimize_collapsed: true
+            add_to_top: true
+            fields:
+              - name: "photos"
+                label: "Фото (до 3-х; первое — обложка)"
+                widget: "list"
+                required: false
+                max: 3
+                field: { name: "image", label: "Фото", widget: "image" }
+                hint: "Первое фото — обложка карточки. Можно 1, 2 или 3. Перетаскиванием меняется порядок."
+              - { name: "name_uk", label: "Название", widget: "string" }
+              - name: "proba"
+                label: "Проба (585, 750, 999…)"
+                widget: "number"
+                value_type: "int"
+                default: 585
+              - name: "weight"
+                label: "Вес, грамм (можно с запятой: 13,33)"
+                widget: "string"
+                hint: "Например: 13,33 или 13.33"
+              - name: "length"
+                label: "Длина (необязательно, напр. 50 см)"
+                widget: "string"
+                required: false
+                hint: "Только для цепочек и браслетов. Можно оставить пустым."
+              - name: "price"
+                label: "Цена, ₴ (оставить пустым = «по договорённости»)"
+                widget: "number"
+                value_type: "int"
+                required: false
+              - name: "status"
+                label: "Статус"
+                widget: "select"
+                default: "available"
+                options:
+                  - { label: "В наличии", value: "available" }
+                  - { label: "Продано", value: "sold" }
+
+      - name: "coins"
+        label: "Монети та злитки"
+        file: "yashaboks/assets/data/catalog/coins.json"
+        format: "json"
+        description: >-
+          Раздел «Монети». Добавляйте, редактируйте и удаляйте изделия.
+          Порядок меняется перетаскиванием. Фото не обязательно.
+        fields:
+          - name: "items"
+            label: "Монети"
+            label_singular: "изделие"
+            widget: "list"
+            summary: "{{fields.name_uk}} · {{fields.weight}} г"
+            # Список открывается свёрнутым целиком (minimize_collapsed),
+            # а каждое изделие — одной строкой (collapsed).
+            # Новое изделие добавляется наверх, чтобы не листать до конца.
+            collapsed: true
+            minimize_collapsed: true
+            add_to_top: true
+            fields:
+              - name: "photos"
+                label: "Фото (до 3-х; первое — обложка)"
+                widget: "list"
+                required: false
+                max: 3
+                field: { name: "image", label: "Фото", widget: "image" }
+                hint: "Первое фото — обложка карточки. Можно 1, 2 или 3. Перетаскиванием меняется порядок."
+              - { name: "name_uk", label: "Название", widget: "string" }
+              - name: "proba"
+                label: "Проба (585, 750, 999…)"
+                widget: "number"
+                value_type: "int"
+                default: 585
+              - name: "weight"
+                label: "Вес, грамм (можно с запятой: 13,33)"
+                widget: "string"
+                hint: "Например: 13,33 или 13.33"
+              - name: "length"
+                label: "Длина (необязательно, напр. 50 см)"
+                widget: "string"
+                required: false
+                hint: "Только для цепочек и браслетов. Можно оставить пустым."
+              - name: "price"
+                label: "Цена, ₴ (оставить пустым = «по договорённости»)"
+                widget: "number"
+                value_type: "int"
+                required: false
+              - name: "status"
+                label: "Статус"
+                widget: "select"
+                default: "available"
+                options:
+                  - { label: "В наличии", value: "available" }
+                  - { label: "Продано", value: "sold" }
+
+      - name: "other"
+        label: "Інше — всё, что не подошло в разделы выше"
+        file: "yashaboks/assets/data/catalog/other.json"
+        format: "json"
+        description: >-
+          Раздел «Інше». Добавляйте, редактируйте и удаляйте изделия.
+          Порядок меняется перетаскиванием. Фото не обязательно.
+        fields:
+          - name: "items"
+            label: "Інше"
+            label_singular: "изделие"
+            widget: "list"
+            summary: "{{fields.name_uk}} · {{fields.weight}} г"
+            # Список открывается свёрнутым целиком (minimize_collapsed),
+            # а каждое изделие — одной строкой (collapsed).
+            # Новое изделие добавляется наверх, чтобы не листать до конца.
+            collapsed: true
+            minimize_collapsed: true
+            add_to_top: true
+            fields:
+              - name: "photos"
+                label: "Фото (до 3-х; первое — обложка)"
+                widget: "list"
+                required: false
+                max: 3
+                field: { name: "image", label: "Фото", widget: "image" }
+                hint: "Первое фото — обложка карточки. Можно 1, 2 или 3. Перетаскиванием меняется порядок."
+              - { name: "name_uk", label: "Название", widget: "string" }
               - name: "proba"
                 label: "Проба (585, 750, 999…)"
                 widget: "number"
