@@ -1,0 +1,125 @@
+{
+  "items": [
+    {
+      "photos": [
+        "/assets/img/IMG_4339.jpeg"
+      ],
+      "name_uk": "Сережки",
+      "proba": 585,
+      "weight": "0.64",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4333.jpeg"
+      ],
+      "name_uk": "Сережки",
+      "proba": 585,
+      "weight": "3",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4331.jpeg"
+      ],
+      "name_uk": "Сережки",
+      "proba": 585,
+      "weight": "4.6",
+      "length": "6",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/C9C45D5A-61E9-42E6-A6A5-8EA7509F60D2.png"
+      ],
+      "name_uk": "Сережки",
+      "proba": 585,
+      "weight": "8",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4610.jpeg"
+      ],
+      "name_uk": "Сережки камня",
+      "proba": 585,
+      "weight": "6.67",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4347.jpeg"
+      ],
+      "name_uk": "Сережки крила",
+      "proba": 585,
+      "weight": "1,68",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4613.jpeg"
+      ],
+      "name_uk": "Сережки круг",
+      "proba": 750,
+      "weight": "4.82",
+      "length": "5",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4614.jpeg"
+      ],
+      "name_uk": "Сережки мама",
+      "proba": 583,
+      "weight": "2.13",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5438.jpeg"
+      ],
+      "name_uk": "Сережки дитячі камні",
+      "proba": 585,
+      "weight": "1.8",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5516.jpeg"
+      ],
+      "name_uk": "Сережки гвоздик мрія",
+      "proba": 585,
+      "weight": "1.67",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5935.webp"
+      ],
+      "name_uk": "Сережки с кулоном",
+      "proba": 585,
+      "weight": "5.03",
+      "length": "",
+      "price": null,
+      "status": "available"
+    }
+  ]
+}

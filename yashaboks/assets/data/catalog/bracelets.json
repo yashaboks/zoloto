@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "photos": [
+        "/assets/img/IMG_5530.jpeg"
+      ],
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "3.87",
+      "length": "19",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4320.jpeg"
+      ],
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "14",
+      "length": "19",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4508.jpeg"
+      ],
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "22.27",
+      "length": "21",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4850.jpeg"
+      ],
+      "name_uk": "Браслет без проб",
+      "proba": 585,
+      "weight": "13.85",
+      "length": "20",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5092.jpeg"
+      ],
+      "name_uk": "Браслет чоловіч коса",
+      "proba": 585,
+      "weight": "60.25",
+      "length": "28",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5430.jpeg"
+      ],
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "18.75",
+      "length": "19.5",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5434.jpeg"
+      ],
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "2.2",
+      "length": "20",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5533.jpeg"
+      ],
+      "name_uk": "Браслет на лом брак",
+      "proba": 585,
+      "weight": "8.5",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5732.webp"
+      ],
+      "name_uk": "Браслет жіночій",
+      "proba": 585,
+      "weight": "5.91",
+      "length": "18",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5835.webp"
+      ],
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "9.88",
+      "length": "21",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5835.webp"
+      ],
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "9.88",
+      "length": "21",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5931.webp"
+      ],
+      "name_uk": "Браслет ленград",
+      "proba": 585,
+      "weight": "30.91",
+      "length": "20",
+      "price": null,
+      "status": "available"
+    }
+  ]
+}

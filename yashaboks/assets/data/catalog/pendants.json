@@ -1,0 +1,223 @@
+{
+  "items": [
+    {
+      "photos": [
+        "/assets/img/IMG_4350.jpeg"
+      ],
+      "name_uk": "Підвіска",
+      "proba": 585,
+      "weight": "0.59",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4348.jpeg"
+      ],
+      "name_uk": "Ладанка",
+      "proba": 583,
+      "weight": "5.65",
+      "length": "3.7",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4345.jpeg",
+        "/assets/img/IMG_4344.jpeg"
+      ],
+      "name_uk": "Підвіска",
+      "proba": 750,
+      "weight": "11.37",
+      "length": "5.6",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4342.jpeg"
+      ],
+      "name_uk": "Підвіска ♥️",
+      "proba": 585,
+      "weight": "1.93",
+      "length": "2",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/B9C6DF60-00D8-46EE-87BC-FFF277AF46CA.png"
+      ],
+      "name_uk": "Підвіска",
+      "proba": 585,
+      "weight": "0,52",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4608.jpeg"
+      ],
+      "name_uk": "Хрест",
+      "proba": 585,
+      "weight": "13.6",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4616.jpeg"
+      ],
+      "name_uk": "Ладонка діамант",
+      "proba": 585,
+      "weight": "14.92",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5428.jpeg"
+      ],
+      "name_uk": "Підвіска  баба",
+      "proba": 585,
+      "weight": "4.82",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5429.jpeg"
+      ],
+      "name_uk": "Підвіска водолій",
+      "proba": 585,
+      "weight": "2.66",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5526.jpeg"
+      ],
+      "name_uk": "Підвіска слон",
+      "proba": 585,
+      "weight": "1.83",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5534.jpeg"
+      ],
+      "name_uk": "Підвіска зайчиня",
+      "proba": 585,
+      "weight": "1.15",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5733.webp"
+      ],
+      "name_uk": "Підвіска ніфертіті",
+      "proba": 750,
+      "weight": "3.29",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5837.webp"
+      ],
+      "name_uk": "Підвіска 7 стріл",
+      "proba": 585,
+      "weight": "1.42",
+      "length": "3",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5838.webp"
+      ],
+      "name_uk": "Підвіска Микола чуд",
+      "proba": 585,
+      "weight": "1.6",
+      "length": "2.5",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5837.webp"
+      ],
+      "name_uk": "Підвіска 7 стріл",
+      "proba": 585,
+      "weight": "1.42",
+      "length": "3",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5838.webp"
+      ],
+      "name_uk": "Підвіска Микола чуд",
+      "proba": 585,
+      "weight": "1.6",
+      "length": "2.5",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5938.webp"
+      ],
+      "name_uk": "Хрест",
+      "proba": 585,
+      "weight": "0.39",
+      "length": "2",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5939.webp"
+      ],
+      "name_uk": "Підвіска ладанка с камнями",
+      "proba": 585,
+      "weight": "2.82",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5940.webp"
+      ],
+      "name_uk": "Хрест",
+      "proba": 585,
+      "weight": "1.55",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [],
+      "name_uk": "Хрест",
+      "proba": 585,
+      "weight": "1.56",
+      "length": "3",
+      "price": null,
+      "status": "available"
+    }
+  ]
+}

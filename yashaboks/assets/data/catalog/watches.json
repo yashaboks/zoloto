@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "photos": [
+        "/assets/img/IMG_3871.jpeg",
+        "/assets/img/IMG_3872.jpeg"
+      ],
+      "name_uk": "Годинник",
+      "proba": 750,
+      "weight": "55",
+      "length": "19",
+      "price": 270000,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_3884.jpeg"
+      ],
+      "name_uk": "Годинник",
+      "proba": 585,
+      "weight": "21.52",
+      "length": "18",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4714.jpeg"
+      ],
+      "name_uk": "Годинник жіночій вага 20 чист 16",
+      "proba": 583,
+      "weight": "16",
+      "length": "17",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_4939.jpeg"
+      ],
+      "name_uk": "Годинник Ролекс 41",
+      "proba": 750,
+      "weight": "1",
+      "length": "23",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_5955.webp"
+      ],
+      "name_uk": "Годинник мак тайм",
+      "proba": 585,
+      "weight": "11",
+      "length": "22",
+      "price": null,
+      "status": "available"
+    }
+  ]
+}
