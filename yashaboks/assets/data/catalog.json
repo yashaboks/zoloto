@@ -6,168 +6,168 @@
         "/assets/img/IMG_3872.jpeg"
       ],
       "name_uk": "Годинник",
+      "category": "watches",
       "proba": 750,
       "weight": "55",
       "length": "19",
       "price": 270000,
-      "status": "available",
-      "name_ru": "Часы"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_3884.jpeg"
       ],
       "name_uk": "Годинник",
+      "category": "watches",
       "proba": 585,
       "weight": "21.52",
       "length": "18",
       "price": null,
-      "status": "available",
-      "name_ru": "Часы"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4374.jpeg"
       ],
       "name_uk": "Обручка",
+      "category": "rings",
       "proba": 585,
       "weight": "1.64",
       "length": "16.5",
       "price": null,
-      "status": "available",
-      "name_ru": "Кольцо"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4370.jpeg"
       ],
       "name_uk": "Обручка",
+      "category": "rings",
       "proba": 585,
       "weight": "2.82",
       "length": "19",
       "price": null,
-      "status": "available",
-      "name_ru": "Кольцо"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4369.jpeg"
       ],
       "name_uk": "Обручка",
+      "category": "rings",
       "proba": 750,
       "weight": "6.46",
       "length": "20",
       "price": null,
-      "status": "available",
-      "name_ru": "Кольцо"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4365.jpeg"
       ],
       "name_uk": "Обручка",
+      "category": "rings",
       "proba": 585,
       "weight": "3.5",
       "length": "18.5",
       "price": null,
-      "status": "available",
-      "name_ru": "Кольцо"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4364.jpeg"
       ],
       "name_uk": "Обручка",
+      "category": "rings",
       "proba": 583,
       "weight": "3.61",
       "length": "19",
       "price": null,
-      "status": "available",
-      "name_ru": "Кольцо"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4363.jpeg"
       ],
       "name_uk": "Обручка",
+      "category": "rings",
       "proba": 585,
       "weight": "2.91",
       "length": "18.5",
       "price": null,
-      "status": "available",
-      "name_ru": "Кольцо"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4360.jpeg"
       ],
       "name_uk": "Обручка",
+      "category": "rings",
       "proba": 583,
       "weight": "5.65",
       "length": "18.5",
       "price": null,
-      "status": "available",
-      "name_ru": "Кольцо"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4358.jpeg"
       ],
       "name_uk": "Обручка",
+      "category": "rings",
       "proba": 585,
       "weight": "3.31",
       "length": "20",
       "price": null,
-      "status": "available",
-      "name_ru": "Кольцо"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4357.jpeg"
       ],
       "name_uk": "Обручка",
+      "category": "rings",
       "proba": 583,
       "weight": "5.96",
       "length": "20.5",
       "price": null,
-      "status": "available",
-      "name_ru": "Кольцо"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4337.jpeg"
       ],
       "name_uk": "Обручка",
+      "category": "rings",
       "proba": 585,
       "weight": "1.09",
       "length": "16",
       "price": null,
-      "status": "available",
-      "name_ru": "Кольцо"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4350.jpeg"
       ],
       "name_uk": "Підвіска",
+      "category": "pendants",
       "proba": 585,
       "weight": "0.59",
       "length": "",
       "price": null,
-      "status": "available",
-      "name_ru": "Подвеска"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4348.jpeg"
       ],
       "name_uk": "Ладанка",
+      "category": "pendants",
       "proba": 583,
       "weight": "5.65",
       "length": "3.7",
       "price": null,
-      "status": "available",
-      "name_ru": "Ладанка"
+      "status": "available"
     },
     {
       "photos": [
@@ -175,138 +175,139 @@
         "/assets/img/IMG_4344.jpeg"
       ],
       "name_uk": "Підвіска",
+      "category": "pendants",
       "proba": 750,
       "weight": "11.37",
       "length": "5.6",
       "price": null,
-      "status": "available",
-      "name_ru": "Подвеска"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4342.jpeg"
       ],
       "name_uk": "Підвіска ♥️",
+      "category": "pendants",
       "proba": 585,
       "weight": "1.93",
       "length": "2",
       "price": null,
-      "status": "available",
-      "name_ru": "Подвеска"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4339.jpeg"
       ],
       "name_uk": "Сережки",
+      "category": "earrings",
       "proba": 585,
       "weight": "0.64",
       "length": "",
       "price": null,
-      "status": "available",
-      "name_ru": "Сережки"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4334.jpeg"
       ],
       "name_uk": "Намисто",
+      "category": "other",
       "proba": 585,
       "weight": "11",
       "length": "",
       "price": null,
-      "status": "available",
-      "name_ru": "Набор"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4333.jpeg"
       ],
       "name_uk": "Сережки",
+      "category": "earrings",
       "proba": 585,
       "weight": "3",
       "length": "",
       "price": null,
-      "status": "available",
-      "name_ru": "Сережки"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4331.jpeg"
       ],
       "name_uk": "Сережки",
+      "category": "earrings",
       "proba": 585,
       "weight": "4.6",
       "length": "6",
       "price": null,
-      "status": "available",
-      "name_ru": "Сережки"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_5530.jpeg"
       ],
       "name_uk": "Браслет",
+      "category": "bracelets",
       "proba": 585,
       "weight": "3.87",
       "length": "19",
       "price": null,
-      "status": "available",
-      "name_ru": "Браслет"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4323.jpeg"
       ],
       "name_uk": "Ланцюг",
+      "category": "chains",
       "proba": 585,
       "weight": "8.82",
       "length": "56",
       "price": null,
-      "status": "available",
-      "name_ru": "Цепочка"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4320.jpeg"
       ],
       "name_uk": "Браслет",
+      "category": "bracelets",
       "proba": 585,
       "weight": "14",
       "length": "19",
       "price": null,
-      "status": "available",
-      "name_ru": "Браслет"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/C9C45D5A-61E9-42E6-A6A5-8EA7509F60D2.png"
       ],
       "name_uk": "Сережки",
+      "category": "earrings",
       "proba": 585,
       "weight": "8",
       "length": "",
       "price": null,
-      "status": "available",
-      "name_ru": "Сережки"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/B9C6DF60-00D8-46EE-87BC-FFF277AF46CA.png"
       ],
       "name_uk": "Підвіска",
+      "category": "pendants",
       "proba": 585,
       "weight": "0,52",
       "length": "",
       "price": null,
-      "status": "available",
-      "name_ru": "Сережки"
+      "status": "available"
     },
     {
       "photos": [
         "/assets/img/IMG_4488.jpeg"
       ],
       "name_uk": "Ланцюг",
+      "category": "chains",
       "proba": 585,
       "weight": "23.3",
       "length": "45",
@@ -318,6 +319,7 @@
         "/assets/img/IMG_4508.jpeg"
       ],
       "name_uk": "Браслет",
+      "category": "bracelets",
       "proba": 585,
       "weight": "22.27",
       "length": "21",
@@ -329,6 +331,7 @@
         "/assets/img/IMG_4606.jpeg"
       ],
       "name_uk": "Обручка 18",
+      "category": "rings",
       "proba": 585,
       "weight": "4.31",
       "length": "18",
@@ -340,6 +343,7 @@
         "/assets/img/IMG_4608.jpeg"
       ],
       "name_uk": "Хрест",
+      "category": "pendants",
       "proba": 585,
       "weight": "13.6",
       "length": "",
@@ -351,6 +355,7 @@
         "/assets/img/IMG_4610.jpeg"
       ],
       "name_uk": "Сережки камня",
+      "category": "earrings",
       "proba": 585,
       "weight": "6.67",
       "length": "",
@@ -362,6 +367,7 @@
         "/assets/img/IMG_4347.jpeg"
       ],
       "name_uk": "Сережки крила",
+      "category": "earrings",
       "proba": 585,
       "weight": "1,68",
       "length": "",
@@ -373,6 +379,7 @@
         "/assets/img/IMG_4612.jpeg"
       ],
       "name_uk": "Обручка",
+      "category": "rings",
       "proba": 583,
       "weight": "6.85",
       "length": "18",
@@ -384,6 +391,7 @@
         "/assets/img/IMG_4613.jpeg"
       ],
       "name_uk": "Сережки круг",
+      "category": "earrings",
       "proba": 750,
       "weight": "4.82",
       "length": "5",
@@ -395,6 +403,7 @@
         "/assets/img/IMG_4614.jpeg"
       ],
       "name_uk": "Сережки мама",
+      "category": "earrings",
       "proba": 583,
       "weight": "2.13",
       "length": "",
@@ -406,6 +415,7 @@
         "/assets/img/IMG_4616.jpeg"
       ],
       "name_uk": "Ладонка діамант",
+      "category": "pendants",
       "proba": 585,
       "weight": "14.92",
       "length": "",
@@ -417,6 +427,7 @@
         "/assets/img/IMG_4714.jpeg"
       ],
       "name_uk": "Годинник жіночій вага 20 чист 16",
+      "category": "watches",
       "proba": 583,
       "weight": "16",
       "length": "17",
@@ -428,6 +439,7 @@
         "/assets/img/IMG_4850.jpeg"
       ],
       "name_uk": "Браслет без проб",
+      "category": "bracelets",
       "proba": 585,
       "weight": "13.85",
       "length": "20",
@@ -439,6 +451,7 @@
         "/assets/img/IMG_4859.jpeg"
       ],
       "name_uk": "Шнурок",
+      "category": "other",
       "proba": 585,
       "weight": "1.3",
       "length": "42",
@@ -450,6 +463,7 @@
         "/assets/img/IMG_4860.jpeg"
       ],
       "name_uk": "Шнурок",
+      "category": "other",
       "proba": 585,
       "weight": "1,3",
       "length": "48",
@@ -461,6 +475,7 @@
         "/assets/img/IMG_4939.jpeg"
       ],
       "name_uk": "Годинник Ролекс 41",
+      "category": "watches",
       "proba": 750,
       "weight": "1",
       "length": "23",
@@ -472,6 +487,7 @@
         "/assets/img/IMG_5092.jpeg"
       ],
       "name_uk": "Браслет чоловіч коса",
+      "category": "bracelets",
       "proba": 585,
       "weight": "60.25",
       "length": "28",
@@ -484,6 +500,7 @@
         "/assets/img/IMG_5093.jpeg"
       ],
       "name_uk": "Монета червінець Миколай",
+      "category": "coins",
       "proba": 900,
       "weight": "8.6",
       "length": "",
@@ -495,6 +512,7 @@
         "/assets/img/IMG_5205.jpeg"
       ],
       "name_uk": "Обручка аист",
+      "category": "rings",
       "proba": 585,
       "weight": "1.82",
       "length": "18.5",
@@ -506,6 +524,7 @@
         "/assets/img/IMG_5328.jpeg"
       ],
       "name_uk": "Ланцюг удав жіноч",
+      "category": "chains",
       "proba": 585,
       "weight": "19.56",
       "length": "45",
@@ -517,6 +536,7 @@
         "/assets/img/IMG_5428.jpeg"
       ],
       "name_uk": "Підвіска  баба",
+      "category": "pendants",
       "proba": 585,
       "weight": "4.82",
       "length": "",
@@ -528,6 +548,7 @@
         "/assets/img/IMG_5429.jpeg"
       ],
       "name_uk": "Підвіска водолій",
+      "category": "pendants",
       "proba": 585,
       "weight": "2.66",
       "length": "",
@@ -539,6 +560,7 @@
         "/assets/img/IMG_5430.jpeg"
       ],
       "name_uk": "Браслет",
+      "category": "bracelets",
       "proba": 585,
       "weight": "18.75",
       "length": "19.5",
@@ -550,6 +572,7 @@
         "/assets/img/IMG_5515.jpeg"
       ],
       "name_uk": "Ланцюг жіноч",
+      "category": "chains",
       "proba": 585,
       "weight": "1.78",
       "length": "44",
@@ -561,6 +584,7 @@
         "/assets/img/IMG_5434.jpeg"
       ],
       "name_uk": "Браслет",
+      "category": "bracelets",
       "proba": 585,
       "weight": "2.2",
       "length": "20",
@@ -572,6 +596,7 @@
         "/assets/img/IMG_5436.jpeg"
       ],
       "name_uk": "Булавка",
+      "category": "other",
       "proba": 585,
       "weight": "0.9",
       "length": "3.5",
@@ -583,6 +608,7 @@
         "/assets/img/IMG_5438.jpeg"
       ],
       "name_uk": "Сережки дитячі камні",
+      "category": "earrings",
       "proba": 585,
       "weight": "1.8",
       "length": "",
@@ -594,6 +620,7 @@
         "/assets/img/IMG_5516.jpeg"
       ],
       "name_uk": "Сережки гвоздик мрія",
+      "category": "earrings",
       "proba": 585,
       "weight": "1.67",
       "length": "",
@@ -605,6 +632,7 @@
         "/assets/img/IMG_5526.jpeg"
       ],
       "name_uk": "Підвіска слон",
+      "category": "pendants",
       "proba": 585,
       "weight": "1.83",
       "length": "",
@@ -616,6 +644,7 @@
         "/assets/img/IMG_5527.jpeg"
       ],
       "name_uk": "Каблучка фронті",
+      "category": "rings",
       "proba": 583,
       "weight": "4.68",
       "length": "",
@@ -627,6 +656,7 @@
         "/assets/img/IMG_5528.jpeg"
       ],
       "name_uk": "Ланцюг Бисмарк унісекс без проби",
+      "category": "chains",
       "proba": 585,
       "weight": "14.9",
       "length": "48",
@@ -638,6 +668,7 @@
         "/assets/img/IMG_5509.jpeg"
       ],
       "name_uk": "Злиток",
+      "category": "coins",
       "proba": 9999,
       "weight": "5",
       "length": "",
@@ -649,6 +680,7 @@
         "/assets/img/IMG_5527.jpeg"
       ],
       "name_uk": "Каблучка фронті",
+      "category": "rings",
       "proba": 583,
       "weight": "4.68",
       "length": "",
@@ -660,6 +692,7 @@
         "/assets/img/IMG_5528.jpeg"
       ],
       "name_uk": "Ланцюг Бисмарк унісекс без проби",
+      "category": "chains",
       "proba": 585,
       "weight": "14.9",
       "length": "48",
@@ -671,6 +704,7 @@
         "/assets/img/IMG_5533.jpeg"
       ],
       "name_uk": "Браслет на лом брак",
+      "category": "bracelets",
       "proba": 585,
       "weight": "8.5",
       "length": "",
@@ -682,6 +716,7 @@
         "/assets/img/IMG_5534.jpeg"
       ],
       "name_uk": "Підвіска зайчиня",
+      "category": "pendants",
       "proba": 585,
       "weight": "1.15",
       "length": "",
@@ -693,6 +728,7 @@
         "/assets/img/IMG_5732.webp"
       ],
       "name_uk": "Браслет жіночій",
+      "category": "bracelets",
       "proba": 585,
       "weight": "5.91",
       "length": "18",
@@ -704,6 +740,7 @@
         "/assets/img/IMG_5733.webp"
       ],
       "name_uk": "Підвіска ніфертіті",
+      "category": "pendants",
       "proba": 750,
       "weight": "3.29",
       "length": "",
@@ -715,6 +752,7 @@
         "/assets/img/IMG_5734.webp"
       ],
       "name_uk": "Ланцюг с крестом",
+      "category": "chains",
       "proba": 583,
       "weight": "7.62",
       "length": "60",
@@ -726,6 +764,7 @@
         "/assets/img/IMG_5735.webp"
       ],
       "name_uk": "Ланцюг жіноч карте",
+      "category": "chains",
       "proba": 583,
       "weight": "4.85",
       "length": "70",
@@ -737,6 +776,7 @@
         "/assets/img/IMG_5736.webp"
       ],
       "name_uk": "Каблучка  каратун",
+      "category": "rings",
       "proba": 583,
       "weight": "6.51",
       "length": "18.5",
@@ -748,6 +788,7 @@
         "/assets/img/IMG_5737.webp"
       ],
       "name_uk": "Каблучка",
+      "category": "rings",
       "proba": 585,
       "weight": "6.61",
       "length": "19",
@@ -759,6 +800,7 @@
         "/assets/img/IMG_5738.webp"
       ],
       "name_uk": "Каблучка вінтаж",
+      "category": "rings",
       "proba": 583,
       "weight": "4.35",
       "length": "17",
@@ -770,6 +812,7 @@
         "/assets/img/IMG_5740.webp"
       ],
       "name_uk": "Печатка чоловіча",
+      "category": "rings",
       "proba": 585,
       "weight": "4",
       "length": "21",
@@ -781,6 +824,7 @@
         "/assets/img/IMG_5741.webp"
       ],
       "name_uk": "Ланцюг канат",
+      "category": "chains",
       "proba": 585,
       "weight": "1.3",
       "length": "35",
@@ -792,6 +836,7 @@
         "/assets/img/IMG_5835.webp"
       ],
       "name_uk": "Браслет",
+      "category": "bracelets",
       "proba": 585,
       "weight": "9.88",
       "length": "21",
@@ -803,6 +848,7 @@
         "/assets/img/IMG_5837.webp"
       ],
       "name_uk": "Підвіска 7 стріл",
+      "category": "pendants",
       "proba": 585,
       "weight": "1.42",
       "length": "3",
@@ -814,6 +860,7 @@
         "/assets/img/IMG_5838.webp"
       ],
       "name_uk": "Підвіска Микола чуд",
+      "category": "pendants",
       "proba": 585,
       "weight": "1.6",
       "length": "2.5",
@@ -825,6 +872,7 @@
         "/assets/img/IMG_5741.webp"
       ],
       "name_uk": "Ланцюг канат",
+      "category": "chains",
       "proba": 585,
       "weight": "1.3",
       "length": "35",
@@ -836,6 +884,7 @@
         "/assets/img/IMG_5835.webp"
       ],
       "name_uk": "Браслет",
+      "category": "bracelets",
       "proba": 585,
       "weight": "9.88",
       "length": "21",
@@ -847,6 +896,7 @@
         "/assets/img/IMG_5836.webp"
       ],
       "name_uk": "Ланцюг унісекс",
+      "category": "chains",
       "proba": 585,
       "weight": "12.5",
       "length": "60",
@@ -858,6 +908,7 @@
         "/assets/img/IMG_5837.webp"
       ],
       "name_uk": "Підвіска 7 стріл",
+      "category": "pendants",
       "proba": 585,
       "weight": "1.42",
       "length": "3",
@@ -869,6 +920,7 @@
         "/assets/img/IMG_5838.webp"
       ],
       "name_uk": "Підвіска Микола чуд",
+      "category": "pendants",
       "proba": 585,
       "weight": "1.6",
       "length": "2.5",
@@ -880,6 +932,7 @@
         "/assets/img/IMG_5841.webp"
       ],
       "name_uk": "Печатка",
+      "category": "rings",
       "proba": 583,
       "weight": "6.67",
       "length": "20",
@@ -891,6 +944,7 @@
         "/assets/img/IMG_5930.webp"
       ],
       "name_uk": "Печатка",
+      "category": "rings",
       "proba": 583,
       "weight": "8.15",
       "length": "20",
@@ -902,6 +956,7 @@
         "/assets/img/IMG_5931.webp"
       ],
       "name_uk": "Браслет ленград",
+      "category": "bracelets",
       "proba": 585,
       "weight": "30.91",
       "length": "20",
@@ -913,6 +968,7 @@
         "/assets/img/IMG_5932.webp"
       ],
       "name_uk": "Ланцюг якор",
+      "category": "chains",
       "proba": 585,
       "weight": "14.14",
       "length": "50",
@@ -925,6 +981,7 @@
         "/assets/img/IMG_5933.webp"
       ],
       "name_uk": "Злиток 2.5",
+      "category": "coins",
       "proba": 585,
       "weight": "2.5",
       "length": "",
@@ -936,6 +993,7 @@
         "/assets/img/IMG_5935.webp"
       ],
       "name_uk": "Сережки с кулоном",
+      "category": "pendants",
       "proba": 585,
       "weight": "5.03",
       "length": "",
@@ -947,6 +1005,7 @@
         "/assets/img/IMG_5936.webp"
       ],
       "name_uk": "Булавка",
+      "category": "other",
       "proba": 585,
       "weight": "0.63",
       "length": "3",
@@ -958,6 +1017,7 @@
         "/assets/img/IMG_5937.webp"
       ],
       "name_uk": "Булавка",
+      "category": "other",
       "proba": 585,
       "weight": "0.76",
       "length": "",
@@ -969,6 +1029,7 @@
         "/assets/img/IMG_5938.webp"
       ],
       "name_uk": "Хрест",
+      "category": "pendants",
       "proba": 585,
       "weight": "0.39",
       "length": "2",
@@ -980,6 +1041,7 @@
         "/assets/img/IMG_5939.webp"
       ],
       "name_uk": "Підвіска ладанка с камнями",
+      "category": "pendants",
       "proba": 585,
       "weight": "2.82",
       "length": "",
@@ -991,6 +1053,7 @@
         "/assets/img/IMG_5940.webp"
       ],
       "name_uk": "Хрест",
+      "category": "pendants",
       "proba": 585,
       "weight": "1.55",
       "length": "",
@@ -1000,6 +1063,7 @@
     {
       "photos": [],
       "name_uk": "Хрест",
+      "category": "pendants",
       "proba": 585,
       "weight": "1.56",
       "length": "3",
@@ -1011,6 +1075,7 @@
         "/assets/img/IMG_5955.webp"
       ],
       "name_uk": "Годинник мак тайм",
+      "category": "watches",
       "proba": 585,
       "weight": "11",
       "length": "22",
