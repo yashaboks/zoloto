@@ -73,6 +73,20 @@ collections:
                 field: { name: "image", label: "Фото", widget: "image" }
                 hint: "Первое фото — обложка карточки. Можно 1, 2 или 3. Перетаскиванием меняется порядок."
               - { name: "name_uk", label: "Название", widget: "string" }
+              - name: "category"
+                label: "Раздел на сайте"
+                widget: "select"
+                default: "other"
+                hint: "В каком разделе каталога показывать изделие. Если не подходит ничего — «Інше»."
+                options:
+                  - { label: "Каблучки (кольца, обручки, печатки)", value: "rings" }
+                  - { label: "Підвіски та кулони", value: "pendants" }
+                  - { label: "Ланцюжки", value: "chains" }
+                  - { label: "Браслети", value: "bracelets" }
+                  - { label: "Сережки", value: "earrings" }
+                  - { label: "Годинники", value: "watches" }
+                  - { label: "Монети та злитки", value: "coins" }
+                  - { label: "Інше", value: "other" }
               - name: "proba"
                 label: "Проба (585, 750, 999…)"
                 widget: "number"
