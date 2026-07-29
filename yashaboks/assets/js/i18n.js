@@ -77,8 +77,8 @@ const I18N = {
     "catalog.weight": "вага",
     "catalog.length": "довжина",
     "catalog.deal": "за домовленістю",
-    "catalog.expand": "Показати всі",
-    "catalog.collapse": "Згорнути",
+    "catalog.all": "Усі",
+    "catalog.more": "Показати ще",
     "catalog.empty": "Скоро тут з'являться нові вироби.",
     "lightbox.close": "Закрити",
 

@@ -119,9 +119,29 @@
     }).join("");
   }
 
-  /* how many items to show before the "expand" button kicks in */
-  var CATALOG_LIMIT = 6;
-  var catalogExpanded = false;
+  /* ---------- catalog paging ----------
+     Показываем маленькими порциями. Это НЕ косметика: каждое видимое
+     фото 1200x1600 занимает ~7.3 МБ оперативки телефона, а вкладка
+     умирает где-то на 200-400 МБ. Показать все 90 разом = 657 МБ = смерть.
+     Поэтому первый экран 6 штук, дальше по 12 за нажатие. */
+  var CATALOG_FIRST = 6;
+  var CATALOG_STEP = 12;
+  var catalogShown = CATALOG_FIRST;
+
+  /* ---------- разделы каталога ----------
+     Порядок здесь = порядок кнопок на сайте.
+     value должен совпадать со значением поля "category" в панели. */
+  var CATEGORIES = [
+    { value: "rings",     uk: "Каблучки" },
+    { value: "pendants",  uk: "Підвіски" },
+    { value: "chains",    uk: "Ланцюжки" },
+    { value: "bracelets", uk: "Браслети" },
+    { value: "earrings",  uk: "Сережки" },
+    { value: "watches",   uk: "Годинники" },
+    { value: "coins",     uk: "Монети" },
+    { value: "other",     uk: "Інше" }
+  ];
+  var activeCategory = "all";
 
   /* ---------- external data (edited via /admin CMS) ----------
      Catalog + settings live in assets/data/*.json so the client can
@@ -152,6 +172,7 @@
     }
     return {
       type: it.type || "coin",
+      category: it.category || "other",
       name: name,
       proba: it.proba,
       weight: it.weight,
@@ -178,18 +199,83 @@
       .forEach(function (k) { if (data[k]) s[k] = data[k]; });
   }
 
+  /* ---------- страж памяти ----------
+     loading="lazy" умеет только НЕ грузить заранее. Но раз загруженное
+     фото остаётся в памяти навсегда, даже уехав далеко за экран.
+     Поэтому сами выгружаем всё, что дальше двух экранов, и возвращаем
+     при подходе. Так расход памяти держится на уровне пары экранов,
+     сколько бы товаров человек ни открыл. */
+  var BLANK = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+  var memGuard = null;
+
+  function initMemoryGuard() {
+    if (typeof IntersectionObserver !== "function") return;
+    memGuard = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var img = en.target;
+        var real = img.getAttribute("data-src");
+        if (!real) return;
+        if (en.isIntersecting) {
+          if (img.getAttribute("src") !== real) img.setAttribute("src", real);
+        } else if (img.getAttribute("src") !== BLANK) {
+          img.setAttribute("src", BLANK);
+        }
+      });
+    }, { rootMargin: "1200px 0px" });
+  }
+
+  function watchCatalogImages() {
+    if (!memGuard) return;
+    $all("#catalogGrid img[data-src]").forEach(function (img) { memGuard.observe(img); });
+  }
+
+  /* товары выбранного раздела */
+  function visibleItems() {
+    if (activeCategory === "all") return catalogItems;
+    return catalogItems.filter(function (it) { return it.category === activeCategory; });
+  }
+
+  /* кнопки-разделы с количеством; пустые разделы не показываем */
+  function renderFilters(lang) {
+    var wrap = $("#catalogFilters");
+    if (!wrap) return;
+
+    var counts = {};
+    catalogItems.forEach(function (it) {
+      counts[it.category] = (counts[it.category] || 0) + 1;
+    });
+
+    var chips = [{ value: "all", label: t("catalog.all", lang), n: catalogItems.length }];
+    CATEGORIES.forEach(function (c) {
+      if (counts[c.value]) chips.push({ value: c.value, label: c[lang] || c.uk, n: counts[c.value] });
+    });
+
+    wrap.innerHTML = chips.map(function (c) {
+      var on = c.value === activeCategory;
+      return '<button type="button" class="cat-chip' + (on ? " is-active" : "") + '"' +
+        ' role="tab" aria-selected="' + (on ? "true" : "false") + '"' +
+        ' data-cat="' + c.value + '">' +
+        c.label + '<span class="cat-n">' + c.n + "</span></button>";
+    }).join("");
+
+    wrap.hidden = chips.length < 2;
+  }
+
   function renderCatalog(lang) {
     var grid = $("#catalogGrid");
     if (!grid) return;
 
-    if (!catalogItems.length) {
+    renderFilters(lang);
+
+    var items = visibleItems();
+    if (!items.length) {
       grid.innerHTML = '<p class="catalog-empty">' + t("catalog.empty", lang) + "</p>";
       var emptyMore = $("#catalogMore");
       if (emptyMore) emptyMore.hidden = true;
       return;
     }
 
-    grid.innerHTML = catalogItems.map(function (it) {
+    grid.innerHTML = items.map(function (it) {
       var isSold = it.status === "sold";
       var statusKey = isSold ? "catalog.sold" : "catalog.available";
       var statusCls = isSold ? "sold" : "available";
@@ -198,7 +284,8 @@
       var multi = it.photos && it.photos.length > 1;
       var media = it.photo
         ? '<img src="' + it.photo + '" alt="' + altText + '" loading="lazy"' +
-            (multi ? ' data-photos="' + it.photos.join("|") + '"' : "") + " />"
+            ' data-src="' + it.photo + '"' +
+            ' data-photos="' + it.photos.join("|") + '" />'
         : lineIcon(it.type);
       var countBadge = multi
         ? '<span class="item-count">' + it.photos.length + ' фото</span>'
@@ -230,9 +317,12 @@
     }).join("");
 
     applyCatalogLimit(lang);
+    watchCatalogImages();
   }
 
-  /* show only the first CATALOG_LIMIT items until "expand" is pressed */
+  /* Показываем первые catalogShown карточек, остальные прячем.
+     Скрытые (display:none) браузер не загружает благодаря loading="lazy",
+     поэтому память растёт только на то, что реально видно. */
   function applyCatalogLimit(lang) {
     var grid = $("#catalogGrid");
     var moreWrap = $("#catalogMore");
@@ -241,23 +331,25 @@
 
     var items = $all(".item", grid);
 
-    if (items.length <= CATALOG_LIMIT) {
-      items.forEach(function (el) { el.classList.remove("is-hidden"); });
+    if (items.length <= catalogShown) {
+      items.forEach(function (el) {
+        el.classList.remove("is-hidden");
+        el.classList.add("in");
+      });
       if (moreWrap) moreWrap.hidden = true;
       return;
     }
 
     items.forEach(function (el, i) {
-      var hide = !catalogExpanded && i >= CATALOG_LIMIT;
+      var hide = i >= catalogShown;
       el.classList.toggle("is-hidden", hide);
       if (!hide) el.classList.add("in"); // reveal freshly shown cards
     });
 
+    var left = items.length - catalogShown;
     if (moreWrap) moreWrap.hidden = false;
     if (btn) {
-      btn.textContent = catalogExpanded
-        ? t("catalog.collapse", lang)
-        : t("catalog.expand", lang) + " (" + items.length + ")";
+      btn.textContent = t("catalog.more", lang) + " " + Math.min(CATALOG_STEP, left);
     }
   }
 
@@ -265,11 +357,26 @@
     var btn = $("#catalogMoreBtn");
     if (!btn) return;
     btn.addEventListener("click", function () {
-      catalogExpanded = !catalogExpanded;
+      catalogShown += CATALOG_STEP;
       applyCatalogLimit(activeLang);
-      if (!catalogExpanded) {
-        var sec = $("#catalog");
-        if (sec) sec.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+
+  /* переключение разделов */
+  function initCatalogFilters() {
+    var wrap = $("#catalogFilters");
+    if (!wrap) return;
+    wrap.addEventListener("click", function (e) {
+      var btn = e.target.closest ? e.target.closest(".cat-chip") : null;
+      if (!btn) return;
+      var cat = btn.getAttribute("data-cat");
+      if (!cat || cat === activeCategory) return;
+      activeCategory = cat;
+      catalogShown = CATALOG_FIRST; // новый раздел — снова с начала
+      renderCatalog(activeLang);
+      var head = $("#catalogFilters");
+      if (head && head.scrollIntoView) {
+        head.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
   }
@@ -598,6 +705,7 @@
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     markReveals();
+    initMemoryGuard();          // до первой отрисовки, иначе картинки не под наблюдением
     setLang(lang, { initial: true });
 
     initCalc();
@@ -606,6 +714,7 @@
     initLangSwitch();
     initScrollTop();
     initCatalogMore();
+    initCatalogFilters();
     initLightbox();
     initReveals();
 
