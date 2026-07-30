@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6232.webp"
+      ],
+      "name_uk": "Ланцюг якор білий",
+      "proba": 585,
+      "weight": "31",
+      "length": "52",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6230.webp"
       ],
       "name_uk": "Ланцюг пітон без проби",
