@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6230.webp"
+      ],
+      "name_uk": "Ланцюг пітон без проби",
+      "proba": 585,
+      "weight": "14.91",
+      "length": "48",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6229.webp"
       ],
       "name_uk": "Ланцюг якор",
