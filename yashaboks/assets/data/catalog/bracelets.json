@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6227.webp"
+      ],
+      "name_uk": "Боаслет",
+      "proba": 585,
+      "weight": "1.75",
+      "length": "19",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_4508.jpeg"
       ],
       "name_uk": "Браслет",
