@@ -2,28 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_5530.jpeg"
-      ],
-      "name_uk": "Браслет",
-      "proba": 585,
-      "weight": "3.87",
-      "length": "19",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4320.jpeg"
-      ],
-      "name_uk": "Браслет",
-      "proba": 585,
-      "weight": "14",
-      "length": "19",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4508.jpeg"
       ],
       "name_uk": "Браслет",
@@ -57,17 +35,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5430.jpeg"
-      ],
-      "name_uk": "Браслет",
-      "proba": 585,
-      "weight": "18.75",
-      "length": "19.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_5434.jpeg"
       ],
       "name_uk": "Браслет",
@@ -96,17 +63,6 @@
       "proba": 585,
       "weight": "5.91",
       "length": "18",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5835.webp"
-      ],
-      "name_uk": "Браслет",
-      "proba": 585,
-      "weight": "9.88",
-      "length": "21",
       "price": null,
       "status": "available"
     },
