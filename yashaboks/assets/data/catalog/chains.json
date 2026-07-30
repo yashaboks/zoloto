@@ -46,50 +46,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5515.jpeg"
-      ],
-      "name_uk": "Ланцюг жіноч",
-      "proba": 585,
-      "weight": "1.78",
-      "length": "44",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5528.jpeg"
-      ],
-      "name_uk": "Ланцюг Бисмарк унісекс без проби",
-      "proba": 585,
-      "weight": "14.9",
-      "length": "48",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5528.jpeg"
-      ],
-      "name_uk": "Ланцюг Бисмарк унісекс без проби",
-      "proba": 585,
-      "weight": "14.9",
-      "length": "48",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5734.webp"
-      ],
-      "name_uk": "Ланцюг с крестом",
-      "proba": 583,
-      "weight": "7.62",
-      "length": "60",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_5735.webp"
       ],
       "name_uk": "Ланцюг жіноч карте",
@@ -107,39 +63,6 @@
       "proba": 585,
       "weight": "1.3",
       "length": "35",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5741.webp"
-      ],
-      "name_uk": "Ланцюг канат",
-      "proba": 585,
-      "weight": "1.3",
-      "length": "35",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5836.webp"
-      ],
-      "name_uk": "Ланцюг унісекс",
-      "proba": 585,
-      "weight": "12.5",
-      "length": "60",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5932.webp"
-      ],
-      "name_uk": "Ланцюг якор",
-      "proba": 585,
-      "weight": "14.14",
-      "length": "50",
       "price": null,
       "status": "available"
     }
