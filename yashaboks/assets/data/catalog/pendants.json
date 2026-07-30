@@ -68,18 +68,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4345.jpeg",
-        "/assets/img/IMG_4344.jpeg"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 750,
-      "weight": "11.37",
-      "length": "5.6",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4342.jpeg"
       ],
       "name_uk": "Підвіска ♥️",
@@ -107,17 +95,6 @@
       "name_uk": "Хрест",
       "proba": 585,
       "weight": "13.6",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4616.jpeg"
-      ],
-      "name_uk": "Ладонка діамант",
-      "proba": 585,
-      "weight": "14.92",
       "length": "",
       "price": null,
       "status": "available"
@@ -157,56 +134,12 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5534.jpeg"
-      ],
-      "name_uk": "Підвіска зайчиня",
-      "proba": 585,
-      "weight": "1.15",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_5733.webp"
       ],
       "name_uk": "Підвіска ніфертіті",
       "proba": 750,
       "weight": "3.29",
       "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5837.webp"
-      ],
-      "name_uk": "Підвіска 7 стріл",
-      "proba": 585,
-      "weight": "1.42",
-      "length": "3",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5838.webp"
-      ],
-      "name_uk": "Підвіска Микола чуд",
-      "proba": 585,
-      "weight": "1.6",
-      "length": "2.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5837.webp"
-      ],
-      "name_uk": "Підвіска 7 стріл",
-      "proba": 585,
-      "weight": "1.42",
-      "length": "3",
       "price": null,
       "status": "available"
     },
