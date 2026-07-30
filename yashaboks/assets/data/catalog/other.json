@@ -54,17 +54,6 @@
       "length": "3",
       "price": null,
       "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5937.webp"
-      ],
-      "name_uk": "Булавка",
-      "proba": 585,
-      "weight": "0.76",
-      "length": "",
-      "price": null,
-      "status": "available"
     }
   ]
 }
