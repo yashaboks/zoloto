@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6215.webp"
+      ],
+      "name_uk": "Ланцюг жіночій",
+      "proba": 585,
+      "weight": "4.3",
+      "length": "52",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_4323.jpeg"
       ],
       "name_uk": "Ланцюг",
