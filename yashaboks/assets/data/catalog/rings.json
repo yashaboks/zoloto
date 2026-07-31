@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6309.webp"
+      ],
+      "name_uk": "Печатка",
+      "proba": 583,
+      "weight": "7",
+      "length": "22.5",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6308.webp"
       ],
       "name_uk": "Обручка",
