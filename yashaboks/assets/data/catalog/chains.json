@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6313.webp"
+      ],
+      "name_uk": "Ланцюг якор дута",
+      "proba": 585,
+      "weight": "14",
+      "length": "57",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6232.webp"
       ],
       "name_uk": "Ланцюг якор білий",
