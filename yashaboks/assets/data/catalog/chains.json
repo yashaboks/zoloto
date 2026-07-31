@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6315.webp"
+      ],
+      "name_uk": "Ланцюг",
+      "proba": 585,
+      "weight": "6.5",
+      "length": "53",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6313.webp"
       ],
       "name_uk": "Ланцюг якор дута",
