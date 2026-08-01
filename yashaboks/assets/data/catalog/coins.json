@@ -11,29 +11,6 @@
       "length": "",
       "price": null,
       "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5509.jpeg"
-      ],
-      "name_uk": "Злиток",
-      "proba": 9999,
-      "weight": "5",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5934.webp",
-        "/assets/img/IMG_5933.webp"
-      ],
-      "name_uk": "Злиток 2.5",
-      "proba": 585,
-      "weight": "2.5",
-      "length": "",
-      "price": null,
-      "status": "available"
     }
   ]
 }
