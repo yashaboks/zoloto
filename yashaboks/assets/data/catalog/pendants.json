@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6469.webp"
+      ],
+      "name_uk": "Підвіска розкладна",
+      "proba": 585,
+      "weight": "1.46",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6459.webp"
       ],
       "name_uk": "Підвіска",
