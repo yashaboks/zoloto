@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6449.webp"
+      ],
+      "name_uk": "Годиник",
+      "proba": 583,
+      "weight": "12.5",
+      "length": "23",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6201.webp"
       ],
       "name_uk": "Годиник континенталь",
