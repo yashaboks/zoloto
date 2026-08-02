@@ -13,28 +13,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6308.webp"
-      ],
-      "name_uk": "Обручка",
-      "proba": 585,
-      "weight": "3",
-      "length": "21",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6303.webp"
-      ],
-      "name_uk": "Підвіска скорпіон",
-      "proba": 585,
-      "weight": "1.36",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6302.webp"
       ],
       "name_uk": "Хрест",
@@ -79,39 +57,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6214.webp"
-      ],
-      "name_uk": "Обручка",
-      "proba": 585,
-      "weight": "1.15",
-      "length": "17",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6213.webp"
-      ],
-      "name_uk": "Обручка",
-      "proba": 585,
-      "weight": "2.42",
-      "length": "21",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6212.webp"
-      ],
-      "name_uk": "Обручка",
-      "proba": 585,
-      "weight": "3.48",
-      "length": "21",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6211.webp"
       ],
       "name_uk": "Печатка",
@@ -140,17 +85,6 @@
       "proba": 585,
       "weight": "3.21",
       "length": "17",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4374.jpeg"
-      ],
-      "name_uk": "Обручка",
-      "proba": 585,
-      "weight": "1.64",
-      "length": "16.5",
       "price": null,
       "status": "available"
     },
@@ -200,17 +134,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4363.jpeg"
-      ],
-      "name_uk": "Обручка",
-      "proba": 585,
-      "weight": "2.91",
-      "length": "18.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4360.jpeg"
       ],
       "name_uk": "Обручка",
@@ -222,34 +145,12 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4358.jpeg"
-      ],
-      "name_uk": "Обручка",
-      "proba": 585,
-      "weight": "3.31",
-      "length": "20",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4357.jpeg"
       ],
       "name_uk": "Обручка",
       "proba": 583,
       "weight": "5.96",
       "length": "20.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4337.jpeg"
-      ],
-      "name_uk": "Обручка",
-      "proba": 585,
-      "weight": "1.09",
-      "length": "16",
       "price": null,
       "status": "available"
     },
@@ -294,61 +195,6 @@
       "proba": 583,
       "weight": "4.68",
       "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5527.jpeg"
-      ],
-      "name_uk": "Каблучка фронті",
-      "proba": 583,
-      "weight": "4.68",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5736.webp"
-      ],
-      "name_uk": "Каблучка  каратун",
-      "proba": 583,
-      "weight": "6.51",
-      "length": "18.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5737.webp"
-      ],
-      "name_uk": "Каблучка",
-      "proba": 585,
-      "weight": "6.61",
-      "length": "19",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5738.webp"
-      ],
-      "name_uk": "Каблучка вінтаж",
-      "proba": 583,
-      "weight": "4.35",
-      "length": "17",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5740.webp"
-      ],
-      "name_uk": "Печатка чоловіча",
-      "proba": 585,
-      "weight": "4",
-      "length": "21",
       "price": null,
       "status": "available"
     },
