@@ -2,17 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_6306.webp"
-      ],
-      "name_uk": "Підвіска глаз",
-      "proba": 585,
-      "weight": "0.68",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6301.webp"
       ],
       "name_uk": "Підвіска дерево",
@@ -112,17 +101,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6204.webp"
-      ],
-      "name_uk": "Підвіска емаль",
-      "proba": 585,
-      "weight": "0.78",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4350.jpeg"
       ],
       "name_uk": "Підвіска",
@@ -140,17 +118,6 @@
       "proba": 583,
       "weight": "5.65",
       "length": "3.7",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4342.jpeg"
-      ],
-      "name_uk": "Підвіска ♥️",
-      "proba": 585,
-      "weight": "1.93",
-      "length": "2",
       "price": null,
       "status": "available"
     },
