@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6451.webp"
+      ],
+      "name_uk": "Сережки с обручкою",
+      "proba": 585,
+      "weight": "8.15",
+      "length": "17.5",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6441.webp"
       ],
       "name_uk": "Сережки",
