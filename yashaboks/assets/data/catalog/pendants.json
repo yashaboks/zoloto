@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6432.webp"
+      ],
+      "name_uk": "Хрест",
+      "proba": 585,
+      "weight": "1",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6301.webp"
       ],
       "name_uk": "Підвіска дерево",
