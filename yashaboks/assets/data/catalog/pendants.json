@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6433.webp"
+      ],
+      "name_uk": "Підвіска",
+      "proba": 585,
+      "weight": "0.83",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6432.webp"
       ],
       "name_uk": "Хрест",
