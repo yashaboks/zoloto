@@ -79,34 +79,12 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6320.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "7.47",
-      "length": "60",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6319.webp"
       ],
       "name_uk": "Ланцюг",
       "proba": 585,
       "weight": "7.77",
       "length": "54",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6318.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "13.42",
-      "length": "60",
       "price": null,
       "status": "available"
     },
@@ -140,17 +118,6 @@
       "proba": 585,
       "weight": "6.5",
       "length": "53",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6313.webp"
-      ],
-      "name_uk": "Ланцюг якор дута",
-      "proba": 585,
-      "weight": "14",
-      "length": "57",
       "price": null,
       "status": "available"
     },
@@ -195,17 +162,6 @@
       "proba": 585,
       "weight": "4.3",
       "length": "52",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4323.jpeg"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "8.82",
-      "length": "56",
       "price": null,
       "status": "available"
     },
