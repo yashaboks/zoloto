@@ -2,17 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_6471.webp"
-      ],
-      "name_uk": "Каблучка",
-      "proba": 585,
-      "weight": "2.58",
-      "length": "19",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6458.webp"
       ],
       "name_uk": "Каблучка",
@@ -189,45 +178,12 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4365.jpeg"
-      ],
-      "name_uk": "Обручка",
-      "proba": 585,
-      "weight": "3.5",
-      "length": "18.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4364.jpeg"
       ],
       "name_uk": "Обручка",
       "proba": 583,
       "weight": "3.61",
       "length": "19",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4360.jpeg"
-      ],
-      "name_uk": "Обручка",
-      "proba": 583,
-      "weight": "5.65",
-      "length": "18.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4357.jpeg"
-      ],
-      "name_uk": "Обручка",
-      "proba": 583,
-      "weight": "5.96",
-      "length": "20.5",
       "price": null,
       "status": "available"
     },
