@@ -46,28 +46,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6434.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "1.35",
-      "length": "1.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6312.webp"
-      ],
-      "name_uk": "Сережки обруч",
-      "proba": 585,
-      "weight": "2.72",
-      "length": "3",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6228.webp"
       ],
       "name_uk": "Сережки",
@@ -101,17 +79,6 @@
     },
     {
       "photos": [
-        "/assets/img/C9C45D5A-61E9-42E6-A6A5-8EA7509F60D2.png"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "8",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4610.jpeg"
       ],
       "name_uk": "Сережки камня",
@@ -134,17 +101,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4613.jpeg"
-      ],
-      "name_uk": "Сережки круг",
-      "proba": 750,
-      "weight": "4.82",
-      "length": "5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4614.jpeg"
       ],
       "name_uk": "Сережки мама",
@@ -161,17 +117,6 @@
       "name_uk": "Сережки дитячі камні",
       "proba": 585,
       "weight": "1.8",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5516.jpeg"
-      ],
-      "name_uk": "Сережки гвоздик мрія",
-      "proba": 585,
-      "weight": "1.67",
       "length": "",
       "price": null,
       "status": "available"
