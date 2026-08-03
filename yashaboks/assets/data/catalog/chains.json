@@ -2,56 +2,12 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_6487.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "7.22",
-      "length": "58",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6486.webp"
       ],
       "name_uk": "Ланцюг",
       "proba": 585,
       "weight": "2.74",
       "length": "80",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6468.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "43.89",
-      "length": "60",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6460.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "7.22",
-      "length": "60",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6452.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "27.94",
-      "length": "65",
       "price": null,
       "status": "available"
     },
@@ -68,56 +24,12 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6430.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "16.72",
-      "length": "50",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6429.webp"
       ],
       "name_uk": "Ланцюг",
       "proba": 585,
       "weight": "2.48",
       "length": "50",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6321.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "8.17",
-      "length": "60",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6319.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "7.77",
-      "length": "54",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6316.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "2.71",
-      "length": "85",
       "price": null,
       "status": "available"
     },
@@ -140,17 +52,6 @@
       "proba": 585,
       "weight": "31",
       "length": "52",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6230.webp"
-      ],
-      "name_uk": "Ланцюг пітон без проби",
-      "proba": 585,
-      "weight": "14.91",
-      "length": "48",
       "price": null,
       "status": "available"
     },
