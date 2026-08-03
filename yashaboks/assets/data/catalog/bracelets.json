@@ -2,45 +2,12 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_6457.webp"
-      ],
-      "name_uk": "Браслет жіночій",
-      "proba": 585,
-      "weight": "10.06",
-      "length": "19",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4508.jpeg"
       ],
       "name_uk": "Браслет",
       "proba": 585,
       "weight": "22.27",
       "length": "21",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4850.jpeg"
-      ],
-      "name_uk": "Браслет без проб",
-      "proba": 585,
-      "weight": "13.85",
-      "length": "20",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5092.jpeg"
-      ],
-      "name_uk": "Браслет чоловіч коса",
-      "proba": 585,
-      "weight": "60.25",
-      "length": "28",
       "price": null,
       "status": "available"
     },
@@ -74,17 +41,6 @@
       "proba": 585,
       "weight": "5.91",
       "length": "18",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5835.webp"
-      ],
-      "name_uk": "Браслет",
-      "proba": 585,
-      "weight": "9.88",
-      "length": "21",
       "price": null,
       "status": "available"
     },
