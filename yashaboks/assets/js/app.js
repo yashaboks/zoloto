@@ -435,6 +435,15 @@
       }).join("");
     }
 
+    /* Viber в шапке. Адрес и значок — те же, что у кнопки Viber внизу,
+       чтобы номер менялся в одном месте: настройки панели. */
+    var vTop = $("#viberTop");
+    if (vTop) {
+      vTop.href = s.viber;
+      var vIcon = vTop.querySelector(".btn-viber-icon");
+      if (vIcon && !vIcon.firstChild) vIcon.innerHTML = glyph("viber");
+    }
+
     var foot = $("#footerSocials");
     if (foot) {
       var socials = [
