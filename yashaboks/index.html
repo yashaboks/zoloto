@@ -51,6 +51,15 @@
       </nav>
 
       <div class="header-actions">
+        <!-- Viber закреплён в шапке: это основной способ, которым пишут.
+             Ссылка подставляется из настроек панели (settings.json → viber),
+             здесь стоит только запасной якорь на блок контактов — на случай,
+             если скрипты не загрузятся. Значок рисуется тем же кодом, что и
+             в блоке контактов внизу, см. GLYPHS в assets/js/app.js. -->
+        <a href="#contact" id="viberTop" class="btn btn-gold-soft btn-viber">
+          <span class="btn-viber-icon" aria-hidden="true"></span>
+          <span>Viber</span>
+        </a>
         <a href="#contact" class="btn btn-gold btn-sm" data-i18n="nav.write">Написати</a>
         <button type="button" class="nav-toggle" aria-controls="mobileMenu" aria-expanded="false" data-i18n-attr="aria-label" data-i18n="nav.menu_toggle" aria-label="Меню">
           <span class="nav-toggle-bars" aria-hidden="true"></span>
