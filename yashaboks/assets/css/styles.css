@@ -171,6 +171,16 @@ input { font: inherit; }
 .header-actions { display: flex; align-items: center; gap: .7rem; }
 .main-nav + .header-actions { margin-left: 1.3rem; }
 
+/* Viber в шапке. Размер задан отдельно от .btn-sm намеренно: на узких
+   экранах .btn-sm скрывается (см. медиазапрос 620px), а эта кнопка
+   должна оставаться видимой всегда — ради неё всё и затевалось. */
+/* .62rem по вертикали даёт высоту 44-45 px — минимальный размер цели
+   нажатия по рекомендациям Apple. Меньше делать нельзя: промахиваться
+   пальцем по главной кнопке связи — худшее, что тут может быть. */
+.btn-viber { gap: .45rem; padding: .62rem .95rem; font-size: .86rem; white-space: nowrap; flex-shrink: 0; }
+.btn-viber-icon { display: inline-flex; flex-shrink: 0; }
+.btn-viber svg { width: 17px; height: 17px; display: block; }
+
 .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; }
 .lang-switch button {
   border: 0; background: transparent; color: var(--muted); font-size: .78rem; font-weight: 700;
@@ -476,7 +486,13 @@ body.lb-open { overflow: hidden; }
 
 @media (max-width: 980px) {
   .main-nav { display: none; }
-  .nav-toggle { display: inline-flex; }
+  /* Меню скрыто, и его margin-left:auto вместе с ним — значит кнопки
+     больше ничем не прижимаются вправо и липнут к логотипу. Прижимаем
+     сами: логотип слева, Viber и бургер справа. Заодно уходит лишний
+     отступ в 21 px, из-за которого на узких экранах шапка вылезала
+     за поля. */
+  .main-nav + .header-actions { margin-left: auto; }
+  .nav-toggle { display: inline-flex; flex-shrink: 0; }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
   .catalog-grid { grid-template-columns: repeat(2, 1fr); }
@@ -499,6 +515,13 @@ body.lb-open { overflow: hidden; }
 
 @media (max-width: 380px) {
   .catalog-grid { grid-template-columns: 1fr; }
+}
+
+/* Самые узкие телефоны (iPhone SE и подобные, 320 px). Логотип, кнопка
+   Viber и бургер вместе на 3 px не помещаются в поля. Уменьшаем надпись
+   логотипа — она и так узнаётся, а кнопку Viber трогать нельзя. */
+@media (max-width: 340px) {
+  .brand-name { font-size: 1rem; }
 }
 
 /* ---------- reduced motion ---------- */
