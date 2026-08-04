@@ -42,6 +42,12 @@ collections:
   # целиком, и цена одного удаления растёт примерно как квадрат длины списка.
   # На 90 позициях одно удаление стоило ~32 МБ, на 21 позиции — ~1 МБ.
   # Из-за этого телефон и выбрасывал панель. Короткие списки лечат причину.
+  #
+  # У каждого списка items стоит required: false. Без него панель не даёт
+  # удалить последнее изделие («поле должно быть заполнено») и раздел
+  # невозможно опустошить. А опустошать надо: монеты и часы кончаются
+  # и появляются снова. Пустой раздел сайту не мешает — кнопка фильтра
+  # рисуется только при count > 0, см. renderFilters в assets/js/app.js.
   - name: "catalog"
     label: "Изделия в наличии"
     label_singular: "изделие"
@@ -59,6 +65,7 @@ collections:
             label: "Каблучки"
             label_singular: "изделие"
             widget: "list"
+            required: false
             summary: "{{fields.name_uk}} · {{fields.weight}} г"
             # Список открывается свёрнутым целиком (minimize_collapsed),
             # а каждое изделие — одной строкой (collapsed).
@@ -114,6 +121,7 @@ collections:
             label: "Підвіски"
             label_singular: "изделие"
             widget: "list"
+            required: false
             summary: "{{fields.name_uk}} · {{fields.weight}} г"
             # Список открывается свёрнутым целиком (minimize_collapsed),
             # а каждое изделие — одной строкой (collapsed).
@@ -169,6 +177,7 @@ collections:
             label: "Ланцюжки"
             label_singular: "изделие"
             widget: "list"
+            required: false
             summary: "{{fields.name_uk}} · {{fields.weight}} г"
             # Список открывается свёрнутым целиком (minimize_collapsed),
             # а каждое изделие — одной строкой (collapsed).
@@ -224,6 +233,7 @@ collections:
             label: "Браслети"
             label_singular: "изделие"
             widget: "list"
+            required: false
             summary: "{{fields.name_uk}} · {{fields.weight}} г"
             # Список открывается свёрнутым целиком (minimize_collapsed),
             # а каждое изделие — одной строкой (collapsed).
@@ -279,6 +289,7 @@ collections:
             label: "Сережки"
             label_singular: "изделие"
             widget: "list"
+            required: false
             summary: "{{fields.name_uk}} · {{fields.weight}} г"
             # Список открывается свёрнутым целиком (minimize_collapsed),
             # а каждое изделие — одной строкой (collapsed).
@@ -334,6 +345,7 @@ collections:
             label: "Годинники"
             label_singular: "изделие"
             widget: "list"
+            required: false
             summary: "{{fields.name_uk}} · {{fields.weight}} г"
             # Список открывается свёрнутым целиком (minimize_collapsed),
             # а каждое изделие — одной строкой (collapsed).
@@ -389,6 +401,7 @@ collections:
             label: "Монети"
             label_singular: "изделие"
             widget: "list"
+            required: false
             summary: "{{fields.name_uk}} · {{fields.weight}} г"
             # Список открывается свёрнутым целиком (minimize_collapsed),
             # а каждое изделие — одной строкой (collapsed).
@@ -444,6 +457,7 @@ collections:
             label: "Інше"
             label_singular: "изделие"
             widget: "list"
+            required: false
             summary: "{{fields.name_uk}} · {{fields.weight}} г"
             # Список открывается свёрнутым целиком (minimize_collapsed),
             # а каждое изделие — одной строкой (collapsed).
