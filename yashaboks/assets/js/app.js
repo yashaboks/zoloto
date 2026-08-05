@@ -409,6 +409,19 @@
     });
   }
 
+  /* ---------- Viber идёт через свою страницу ----------
+     Кнопка Viber (она осталась только в блоке контактов внизу) ведёт не
+     на viber://…, а на viber.html — обычный https-адрес на нашем же
+     сайте, который уже сам пробует запустить приложение. Причина:
+     встроенные браузеры соцсетей (TikTok, Instagram, Facebook)
+     пропускают только http и https, а незнакомую приставку viber://
+     отменяют молча — нажатие не делало ничего.
+     У Telegram и WhatsApp такой страницы-переходника не нужно: t.me и
+     wa.me и есть настоящие сайты. Подробности — в шапке viber.html.
+     Сам адрес viber://… остаётся в настройках панели, оттуда его
+     читает viber.html. */
+  var VIBER_PAGE = "viber.html";
+
   function renderContacts(lang) {
     var s = CONFIG.social;
     var handle = "@yashaboks";
@@ -417,7 +430,7 @@
       { icon: "phone",     href: "tel:" + s.phone,   label: t("contact.call", lang), sub: s.phoneDisplay, primary: true, ext: false },
       { icon: "telegram",  href: s.telegram,         label: "Telegram", sub: handle,        ext: true },
       { icon: "whatsapp",  href: s.whatsapp,         label: "WhatsApp", sub: s.phoneDisplay, ext: true },
-      { icon: "viber",     href: s.viber,            label: "Viber",    sub: s.phoneDisplay, ext: false },
+      { icon: "viber",     href: VIBER_PAGE,         label: "Viber",    sub: s.phoneDisplay, ext: false },
       { icon: "tiktok",    href: s.tiktok,           label: t("contact.write_tiktok", lang),    sub: handle,        ext: true },
       { icon: "instagram", href: s.instagram,        label: t("contact.write_instagram", lang), sub: handle,        ext: true }
     ];
@@ -435,14 +448,19 @@
       }).join("");
     }
 
-    /* Viber в шапке. Адрес и значок — те же, что у кнопки Viber внизу,
-       чтобы номер менялся в одном месте: настройки панели. */
-    var vTop = $("#viberTop");
-    if (vTop) {
-      vTop.href = s.viber;
-      var vIcon = vTop.querySelector(".btn-viber-icon");
-      if (vIcon && !vIcon.firstChild) vIcon.innerHTML = glyph("viber");
-    }
+    /* Круглые кнопки связи в шапке. Адреса и значки — те же, что в блоке
+       контактов внизу, чтобы всё менялось в одном месте: в настройках
+       панели. Viber в шапке больше нет, он остался только внизу. */
+    [
+      { sel: "#tgTop", href: s.telegram, icon: "telegram" },
+      { sel: "#waTop", href: s.whatsapp, icon: "whatsapp" }
+    ].forEach(function (b) {
+      var el = $(b.sel);
+      if (!el) return;
+      if (b.href) el.href = b.href;
+      var box = el.querySelector(".btn-round-icon");
+      if (box && !box.firstChild) box.innerHTML = glyph(b.icon);
+    });
 
     var foot = $("#footerSocials");
     if (foot) {
