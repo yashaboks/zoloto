@@ -25,7 +25,7 @@
        обновления сайта может подсунуть старые. Цифра в адресе делает файл
        для него новым, и он забирает свежий. Правило: поменял файл — подними
        цифру у него на единицу. -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=3" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=4" />
 </head>
 <body>
   <a class="skip-link" href="#contact" data-i18n="nav.contact">Контакти</a>
@@ -55,32 +55,22 @@
       </nav>
 
       <div class="header-actions">
-        <!-- Telegram и WhatsApp закреплены в шапке: это основные способы,
-             которыми пишут. Круглые, без подписей — по просьбе заказчика,
-             в родных цветах, чтобы узнавались с одного взгляда. Заодно
-             двое без подписей занимают столько же места, сколько занимала
-             одна кнопка с подписью.
+        <!-- Viber закреплён в шапке: это основной способ, которым пишут.
+             В родном фиолетовом цвете, с надписью и значком — по просьбе
+             заказчика, чтобы узнавался с одного взгляда.
 
-             Viber отсюда убран, но никуда не делся: он остался в блоке
-             контактов внизу и ведёт на viber.html — свою страницу-
-             переходник. Прямая ссылка viber://… не работала бы во
-             встроенных браузерах соцсетей, почему — подробно в шапке
-             viber.html.
+             Ведёт не прямо на viber://…, а на viber.html — свою страницу-
+             переходник. Прямая ссылка не работает во встроенных браузерах
+             соцсетей: они пропускают только http и https, а незнакомую
+             приставку отменяют молча. Подробно — в шапке viber.html.
 
-             Адреса здесь записаны прямо, чтобы кнопки работали, даже если
-             скрипты не загрузятся; при загрузке их перезапишет app.js
-             значениями из настроек панели. Значки рисуются тем же кодом,
-             что и в блоке контактов внизу, см. GLYPHS в app.js.
-
-             Подпись нужна: кнопка без текста непонятна тем, кто слушает
-             страницу голосом, — отсюда aria-label. -->
-        <a href="https://t.me/yashaboks" id="tgTop" class="btn-round btn-tg"
-           aria-label="Telegram" target="_blank" rel="noopener noreferrer">
-          <span class="btn-round-icon" aria-hidden="true"></span>
-        </a>
-        <a href="https://wa.me/380979122665" id="waTop" class="btn-round btn-wa"
-           aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-          <span class="btn-round-icon" aria-hidden="true"></span>
+             Адрес записан прямо здесь, чтобы кнопка работала, даже если
+             скрипты не загрузятся; при загрузке его подтвердит app.js
+             (VIBER_PAGE). Значок рисуется тем же кодом, что и в блоке
+             контактов внизу, см. GLYPHS в assets/js/app.js. -->
+        <a href="viber.html" id="viberTop" class="btn btn-viber">
+          <span class="btn-viber-icon" aria-hidden="true"></span>
+          <span>Viber</span>
         </a>
         <a href="#contact" class="btn btn-gold btn-sm" data-i18n="nav.write">Написати</a>
         <button type="button" class="nav-toggle" aria-controls="mobileMenu" aria-expanded="false" data-i18n-attr="aria-label" data-i18n="nav.menu_toggle" aria-label="Меню">
@@ -254,6 +244,6 @@
 
   <script src="assets/js/data.js?v=2"></script>
   <script src="assets/js/i18n.js?v=2"></script>
-  <script src="assets/js/app.js?v=3"></script>
+  <script src="assets/js/app.js?v=4"></script>
 </body>
 </html>
