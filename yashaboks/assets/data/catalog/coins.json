@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6893.webp"
+      ],
+      "name_uk": "5",
+      "proba": 900,
+      "weight": "4.3",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_5094.jpeg",
         "/assets/img/IMG_5093.jpeg"
       ],
