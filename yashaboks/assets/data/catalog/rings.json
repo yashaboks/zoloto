@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6885.webp"
+      ],
+      "name_uk": "Каблучка",
+      "proba": 585,
+      "weight": "1.88",
+      "length": "19",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6884.webp"
       ],
       "name_uk": "Каблучка",
