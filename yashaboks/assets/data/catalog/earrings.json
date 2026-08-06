@@ -2,17 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_6485.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "1.65",
-      "length": "2.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6451.webp"
       ],
       "name_uk": "Сережки с обручкою",
@@ -29,17 +18,6 @@
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "5",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6437.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "7.12",
       "length": "",
       "price": null,
       "status": "available"
@@ -74,17 +52,6 @@
       "proba": 585,
       "weight": "4.6",
       "length": "6",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4610.jpeg"
-      ],
-      "name_uk": "Сережки камня",
-      "proba": 585,
-      "weight": "6.67",
-      "length": "",
       "price": null,
       "status": "available"
     },
