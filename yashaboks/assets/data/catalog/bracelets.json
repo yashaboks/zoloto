@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6905.webp"
+      ],
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "9.94",
+      "length": "19",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_5732.webp"
       ],
       "name_uk": "Браслет жіночій",
