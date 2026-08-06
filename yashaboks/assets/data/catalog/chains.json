@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6909.webp"
+      ],
+      "name_uk": "Ланцюг солома колір",
+      "proba": 585,
+      "weight": "117.65",
+      "length": "60",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6486.webp"
       ],
       "name_uk": "Ланцюг",
