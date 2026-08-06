@@ -13,39 +13,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6469.webp"
-      ],
-      "name_uk": "Підвіска розкладна",
-      "proba": 585,
-      "weight": "1.46",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6459.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "1.05",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6442.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "1.51",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6301.webp"
       ],
       "name_uk": "Підвіска дерево",
@@ -73,17 +40,6 @@
       "name_uk": "Хрест",
       "proba": 585,
       "weight": "1.32",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6231.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "1.42",
       "length": "",
       "price": null,
       "status": "available"
@@ -123,17 +79,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6205.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "0.92",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4350.jpeg"
       ],
       "name_uk": "Підвіска",
@@ -151,17 +96,6 @@
       "proba": 583,
       "weight": "5.65",
       "length": "3.7",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/B9C6DF60-00D8-46EE-87BC-FFF277AF46CA.png"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "0,52",
-      "length": "",
       "price": null,
       "status": "available"
     },
@@ -228,17 +162,6 @@
       "proba": 585,
       "weight": "0.39",
       "length": "2",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5939.webp"
-      ],
-      "name_uk": "Підвіска ладанка с камнями",
-      "proba": 585,
-      "weight": "2.82",
-      "length": "",
       "price": null,
       "status": "available"
     },
