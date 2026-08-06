@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6899.webp"
+      ],
+      "name_uk": "Підвіска",
+      "proba": 585,
+      "weight": "0.88",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6484.webp"
       ],
       "name_uk": "Підвіска дельфін",
