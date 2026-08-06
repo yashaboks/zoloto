@@ -2,17 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_4334.jpeg"
-      ],
-      "name_uk": "Намисто",
-      "proba": 585,
-      "weight": "11",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4859.jpeg"
       ],
       "name_uk": "Шнурок",
