@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6975.webp"
+      ],
+      "name_uk": "Сережки набор",
+      "proba": 585,
+      "weight": "6.44",
+      "length": "17.5",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6908.webp"
       ],
       "name_uk": "Сережки набір",
