@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_6981.webp"
+      ],
+      "name_uk": "Під стаканчик",
+      "proba": 875,
+      "weight": "76.5",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_4859.jpeg"
       ],
       "name_uk": "Шнурок",
