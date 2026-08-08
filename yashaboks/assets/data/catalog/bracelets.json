@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_7093.webp"
+      ],
+      "name_uk": "Браслет пандора",
+      "proba": 925,
+      "weight": "75",
+      "length": "18",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_6906.webp"
       ],
       "name_uk": "Браслет",
