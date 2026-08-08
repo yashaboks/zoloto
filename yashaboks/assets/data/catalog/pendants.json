@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_7091.webp"
+      ],
+      "name_uk": "Підвіска булавк",
+      "proba": 585,
+      "weight": "0.91",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_7090.webp"
       ],
       "name_uk": "Підвіска булавка",
