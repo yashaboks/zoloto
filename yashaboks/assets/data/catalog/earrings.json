@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_7086.webp"
+      ],
+      "name_uk": "Сережки",
+      "proba": 585,
+      "weight": "2.16",
+      "length": "3",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_7085.webp"
       ],
       "name_uk": "Сережки",
