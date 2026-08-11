@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_7291.webp"
+      ],
+      "name_uk": "Ланцюг старий",
+      "proba": 56,
+      "weight": "17",
+      "length": "50",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_7290.webp"
       ],
       "name_uk": "Ланцюг",
