@@ -24,50 +24,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6908.webp"
-      ],
-      "name_uk": "Сережки набір",
-      "proba": 585,
-      "weight": "5.04",
-      "length": "17",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6451.webp"
-      ],
-      "name_uk": "Сережки с обручкою",
-      "proba": 585,
-      "weight": "8.15",
-      "length": "17.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6441.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "5",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6228.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "1.63",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4333.jpeg"
       ],
       "name_uk": "Сережки",
@@ -85,17 +41,6 @@
       "proba": 585,
       "weight": "4.6",
       "length": "6",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4347.jpeg"
-      ],
-      "name_uk": "Сережки крила",
-      "proba": 585,
-      "weight": "1,68",
-      "length": "",
       "price": null,
       "status": "available"
     },
