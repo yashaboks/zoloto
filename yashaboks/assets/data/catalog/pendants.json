@@ -2,17 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_7091.webp"
-      ],
-      "name_uk": "Підвіска булавк",
-      "proba": 585,
-      "weight": "0.91",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_7090.webp"
       ],
       "name_uk": "Підвіска булавка",
@@ -40,17 +29,6 @@
       "name_uk": "Хрест",
       "proba": 585,
       "weight": "1.56",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6977.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "0.75",
       "length": "",
       "price": null,
       "status": "available"
@@ -90,17 +68,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6901.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "2.11",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6900.webp"
       ],
       "name_uk": "Хрест солома колір без проб",
@@ -117,50 +84,6 @@
       "name_uk": "Підвіска",
       "proba": 585,
       "weight": "0.88",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6484.webp"
-      ],
-      "name_uk": "Підвіска дельфін",
-      "proba": 585,
-      "weight": "1.24",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6301.webp"
-      ],
-      "name_uk": "Підвіска дерево",
-      "proba": 585,
-      "weight": "2.17",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6300.webp"
-      ],
-      "name_uk": "Підвіска риби",
-      "proba": 585,
-      "weight": "2.49",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6298.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "1.32",
       "length": "",
       "price": null,
       "status": "available"
@@ -238,17 +161,6 @@
       "name_uk": "Підвіска  баба",
       "proba": 585,
       "weight": "4.82",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5429.jpeg"
-      ],
-      "name_uk": "Підвіска водолій",
-      "proba": 585,
-      "weight": "2.66",
       "length": "",
       "price": null,
       "status": "available"
