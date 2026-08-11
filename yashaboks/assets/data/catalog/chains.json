@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_7292.webp"
+      ],
+      "name_uk": "Ланцюг і браслет",
+      "proba": 585,
+      "weight": "22.13-8.7",
+      "length": "46-18",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_7291.webp"
       ],
       "name_uk": "Ланцюг старий",
