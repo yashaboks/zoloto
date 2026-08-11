@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_7293.webp"
+      ],
+      "name_uk": "Ланцюг",
+      "proba": 585,
+      "weight": "2.05",
+      "length": "50",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_7292.webp"
       ],
       "name_uk": "Ланцюг і браслет",
