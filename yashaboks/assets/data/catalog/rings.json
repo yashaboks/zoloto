@@ -35,17 +35,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_7328.webp"
-      ],
-      "name_uk": "Печатка",
-      "proba": 585,
-      "weight": "8.79",
-      "length": "22",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_7329.webp"
       ],
       "name_uk": "Каблучка",
@@ -233,17 +222,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6458.webp"
-      ],
-      "name_uk": "Каблучка",
-      "proba": 585,
-      "weight": "2.34",
-      "length": "17",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6440.webp"
       ],
       "name_uk": "Каблучка",
@@ -283,17 +261,6 @@
       "proba": 585,
       "weight": "9.72",
       "length": "22",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6216.webp"
-      ],
-      "name_uk": "Печатка",
-      "proba": 585,
-      "weight": "9.34",
-      "length": "22.5",
       "price": null,
       "status": "available"
     },
@@ -360,17 +327,6 @@
       "proba": 583,
       "weight": "6.85",
       "length": "18",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5205.jpeg"
-      ],
-      "name_uk": "Обручка аист",
-      "proba": 585,
-      "weight": "1.82",
-      "length": "18.5",
       "price": null,
       "status": "available"
     },
