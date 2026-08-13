@@ -2,17 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_7315.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "4.06",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_7314.webp"
       ],
       "name_uk": "Кулон",
@@ -40,17 +29,6 @@
       "name_uk": "Хрест",
       "proba": 585,
       "weight": "1.24",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7311.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "1.33",
       "length": "",
       "price": null,
       "status": "available"
@@ -123,17 +101,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6904.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "10.9",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6903.webp"
       ],
       "name_uk": "Підвіска",
@@ -178,18 +145,7 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6226.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "2.43",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6225.webp"
+        "/assets/img/IMG_6902.webp"
       ],
       "name_uk": "Підвіска",
       "proba": 585,
@@ -268,10 +224,10 @@
       "photos": [
         "/assets/img/IMG_5838.webp"
       ],
-      "name_uk": "Підвіска Микола чуд",
+      "name_uk": "Хрест",
       "proba": 585,
-      "weight": "1.6",
-      "length": "2.5",
+      "weight": "1.56",
+      "length": "3",
       "price": null,
       "status": "available"
     },
@@ -283,17 +239,6 @@
       "proba": 585,
       "weight": "0.39",
       "length": "2",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5940.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "1.55",
-      "length": "",
       "price": null,
       "status": "available"
     },
