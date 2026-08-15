@@ -2,17 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_7657.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "13",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_7496.webp"
       ],
       "name_uk": "Зрест",
