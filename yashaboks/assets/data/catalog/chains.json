@@ -2,17 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_7663.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "21.44",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_7662.webp"
       ],
       "name_uk": "Ланцюг",
@@ -30,17 +19,6 @@
       "proba": 585,
       "weight": "2.84",
       "length": "52",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7504.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "2.1",
-      "length": "40",
       "price": null,
       "status": "available"
     },
@@ -68,28 +46,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_7501.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "2.07",
-      "length": "54",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7500.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "2.23",
-      "length": "44",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_7498.webp"
       ],
       "name_uk": "Ланцюг",
@@ -107,17 +63,6 @@
       "proba": 585,
       "weight": "22.18",
       "length": "45",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6913.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "16.72",
-      "length": "50",
       "price": null,
       "status": "available"
     },
