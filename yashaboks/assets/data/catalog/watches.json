@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_8174.webp"
+      ],
+      "name_uk": "Годинник",
+      "proba": 585,
+      "weight": "21 чистого",
+      "length": "19",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_8173.webp"
       ],
       "name_uk": "Годинник",
