@@ -13,17 +13,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_7494.webp"
-      ],
-      "name_uk": "Підвіс",
-      "proba": 585,
-      "weight": "0.86",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_7493.webp"
       ],
       "name_uk": "Підвіс",
@@ -123,77 +112,11 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_7089.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "0.63",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6978.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "1.56",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6903.webp"
       ],
       "name_uk": "Підвіска",
       "proba": 585,
       "weight": "1.64",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6902.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "2.16",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6900.webp"
-      ],
-      "name_uk": "Хрест солома колір без проб",
-      "proba": 585,
-      "weight": "9.18",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6899.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "0.88",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6902.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "2.57",
       "length": "",
       "price": null,
       "status": "available"
@@ -228,17 +151,6 @@
       "proba": 583,
       "weight": "5.65",
       "length": "3.7",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4608.jpeg"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "13.6",
-      "length": "",
       "price": null,
       "status": "available"
     },
@@ -283,15 +195,6 @@
       "proba": 585,
       "weight": "0.39",
       "length": "2",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "1.56",
-      "length": "3",
       "price": null,
       "status": "available"
     }
