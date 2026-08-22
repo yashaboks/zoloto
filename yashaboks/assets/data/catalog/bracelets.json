@@ -13,28 +13,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_7321.webp"
-      ],
-      "name_uk": "Браслет",
-      "proba": 585,
-      "weight": "2.32",
-      "length": "27",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7316.webp"
-      ],
-      "name_uk": "Браслет",
-      "proba": 585,
-      "weight": "6.53",
-      "length": "21",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_7093.webp"
       ],
       "name_uk": "Браслет пандора",
