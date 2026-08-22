@@ -2,28 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_7662.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "22.53",
-      "length": "62",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7505.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "2.84",
-      "length": "52",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_7503.webp"
       ],
       "name_uk": "Ланцюг",
@@ -46,28 +24,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_7498.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "3.04",
-      "length": "60",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7497.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "22.18",
-      "length": "45",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_6910.webp"
       ],
       "name_uk": "Ланцюг",
@@ -85,28 +41,6 @@
       "proba": 585,
       "weight": "117.65",
       "length": "60",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4488.jpeg"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "23.3",
-      "length": "45",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5328.jpeg"
-      ],
-      "name_uk": "Ланцюг удав жіноч",
-      "proba": 585,
-      "weight": "19.56",
-      "length": "45",
       "price": null,
       "status": "available"
     }
