@@ -2,44 +2,11 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_7495.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "2.12",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_7491.webp"
       ],
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "2",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7490.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "5.76",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7489.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "4.16",
       "length": "",
       "price": null,
       "status": "available"
@@ -57,56 +24,12 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_7322.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "7.44",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7086.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "2.16",
-      "length": "3",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6975.webp"
-      ],
-      "name_uk": "Сережки набор",
-      "proba": 585,
-      "weight": "6.44",
-      "length": "17.5",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_4333.jpeg"
       ],
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "3",
       "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4331.jpeg"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "4.6",
-      "length": "6",
       "price": null,
       "status": "available"
     },
