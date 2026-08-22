@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_8134.webp"
+      ],
+      "name_uk": "Підвіск",
+      "proba": 585,
+      "weight": "3.58",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_7496.webp"
       ],
       "name_uk": "Зрест",
