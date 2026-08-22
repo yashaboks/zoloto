@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_8091.webp"
+      ],
+      "name_uk": "Печатка",
+      "proba": 585,
+      "weight": "8.8",
+      "length": "22",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_8092.webp"
       ],
       "name_uk": "Печатка",
