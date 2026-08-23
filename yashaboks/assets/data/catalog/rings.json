@@ -430,9 +430,7 @@
       "status": "available"
     },
     {
-      "photos": [
-        "/assets/img/IMG_8120.webp"
-      ],
+      "photos": [],
       "name_uk": "Каблучка",
       "proba": 585,
       "weight": "4.35",
@@ -491,17 +489,6 @@
       "name_uk": "Каблучка",
       "proba": 585,
       "weight": "2.32",
-      "length": "19",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8126.webp"
-      ],
-      "name_uk": "Каблучка",
-      "proba": 585,
-      "weight": "3.89",
       "length": "19",
       "price": null,
       "status": "available"
