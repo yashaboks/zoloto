@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_8295.webp"
+      ],
+      "name_uk": "Ланцюг зінкер",
+      "proba": 750,
+      "weight": "5.87",
+      "length": "62",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_8293.webp"
       ],
       "name_uk": "Ланцюг",
