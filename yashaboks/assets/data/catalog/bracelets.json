@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_8296.webp"
+      ],
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "6.5",
+      "length": "20",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_8153.webp"
       ],
       "name_uk": "Браслет",
