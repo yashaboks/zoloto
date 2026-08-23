@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_8285.webp"
+      ],
+      "name_uk": "Каблучка с діамант",
+      "proba": 585,
+      "weight": "4.47",
+      "length": "18",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_8284.webp"
       ],
       "name_uk": "Каблучка",
