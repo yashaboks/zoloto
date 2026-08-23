@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_8288.webp"
+      ],
+      "name_uk": "Підвіска",
+      "proba": 585,
+      "weight": "1.11",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_8291.webp"
       ],
       "name_uk": "Підвіска Зінкер діаманти",
