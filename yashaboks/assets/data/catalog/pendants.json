@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_8359.webp"
+      ],
+      "name_uk": "Підвіска",
+      "proba": 585,
+      "weight": "3.39",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_8288.webp"
       ],
       "name_uk": "Підвіска",
