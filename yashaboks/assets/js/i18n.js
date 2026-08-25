@@ -97,7 +97,6 @@ const I18N = {
     "contact.write_instagram": "Instagram",
 
     "footer.person": "Олександр Харківський",
-    "footer.tagline": "Скупка золота · Харків і область",
-    "footer.demo": "Демо-сайт для презентації."
+    "footer.tagline": "Скупка золота · Харків і область"
   }
 };
