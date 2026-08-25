@@ -25,7 +25,7 @@
        обновления сайта может подсунуть старые. Цифра в адресе делает файл
        для него новым, и он забирает свежий. Правило: поменял файл — подними
        цифру у него на единицу. -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=4" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=5" />
 </head>
 <body>
   <a class="skip-link" href="#contact" data-i18n="nav.contact">Контакти</a>
@@ -237,13 +237,22 @@
       <div class="footer-socials" id="footerSocials"></div>
       <p class="footer-meta">
         <span>© <span id="year"></span> yashaboks.</span>
-        <span data-i18n="footer.demo">Демо-сайт для презентації.</span>
       </p>
+
+      <!-- Кто сделал сайт. Метка ?from= в ссылке нужна, чтобы потом было
+           видно, какой из сайтов реально приводит людей в студию.
+           Стоит отдельной строкой, а не внутри копирайта: там цвет
+           приглушённый, и подпись бы выцвела вдвое. -->
+      <a class="cs-by" href="https://crushstudio.pro/?from=yashaboks"
+         target="_blank" rel="noopener">
+        <span class="cs-by__l">Розробка —</span>
+        <span class="cs-by__n">CrushStudio</span>
+      </a>
     </div>
   </footer>
 
   <script src="assets/js/data.js?v=2"></script>
-  <script src="assets/js/i18n.js?v=2"></script>
+  <script src="assets/js/i18n.js?v=3"></script>
   <script src="assets/js/app.js?v=4"></script>
 </body>
 </html>
