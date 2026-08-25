@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_8355.webp"
+      ],
+      "name_uk": "Ланцюг",
+      "proba": 585,
+      "weight": "14.47",
+      "length": "68",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_8354.webp"
       ],
       "name_uk": "Ланцюг",
