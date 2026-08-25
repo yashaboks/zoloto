@@ -558,3 +558,40 @@ body.lb-open { overflow: hidden; }
   .reveal { opacity: 1; transform: none; }
   .gold-foil { background-position: 0 0 !important; }
 }
+
+/* ---------- подпись разработчика ----------
+   Блок один и тот же на всех сайтах студии, поэтому внутри нет ни одного
+   цвета и ни одного названия шрифта: currentColor берёт цвет текста подвала,
+   font:inherit — шрифт сайта. Отсюда правило: ставить его туда, где действует
+   основной цвет текста, а не внутрь приглушённой строки копирайта, иначе
+   подпись выцветет вдвое.
+
+   Вес 700, а не 800: Manrope на этом сайте подгружается до 800, но на других
+   сайтах студии — только до 700, и там браузер подделывал бы жирность.
+   Пусть блок везде выглядит одинаково. */
+.cs-by {
+  display: inline-flex; align-items: baseline; gap: .45em;
+  /* 44 px — чтобы пальцем попадало с первого раза */
+  min-height: 44px; align-content: center;
+  font: inherit; text-decoration: none; color: currentColor;
+}
+.cs-by__l { font-size: .82rem; font-weight: 400; letter-spacing: .01em; opacity: .42; }
+.cs-by__n {
+  font-size: 1.3rem; font-weight: 700; letter-spacing: -.02em; opacity: .88;
+  /* подчёркивание рисуем фоном, а не border: линия выезжает слева направо
+     и не добавляет высоты строке */
+  background: linear-gradient(currentColor, currentColor) no-repeat 0 100% / 0 1px;
+  transition: opacity .25s, background-size .35s cubic-bezier(.2,.7,.3,1);
+}
+.cs-by:hover .cs-by__n,
+.cs-by:focus-visible .cs-by__n { opacity: 1; background-size: 100% 1px; }
+
+/* В два ряда складываем только на самых узких экранах: на обычном телефоне
+   строка занимает ~208 px и делить её незачем */
+@media (max-width: 340px) {
+  .cs-by { flex-direction: column; align-items: center; gap: 2px; }
+  .cs-by__n { font-size: 1.18rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cs-by__n { transition: opacity .25s; }
+}
