@@ -2,39 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_8358.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "0.94",
-      "length": "45",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8357.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "3.67",
-      "length": "56",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8356.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "14.47",
-      "length": "57",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_8355.webp"
       ],
       "name_uk": "Ланцюг",
@@ -46,56 +13,12 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_8354.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "8.83",
-      "length": "62",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8353.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "15.74",
-      "length": "60",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8352.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "11.42",
-      "length": "52",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_8295.webp"
       ],
       "name_uk": "Ланцюг зінкер",
       "proba": 750,
       "weight": "5.87",
       "length": "62",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8293.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "11.86",
-      "length": "44",
       "price": null,
       "status": "available"
     },
@@ -123,34 +46,12 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_8147.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "До 3 гр",
-      "length": "40-69",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_8146.webp"
       ],
       "name_uk": "Ланцюг",
       "proba": 585,
       "weight": "53.38",
       "length": "44",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7502.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "1.71",
-      "length": "40",
       "price": null,
       "status": "available"
     },
