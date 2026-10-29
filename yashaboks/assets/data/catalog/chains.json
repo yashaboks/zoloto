@@ -12,7 +12,9 @@
       "status": "available"
     },
     {
-      "photos": [],
+      "photos": [
+        "/assets/img/IMG_1956.webp"
+      ],
       "name_uk": "Лан",
       "proba": 585,
       "weight": "55.62",
