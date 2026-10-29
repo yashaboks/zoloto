@@ -45,7 +45,9 @@
       "status": "available"
     },
     {
-      "photos": [],
+      "photos": [
+        "/assets/img/IMG_1960.webp"
+      ],
       "name_uk": "Лан",
       "proba": 585,
       "weight": "16.1",
