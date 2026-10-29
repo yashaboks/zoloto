@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "photos": [],
+      "name_uk": "Ланц",
+      "proba": 585,
+      "weight": "11.41",
+      "length": "50",
+      "price": null,
+      "status": "available"
+    },
+    {
       "photos": [
         "/assets/img/IMG_1951.webp"
       ],
