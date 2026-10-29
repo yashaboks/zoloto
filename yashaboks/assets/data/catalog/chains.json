@@ -34,10 +34,12 @@
       "status": "available"
     },
     {
-      "photos": [],
+      "photos": [
+        "/assets/img/IMG_1959.webp"
+      ],
       "name_uk": "Лан",
       "proba": 585,
-      "weight": "15.49",
+      "weight": "15.5",
       "length": "52",
       "price": null,
       "status": "available"
