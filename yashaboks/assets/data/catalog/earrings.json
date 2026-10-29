@@ -13,17 +13,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_8178.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "3.65",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_8177.webp"
       ],
       "name_uk": "Сережки",
@@ -90,45 +79,12 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_8168.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "2.46",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8169.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "1.79",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_8170.webp"
       ],
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "3.93",
       "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8171.webp"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "5.2",
-      "length": "17",
       "price": null,
       "status": "available"
     },
@@ -150,17 +106,6 @@
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "1.5",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4333.jpeg"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "3",
       "length": "",
       "price": null,
       "status": "available"
