@@ -551,7 +551,9 @@
       "status": "available"
     },
     {
-      "photos": [],
+      "photos": [
+        "/assets/img/IMG_8121.webp"
+      ],
       "name_uk": "Каблучка",
       "proba": 585,
       "weight": "4.35",
