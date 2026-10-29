@@ -4,6 +4,15 @@
       "photos": [],
       "name_uk": "Лан",
       "proba": 585,
+      "weight": "15.49",
+      "length": "52",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [],
+      "name_uk": "Лан",
+      "proba": 585,
       "weight": "16.1",
       "length": "56",
       "price": null,
