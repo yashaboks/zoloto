@@ -56,7 +56,9 @@
       "status": "available"
     },
     {
-      "photos": [],
+      "photos": [
+        "/assets/img/IMG_1961.webp"
+      ],
       "name_uk": "Ланц",
       "proba": 585,
       "weight": "11.41",
