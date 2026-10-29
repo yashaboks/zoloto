@@ -2,198 +2,11 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_8362.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "До 2.2",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8288.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "1.11",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8291.webp"
-      ],
-      "name_uk": "Підвіска Зінкер діаманти",
-      "proba": 750,
-      "weight": "17",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8179.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "1.37",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8141.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "0.42",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8140.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "0.92",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8139.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "0.87",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8138.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "0.97",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8137.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "0.63",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8136.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "1.93",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7496.webp"
-      ],
-      "name_uk": "Зрест",
-      "proba": 585,
-      "weight": "1",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7492.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "0.59",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7314.webp"
-      ],
-      "name_uk": "Кулон",
-      "proba": 585,
-      "weight": "1.75",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7313.webp"
-      ],
-      "name_uk": "Кулон",
-      "proba": 585,
-      "weight": "1.58",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7312.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "1.24",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_7310.webp"
       ],
       "name_uk": "Хрест",
       "proba": 585,
       "weight": "1",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7309.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "1.37",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_7090.webp"
-      ],
-      "name_uk": "Підвіска булавка",
-      "proba": 585,
-      "weight": "1.26",
       "length": "",
       "price": null,
       "status": "available"
@@ -211,7 +24,29 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_6208.webp"
+        "/assets/img/IMG_5838.webp"
+      ],
+      "name_uk": "Хрест",
+      "proba": 585,
+      "weight": "1.56",
+      "length": "3",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_7314.webp"
+      ],
+      "name_uk": "Кулон",
+      "proba": 585,
+      "weight": "1.75",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
+        "/assets/img/IMG_7310.webp"
       ],
       "name_uk": "Хрест",
       "proba": 585,
@@ -222,33 +57,11 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_4350.jpeg"
+        "/assets/img/IMG_6903.webp"
       ],
       "name_uk": "Підвіска",
       "proba": 585,
-      "weight": "0.59",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_4348.jpeg"
-      ],
-      "name_uk": "Ладанка",
-      "proba": 583,
-      "weight": "5.65",
-      "length": "3.7",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5733.webp"
-      ],
-      "name_uk": "Підвіска ніфертіті",
-      "proba": 750,
-      "weight": "3.29",
+      "weight": "1.64",
       "length": "",
       "price": null,
       "status": "available"
@@ -261,17 +74,6 @@
       "proba": 585,
       "weight": "1.56",
       "length": "3",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5938.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "0.39",
-      "length": "2",
       "price": null,
       "status": "available"
     }
