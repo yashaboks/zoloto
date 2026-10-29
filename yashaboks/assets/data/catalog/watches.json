@@ -2,56 +2,12 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_8294.webp"
-      ],
-      "name_uk": "Годинник",
-      "proba": 585,
-      "weight": "48-11.4",
-      "length": "23",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8174.webp"
-      ],
-      "name_uk": "Годинник",
-      "proba": 585,
-      "weight": "21 чистого",
-      "length": "19",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_8173.webp"
       ],
       "name_uk": "Годинник",
       "proba": 585,
       "weight": "16 чистого",
       "length": "16",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8145.webp"
-      ],
-      "name_uk": "Годинник",
-      "proba": 585,
-      "weight": "50 без механизма та скла чистого",
-      "length": "23",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_8172.webp"
-      ],
-      "name_uk": "Годиник",
-      "proba": 585,
-      "weight": "15+17 цепка",
-      "length": "50",
       "price": null,
       "status": "available"
     },
