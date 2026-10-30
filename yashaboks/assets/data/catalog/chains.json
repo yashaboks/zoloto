@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_2011.webp"
+      ],
+      "name_uk": "Ц",
+      "proba": 585,
+      "weight": "9.51",
+      "length": "50",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_1988.webp"
       ],
       "name_uk": "Л",
