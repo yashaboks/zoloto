@@ -90,17 +90,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_1957.webp"
-      ],
-      "name_uk": "Лан",
-      "proba": 585,
-      "weight": "6.21",
-      "length": "45",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_1956.webp"
       ],
       "name_uk": "Лан",
@@ -162,17 +151,6 @@
       "proba": 585,
       "weight": "51.12",
       "length": "57",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_0776.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "6.42",
-      "length": "44",
       "price": null,
       "status": "available"
     },
