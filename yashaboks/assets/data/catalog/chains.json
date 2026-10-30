@@ -46,17 +46,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_1966.webp"
-      ],
-      "name_uk": "Лан",
-      "proba": 585,
-      "weight": "17.64",
-      "length": "55",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_1964.webp"
       ],
       "name_uk": "Лан",
