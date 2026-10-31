@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/IMG_2150.webp"
+      ],
+      "name_uk": "Б",
+      "proba": 585,
+      "weight": "7.67",
+      "length": "20",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_1980.webp"
       ],
       "name_uk": "Бр",
