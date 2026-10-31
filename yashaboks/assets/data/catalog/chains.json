@@ -57,17 +57,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_1963.webp"
-      ],
-      "name_uk": "Лан",
-      "proba": 585,
-      "weight": "13.39",
-      "length": "46",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_1962.webp"
       ],
       "name_uk": "Лан",
@@ -85,17 +74,6 @@
       "proba": 585,
       "weight": "66.91",
       "length": "60",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_1959.webp"
-      ],
-      "name_uk": "Лан",
-      "proba": 585,
-      "weight": "15.5",
-      "length": "52",
       "price": null,
       "status": "available"
     },
@@ -129,28 +107,6 @@
       "proba": 585,
       "weight": "51.12",
       "length": "57",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_0775.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "11.42",
-      "length": "50",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_0774.webp"
-      ],
-      "name_uk": "Ланцюг",
-      "proba": 585,
-      "weight": "13.38",
-      "length": "46",
       "price": null,
       "status": "available"
     },
