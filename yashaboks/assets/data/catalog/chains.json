@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/086f52e4-3d9e-4ad2-a2e2-d401c6f85859.webp"
+      ],
+      "name_uk": "Л",
+      "proba": 585,
+      "weight": "55.5",
+      "length": "52",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_2072.webp"
       ],
       "name_uk": "Л",
