@@ -46,17 +46,6 @@
     },
     {
       "photos": [
-        "/assets/img/IMG_5838.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "1.56",
-      "length": "3",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_7314.webp"
       ],
       "name_uk": "Кулон",
@@ -85,17 +74,6 @@
       "proba": 585,
       "weight": "1.64",
       "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_5838.webp"
-      ],
-      "name_uk": "Хрест",
-      "proba": 585,
-      "weight": "1.56",
-      "length": "3",
       "price": null,
       "status": "available"
     }
