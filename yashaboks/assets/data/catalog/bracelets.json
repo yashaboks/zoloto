@@ -2,17 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_2150.webp"
-      ],
-      "name_uk": "Б",
-      "proba": 585,
-      "weight": "7.67",
-      "length": "20",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_1980.webp"
       ],
       "name_uk": "Бр",
@@ -52,17 +41,6 @@
       "proba": 585,
       "weight": "13",
       "length": "22",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_1975.webp"
-      ],
-      "name_uk": "Бр",
-      "proba": 585,
-      "weight": "5",
-      "length": "18",
       "price": null,
       "status": "available"
     },
