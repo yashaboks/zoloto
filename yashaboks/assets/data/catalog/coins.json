@@ -2,6 +2,18 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261103-225839-h978-1.jpg",
+        "/assets/img/tg-20261103-225839-h978-2.jpg"
+      ],
+      "name_uk": "Монета «Суверен»",
+      "proba": 900,
+      "weight": "8.38",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-225714-ax0m-1.jpg",
         "/assets/img/tg-20261103-225714-ax0m-2.jpg"
       ],
