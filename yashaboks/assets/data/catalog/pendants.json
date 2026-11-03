@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261103-225400-4xe8-1.jpg"
+      ],
+      "name_uk": "Подвеска",
+      "proba": 585,
+      "weight": "1.85",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-225321-s2ue-1.jpg"
       ],
       "name_uk": "Подвеска",
