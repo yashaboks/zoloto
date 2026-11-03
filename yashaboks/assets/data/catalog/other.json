@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261103-221249-1dbo-1.jpg"
+      ],
+      "name_uk": "Скледжи ночи",
+      "proba": 585,
+      "weight": "12.48",
+      "length": "18",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_7519.webp"
       ],
       "name_uk": "Ножі срібло",
