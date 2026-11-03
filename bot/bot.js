@@ -438,7 +438,7 @@ async function deleteMany(deps, chat, finds, r) {
      Поэтому при длинном списке фото не шлём, хватит списка в
      карточке, а похожих показываем по 3, а не по 5. */
   if (sure.length) {
-    if (sure.length <= 4) for (const { section, item } of sure) await sendItem(deps, chat, section, item, fieldLines(fromItem(item, section)).join('\n'), null, false);
+    if (sure.length <= 4) for (const { section, item } of sure) await sendItem(deps, chat, section, item, fieldLines(fromItem(item, section)).join('\n'), null, true);
     await showCard(deps, chat, {
       kind: 'delete_many',
       targets: sure.map(({ section, item }) => ({ section, photo: item.photos[0], name: item.name_uk || SECTIONS[section].one, weight: item.weight })),
