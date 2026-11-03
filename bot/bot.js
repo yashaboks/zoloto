@@ -115,6 +115,7 @@ async function onMessage(deps, m) {
     const cmd = text.split(/[\s@]/)[0].toLowerCase();
     if (cmd === '/otmena' || cmd === '/cancel') return cancelAll(deps, chat);
     if (cmd === '/zhurnal' && m.from.id === ADMIN) return showJournal(deps, chat);
+    if (cmd === '/kanal' && m.from.id === ADMIN) return refreshChannel(deps, chat);
     return tg.send(chat, HELP);
   }
 
@@ -148,6 +149,13 @@ async function showJournal({ tg, store }, chat) {
     return `<b>${new Date(r.ts).toISOString().slice(11, 16)} ${r.mode}</b> «${esc(r.text)}»\n→ ${esc(short)}`;
   });
   return tg.send(chat, parts.join('\n\n').slice(0, 4000));
+}
+
+async function refreshChannel(deps, chat) {
+  await deps.tg.typing(chat);
+  const r = await channel.refreshAll(deps, await readCatalogs(deps, Object.keys(SECTIONS)), fromItem);
+  return deps.tg.send(chat, `📣 Посты в канале переписаны: ${r.done} из ${r.total}.` +
+    (r.missing ? ` Не нашёл на сайте: ${r.missing} (убраны через панель — их помечай руками).` : ''));
 }
 
 async function cancelAll({ tg, store }, chat) {

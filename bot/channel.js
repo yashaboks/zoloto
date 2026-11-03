@@ -44,7 +44,10 @@ export function postText(f, { contacts, sold, testing } = {}) {
   lines.push(`<b>${esc(f.name_uk)}</b>`, facts, `Ціна: ${fmtPrice(f.price)}`);
   if (contacts) {
     lines.push('');
-    if (contacts.phoneDisplay) lines.push(`📞 ${esc(contacts.phoneDisplay)}`);
+    // Номер слитно, без пробелов: только такой Telegram сам узнаёт
+    // как телефон и даёт по нему позвонить. Ссылку tel: в посте он
+    // не пропускает.
+    if (contacts.phone) lines.push(`📞 ${esc(contacts.phone)}`);
     const links = [
       contacts.telegram && `<a href="${esc(contacts.telegram)}">Написати</a>`,
       `<a href="${contacts.site}/#catalog">Весь каталог</a>`
@@ -59,7 +62,8 @@ export function postText(f, { contacts, sold, testing } = {}) {
 async function contacts(deps) {
   try {
     const s = JSON.parse(await deps.gh.read(SETTINGS));
-    return { phoneDisplay: s.phoneDisplay, telegram: s.telegram, site: deps.siteUrl };
+    const phone = String(s.phone || s.phoneDisplay || '').replace(/[^\d+]/g, '');
+    return { phone, telegram: s.telegram, site: deps.siteUrl };
   } catch {
     return { site: deps.siteUrl };
   }
@@ -107,6 +111,25 @@ export async function update(deps, f, key, newFileId) {
     if (gone(e)) return deps.store.forgetChannelPost(key);
     await tell(deps, `пост «${esc(f.name_uk)}» не исправился`, e);
   }
+}
+
+/* Переписать подписи всех живых постов по нынешнему сайту: после
+   того, как поменялся вид поста или телефон в настройках. Команда
+   /kanal, только Артёму. Посты проданного не трогаем. */
+export async function refreshAll(deps, catalogs, fromItem) {
+  const rows = await deps.store.allChannelPosts();
+  let done = 0, missing = 0;
+  for (const row of rows) {
+    let found = null;
+    for (const [section, data] of Object.entries(catalogs)) {
+      const item = data.items.find(i => i.photos && i.photos[0] === row.photo);
+      if (item) { found = fromItem(item, section); break; }
+    }
+    if (!found) { missing++; continue; }
+    await update(deps, found, row.photo, null);
+    done++;
+  }
+  return { done, missing, total: rows.length };
 }
 
 /* Изделие убрали с сайта → «ПРОДАНО» в посте. */

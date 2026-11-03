@@ -175,6 +175,7 @@ export function makeStore(db) {
 
     addChannelPost: (photo, msg) => q(`INSERT OR REPLACE INTO channel (photo, msg, ts) VALUES (?, ?, ?)`, photo, msg, now()).run(),
     getChannelPost: photo => q(`SELECT * FROM channel WHERE photo = ?`, photo).first(),
+    allChannelPosts: async () => (await q(`SELECT * FROM channel ORDER BY ts`).all()).results,
     forgetChannelPost: photo => q(`DELETE FROM channel WHERE photo = ?`, photo).run(),
 
     setFocus: (chat, section, photo, pending = null) => q(
