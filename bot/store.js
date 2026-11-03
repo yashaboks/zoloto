@@ -33,6 +33,9 @@ const SCHEMA = [
   // ответа на сообщение относится к нему. pending — правка, которая
   // ждёт, пока Саша выберет одно изделие из нескольких найденных.
   `CREATE TABLE IF NOT EXISTS focus (chat INTEGER PRIMARY KEY, section TEXT, photo TEXT, pending TEXT, ts INTEGER)`,
+  // Пост в канале про изделие на сайте: по нему пост исправляется
+  // при правке и помечается «продано», когда изделие убирают.
+  `CREATE TABLE IF NOT EXISTS channel (photo TEXT PRIMARY KEY, msg INTEGER, ts INTEGER)`,
   `CREATE TABLE IF NOT EXISTS journal (id INTEGER PRIMARY KEY AUTOINCREMENT, ts INTEGER, chat INTEGER, mode TEXT, text TEXT, model TEXT, result TEXT)`
 ];
 
@@ -161,13 +164,18 @@ export function makeStore(db) {
        «Опубликовано» про него должны вести туда же. */
     retargetPublished: (oldPhoto, section, newPhoto) => db.batch([
       q(`UPDATE published SET section = ?, photo = ? WHERE photo = ?`, section, newPhoto, oldPhoto),
-      q(`UPDATE focus SET section = ?, photo = ? WHERE photo = ?`, section, newPhoto, oldPhoto)
+      q(`UPDATE focus SET section = ?, photo = ? WHERE photo = ?`, section, newPhoto, oldPhoto),
+      q(`UPDATE channel SET photo = ? WHERE photo = ?`, newPhoto, oldPhoto)
     ]),
 
     forgetPublished: photo => db.batch([
       q(`DELETE FROM published WHERE photo = ?`, photo),
       q(`DELETE FROM focus WHERE photo = ?`, photo)
     ]),
+
+    addChannelPost: (photo, msg) => q(`INSERT OR REPLACE INTO channel (photo, msg, ts) VALUES (?, ?, ?)`, photo, msg, now()).run(),
+    getChannelPost: photo => q(`SELECT * FROM channel WHERE photo = ?`, photo).first(),
+    forgetChannelPost: photo => q(`DELETE FROM channel WHERE photo = ?`, photo).run(),
 
     setFocus: (chat, section, photo, pending = null) => q(
       `INSERT OR REPLACE INTO focus (chat, section, photo, pending, ts) VALUES (?, ?, ?, ?, ?)`,

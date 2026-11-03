@@ -34,6 +34,10 @@ import { understand, understandSite, transcribe } from '../../bot/understand.js'
 const LIVE_HOSTS = ['yashaboks.com', 'www.yashaboks.com', 'yashaboks.pages.dev'];
 const SANDBOX_BRANCH = 'bot-sandbox';
 
+/* Сашин канал. Бот в нём администратор (публикация и редактирование
+   сообщений). С тестовой копии посты идут Артёму в личку. */
+const CHANNEL = '@yashaboks_channel';
+
 function branchFor(host) {
   return LIVE_HOSTS.includes(host) ? 'main' : SANDBOX_BRANCH;
 }
@@ -71,13 +75,30 @@ export async function onRequestPost(context) {
     // Откуда Telegram возьмёт фото найденных изделий: у тестовой копии
     // свой адрес, там лежат и фото, добавленные на тесте.
     siteUrl: branch === 'main' ? 'https://yashaboks.com' : `https://${SANDBOX_BRANCH}.yashaboks.pages.dev`,
-    testing: branch !== 'main'
+    testing: branch !== 'main',
+    channel: branch === 'main' ? CHANNEL : ADMIN,
+    admin: ADMIN
   };
 
   // Telegram ждёт ответа быстро, а голос и Claude — это секунды.
   // Отвечаем сразу, работу доделываем после ответа.
   context.waitUntil(handleUpdate(deps, update));
   return new Response('ok');
+}
+
+/* Может ли бот писать в канал. Проверяем права, а не пробным
+   постом, — чтобы проверка не оставляла следов у подписчиков. */
+async function channelCheck(tg, branch) {
+  try {
+    const me = await tg.call('getMe', {});
+    const m = await tg.call('getChatMember', { chat_id: CHANNEL, user_id: me.id });
+    const ok = m.status === 'administrator' && m.can_post_messages && m.can_edit_messages;
+    const where = branch === 'main' ? '' : ' (с тестовой копии посты идут Артёму в личку)';
+    return ok ? `Канал ${CHANNEL}: бот администратор, может публиковать и редактировать${where}`
+      : `Канал ${CHANNEL}: НЕ ХВАТАЕТ ПРАВ — статус ${m.status}, публикация ${!!m.can_post_messages}, редактирование ${!!m.can_edit_messages}`;
+  } catch (e) {
+    return `Канал ${CHANNEL}: не проверить — ${e.message}`;
+  }
 }
 
 /* Открыть в браузере:
@@ -92,6 +113,7 @@ export async function onRequestGet({ request, env }) {
     `Пишет в ветку: ${branch}${branch === 'main' ? ' (настоящий сайт)' : ' (тестовая копия)'}`,
     missing.length ? `Не хватает настроек: ${missing.join(', ')}` : 'Настройки: все на месте'
   ];
+  if (!missing.length) lines.push(await channelCheck(makeTelegram(env.TELEGRAM_TOKEN), branch));
 
   if (url.searchParams.get('setup') && !missing.length) {
     const tg = makeTelegram(env.TELEGRAM_TOKEN);

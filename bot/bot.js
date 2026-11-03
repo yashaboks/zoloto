@@ -19,6 +19,7 @@ import {
   SECTIONS, normalize, check, cardText, esc, fieldLines, fmtWeight,
   parseCatalog, findIndex, toItem, fromItem, insertItem, removeItem, replaceItem, NotFound, searchCatalog
 } from './rules.js';
+import * as channel from './channel.js';
 
 /* Артём: ему бот доступен всегда, и он решает, кого ещё пустить. */
 export const ADMIN = 240611165;
@@ -441,7 +442,7 @@ async function deleteMany(deps, chat, finds, r) {
     if (sure.length <= 4) for (const { section, item } of sure) await sendItem(deps, chat, section, item, fieldLines(fromItem(item, section)).join('\n'), null, true);
     await showCard(deps, chat, {
       kind: 'delete_many',
-      targets: sure.map(({ section, item }) => ({ section, photo: item.photos[0], name: item.name_uk || SECTIONS[section].one, weight: item.weight })),
+      targets: sure.map(({ section, item }) => ({ section, photo: item.photos[0], name: item.name_uk || SECTIONS[section].one, weight: item.weight, proba: item.proba, length: item.length })),
       missing
     });
   } else if (missing.length) {
@@ -677,6 +678,9 @@ async function publishMany(deps, chat, draft, from) {
     ...(gone.size ? ['', `Уже не было на сайте: ${d.targets.filter(t => gone.has(t.photo)).map(t => esc(t.name)).join(', ')}.`] : [])].join('\n');
   await tg.send(chat, text);
   if (chat !== ADMIN) await tg.send(ADMIN, `📋 ${esc(userName(from))}:\n${text}`);
+  for (const t of d.targets) {
+    await channel.sold(deps, { section: t.section, name_uk: t.name, proba: t.proba, weight: t.weight, length: t.length }, t.photo);
+  }
 }
 
 function stamp() {
@@ -781,6 +785,12 @@ async function publish(deps, chat, draft, from) {
     await tg.send(ADMIN, `⚠️ Записано на сайт, но после этого ошибка:\n<code>${esc(String(e && e.stack || e)).slice(0, 2000)}</code>`).catch(() => {});
     throw new Say(text + '\n\n(Записано. Повторно жать не нужно.)');
   }
+
+  // Канал — уже после ответа Саше: пост не должен задерживать
+  // «Опубликовано», а его ошибка — пугать Сашу (её видит Артём).
+  if (d.kind === 'new') await channel.post(deps, f, d.photos[0], photo);
+  else if (d.kind === 'delete') await channel.sold(deps, f, d.target.photo);
+  else await channel.update(deps, f, photo, d.kind === 'photos' ? d.photos[0] : null);
 
   // Первое время Артём видит каждую публикацию — чтобы заметить,
   // если бот где-то понимает Сашу неправильно.
