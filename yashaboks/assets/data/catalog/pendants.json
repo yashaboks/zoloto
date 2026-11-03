@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261103-224601-5dcr-1.jpg"
+      ],
+      "name_uk": "Підвіска",
+      "proba": 585,
+      "weight": "6.23",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-224527-h9r3-1.jpg"
       ],
       "name_uk": "Підвіска",
