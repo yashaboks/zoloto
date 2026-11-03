@@ -29,12 +29,20 @@ const SCHEMA = [
   `CREATE TABLE IF NOT EXISTS published (chat INTEGER, msg INTEGER, section TEXT, photo TEXT, PRIMARY KEY (chat, msg))`,
   // Что сказал Саша и что понял Claude. Нужно, чтобы сравнить модели
   // на настоящих фразах и разбирать ошибки.
+  // «Последнее изделие, о котором шла речь»: следующее голосовое без
+  // ответа на сообщение относится к нему. pending — правка, которая
+  // ждёт, пока Саша выберет одно изделие из нескольких найденных.
+  `CREATE TABLE IF NOT EXISTS focus (chat INTEGER PRIMARY KEY, section TEXT, photo TEXT, pending TEXT, ts INTEGER)`,
   `CREATE TABLE IF NOT EXISTS journal (id INTEGER PRIMARY KEY AUTOINCREMENT, ts INTEGER, chat INTEGER, mode TEXT, text TEXT, model TEXT, result TEXT)`
 ];
 
 /* Фото без голосового дольше этого срока забываются: иначе вчерашние
    снимки прицепились бы к сегодняшнему голосовому. */
 const PHOTO_TTL = 3 * 60 * 60 * 1000;
+
+/* Сколько бот помнит, о каком изделии шла речь. Дольше — опасно:
+   через час «цену поставь пять тысяч» скорее про новое изделие. */
+const FOCUS_TTL = 30 * 60 * 1000;
 
 let ready = false;
 
@@ -148,10 +156,26 @@ export function makeStore(db) {
 
     /* Изделие сменило раздел или первое фото — все старые сообщения
        «Опубликовано» про него должны вести туда же. */
-    retargetPublished: (oldPhoto, section, newPhoto) => q(
-      `UPDATE published SET section = ?, photo = ? WHERE photo = ?`, section, newPhoto, oldPhoto).run(),
+    retargetPublished: (oldPhoto, section, newPhoto) => db.batch([
+      q(`UPDATE published SET section = ?, photo = ? WHERE photo = ?`, section, newPhoto, oldPhoto),
+      q(`UPDATE focus SET section = ?, photo = ? WHERE photo = ?`, section, newPhoto, oldPhoto)
+    ]),
 
-    forgetPublished: photo => q(`DELETE FROM published WHERE photo = ?`, photo).run(),
+    forgetPublished: photo => db.batch([
+      q(`DELETE FROM published WHERE photo = ?`, photo),
+      q(`DELETE FROM focus WHERE photo = ?`, photo)
+    ]),
+
+    setFocus: (chat, section, photo, pending = null) => q(
+      `INSERT OR REPLACE INTO focus (chat, section, photo, pending, ts) VALUES (?, ?, ?, ?, ?)`,
+      chat, section, photo, pending ? JSON.stringify(pending) : null, now()).run(),
+
+    async getFocus(chat) {
+      const row = await q(`SELECT * FROM focus WHERE chat = ? AND ts > ?`, chat, now() - FOCUS_TTL).first();
+      return row ? { section: row.section, photo: row.photo, pending: row.pending ? JSON.parse(row.pending) : null } : null;
+    },
+
+    clearFocus: chat => q(`DELETE FROM focus WHERE chat = ?`, chat).run(),
 
     recentLog: async n => (await q(`SELECT * FROM journal ORDER BY id DESC LIMIT ?`, n).all()).results,
 

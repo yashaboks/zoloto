@@ -208,7 +208,7 @@ async function onWords(deps, m, text) {
 
   if (pub) {
     if (draft) throw new Say('Сначала закончи с карточкой выше: опубликуй или отмени её.');
-    return changePublished(deps, chat, pub, text);
+    return siteRequest(deps, chat, text, pub, true);
   }
 
   if (draft) {
@@ -247,7 +247,7 @@ async function think(deps, chat, mode, text, current) {
 async function newItem(deps, chat, text) {
   const { tg, store } = deps;
   const free = await store.freePhotos(chat);
-  if (!free.length) return findOnSite(deps, chat, text);
+  if (!free.length) return siteRequest(deps, chat, text, await store.getFocus(chat), false);
 
   await tg.typing(chat);
   const r = await think(deps, chat, 'new', text, null);
@@ -271,22 +271,6 @@ async function fixDraft(deps, chat, draft, text) {
   return showCard(deps, chat, { ...draft.data, fields, note: r.question ? '❓ ' + esc(r.question) : '' }, draft);
 }
 
-/* Изделие уже на сайте: читаем, как оно записано сейчас (его могли
-   поменять через панель), и спрашиваем Claude, что Саша хочет. */
-async function changePublished(deps, chat, pub, text) {
-  const { tg } = deps;
-  await tg.typing(chat);
-  const item = await readItem(deps, pub);
-  const current = fromItem(item, pub.section);
-  const r = await think(deps, chat, 'site', text, current);
-
-  if (r.action === 'delete') return showCard(deps, chat, { kind: 'delete', fields: current, target: pub });
-  if (r.action === 'unclear') throw new Say(r.question ? esc(r.question) : 'Не понял, что поменять 🤔');
-
-  const fields = normalize(merge(current, r));
-  return showCard(deps, chat, { kind: 'edit', fields, before: current, target: pub, note: r.question ? '❓ ' + esc(r.question) : '' });
-}
-
 async function readItem({ gh }, pub) {
   const data = parseCatalog(await gh.read(catalogPath(pub.section)));
   const i = findIndex(data, pub.photo);
@@ -294,54 +278,153 @@ async function readItem({ gh }, pub) {
   return data.items[i];
 }
 
-/* Фото нет — значит, Саша говорит о том, что уже на сайте: «убери
-   часы», «у печатки на 12 грамм поменяй цену». Находим и присылаем
-   кандидатов с фото. Каждое такое сообщение работает как
-   «Опубликовано»: под ним кнопка «Убрать», а ответом на него можно
-   поменять поля или фото. */
-async function findOnSite(deps, chat, text) {
-  const { tg, gh, store } = deps;
+/* Новые значения поверх того, что на сайте. Меняются ТОЛЬКО поля,
+   которые Саша назвал; остальные остаются как записаны — даже
+   «16 чистого» в весе, которое бот сам бы так не написал. */
+function applySet(current, set) {
+  const n = normalize({ ...set, name_uk: set.name_uk || '' });
+  const f = { ...current };
+  if (n.section) f.section = n.section;
+  if (set.name_uk && set.name_uk.trim()) f.name_uk = n.name_uk;
+  if (n.proba) f.proba = n.proba;
+  if (n.weight) f.weight = n.weight;
+  if (set.length != null && set.length !== '') f.length = n.length;
+  if (n.price) f.price = n.price;
+  if (set.clear_price) f.price = null;
+  return f;
+}
+
+async function thinkSite(deps, chat, text, current) {
+  const { model, result } = await deps.understandSite({ text, current });
+  await deps.store.log({ chat, mode: 'site', text, model, result });
+  return result;
+}
+
+const unclear = r => new Say(r.question ? '❓ ' + esc(r.question)
+  : 'Не понял 🤔\n\nНовое изделие — сначала пришли фото (1–3 одним сообщением), потом голосовое.\n' +
+    'Убрать или поменять то, что уже на сайте, — скажи, что это и что сделать: «убери часы», «у цепочки бисмарк вес двадцать четыре».');
+
+/* Всё, что касается изделий, которые уже на сайте.
+   focus — изделие, о котором сейчас речь: на сообщение о нём Саша
+   ответил (forced) или оно было последним — найденным, только что
+   опубликованным или изменённым. Если Саша явно говорит о другом
+   изделии, ищем его по приметам. */
+async function siteRequest(deps, chat, text, focus, forced) {
+  const { tg, store } = deps;
   await tg.typing(chat);
-  const r = await think(deps, chat, 'search', text, null);
-  const q = normalize(r);
-  if (r.action === 'unclear' || (!q.section && !q.weight && !q.proba && !r.name_uk)) {
-    throw new Say('Новое изделие — сначала пришли фото (1–3 одним сообщением), потом голосовое.\n\n' +
-      'Убрать или поменять то, что уже на сайте, — скажи, что это и вес, например «убери часы, тридцать грамм».');
+
+  let current = null;
+  if (focus) {
+    try {
+      current = fromItem(await readItem(deps, focus), focus.section);
+    } catch (e) {
+      if (forced) throw e;
+      // Изделие из памяти уже убрали (например, через панель) — просто забываем.
+      await store.clearFocus(chat);
+      focus = null;
+    }
   }
+
+  const r = await thinkSite(deps, chat, text, current);
+  if (r.action === 'unclear') throw unclear(r);
+  if (focus && (forced || r.about === 'this')) return applyRequest(deps, chat, focus, current, r);
+  return searchAndShow(deps, chat, r);
+}
+
+/* Показать карточку «убрать» или «было → стало» для одного изделия. */
+async function applyRequest(deps, chat, pub, current, r) {
+  await deps.store.setFocus(chat, pub.section, pub.photo);
+  if (r.action === 'delete') return showCard(deps, chat, { kind: 'delete', fields: current, target: pub });
+  const fields = applySet(current, r.set);
+  if (JSON.stringify(fields) === JSON.stringify(current)) {
+    throw new Say('Понял, о каком изделии речь, но не понял, что в нём поменять 🤔 Скажи, например: «вес двадцать четыре» или «цена пять тысяч».');
+  }
+  return showCard(deps, chat, { kind: 'edit', fields, before: current, target: pub });
+}
+
+/* Найти изделие по приметам. Одно — сразу к делу; несколько —
+   присылаем их с фото, а правку запоминаем до выбора. */
+async function searchAndShow(deps, chat, r) {
+  const { tg, gh, store } = deps;
+  const find = r.find || {};
+  const q = normalize({ section: find.section, proba: find.proba, weight: find.weight, length: find.length });
+  if (!q.section && !q.weight && !q.proba && !find.name) throw unclear(r);
 
   const catalogs = {};
   for (const section of q.section ? [q.section] : Object.keys(SECTIONS)) {
     catalogs[section] = parseCatalog(await gh.read(catalogPath(section)));
   }
-  const { total, items } = searchCatalog(catalogs, { ...q, name_uk: r.name_uk });
+  const { total, items } = searchCatalog(catalogs, { ...q, name_uk: find.name });
   if (!items.length) throw new Say('Не нашёл такого на сайте 🤔 Скажи по-другому: что это, проба, вес.');
 
-  const wantDelete = r.action === 'delete';
+  const hasChange = r.action === 'change' && Object.entries(r.set || {}).some(([k, v]) => k === 'clear_price' ? v : v != null && v !== '');
+
+  if (total === 1 && (r.action === 'delete' || hasChange)) {
+    const { section, item } = items[0];
+    const pub = { section, photo: item.photos[0] };
+    if (r.action === 'change') return applyRequest(deps, chat, pub, fromItem(item, section), r);
+    await showFound(deps, chat, items, 'delete');
+    return store.setFocus(chat, section, item.photos[0]);
+  }
+
   await tg.send(chat, total > items.length
     ? `Нашёл ${total}, показываю первые ${items.length}. Чтобы найти точнее — скажи вес.`
     : `Нашёл ${total === 1 ? 'одно' : total}:`);
+  await showFound(deps, chat, items, r.action === 'delete' ? 'delete' : hasChange ? 'pick' : 'look');
 
+  if (total === 1) await store.setFocus(chat, items[0].section, items[0].item.photos[0]);
+  // Несколько: какое именно — решит кнопка «Это оно», правка ждёт её.
+  else await store.setFocus(chat, null, null, hasChange ? r : null);
+}
+
+/* Найденные изделия — каждое отдельным сообщением с фото. Каждое
+   работает как «Опубликовано»: на него можно ответить. */
+async function showFound(deps, chat, items, mode) {
+  const { tg, store } = deps;
   for (const { section, item } of items) {
     const f = fromItem(item, section);
-    const caption = [...fieldLines(f), '',
-      wantDelete ? '<i>Это оно? Жми «Убрать».</i>' : '<i>Чтобы поменять — ответь на это сообщение. Убрать — кнопка ниже.</i>'
-    ].join('\n');
-    const buttons = [[{ text: '🗑 Убрать с сайта', data: 'rm' }]];
+    const hint = {
+      delete: '<i>Это оно? Жми «Убрать».</i>',
+      pick: '<i>Это оно? Жми «Это оно» — покажу, что поменяю.</i>',
+      look: '<i>Чтобы поменять — скажи или ответь на это сообщение.</i>'
+    }[mode];
+    const caption = [...fieldLines(f), '', hint].join('\n');
+    const buttons = [[
+      ...(mode === 'pick' ? [{ text: '✏️ Это оно', data: 'pick' }] : []),
+      { text: '🗑 Убрать с сайта', data: 'rm' }
+    ]];
     let msg;
     try {
-      const r = await fetch(deps.siteUrl + item.photos[0], { signal: AbortSignal.timeout(8000) });
-      if (!r.ok) throw new Error(`фото с сайта: ${r.status}`);
-      const type = r.headers.get('content-type') || 'image/jpeg';
-      const bytes = new Uint8Array(await r.arrayBuffer());
+      const resp = await fetch(deps.siteUrl + item.photos[0], { signal: AbortSignal.timeout(8000) });
+      if (!resp.ok) throw new Error(`фото с сайта: ${resp.status}`);
+      const type = resp.headers.get('content-type') || 'image/jpeg';
+      const bytes = new Uint8Array(await resp.arrayBuffer());
       msg = await tg.sendPhotoFile(chat, bytes, item.photos[0].split('/').pop(), type, caption, buttons);
     } catch (e) {
       // Без фото найденное всё равно можно убрать или поправить —
       // присылаем текстом, а Артёму причину, чтобы починить.
       msg = await tg.send(chat, caption, buttons);
-      if (chat !== ADMIN || deps.testing) await tg.send(ADMIN, `⚠️ Не отправилось фото ${esc(item.photos[0])}: ${esc(String(e && e.message || e))}`).catch(() => {});
+      await tg.send(ADMIN, `⚠️ Не отправилось фото ${esc(item.photos[0])}: ${esc(String(e && e.message || e))}`).catch(() => {});
     }
     await store.addPublished(chat, msg, section, item.photos[0]);
   }
+}
+
+/* «Это оно» под одним из нескольких найденных: применяем правку,
+   которую Саша сказал до выбора. */
+async function pickFound(deps, chat, cq) {
+  const { tg, store } = deps;
+  const pub = await store.getPublished(chat, cq.message.message_id);
+  const focus = await store.getFocus(chat);
+  await tg.answer(cq.id);
+  if (!pub) throw new Say('Этого изделия на сайте уже нет.');
+  if (await store.getDraft(chat)) throw new Say('Сначала закончи с карточкой выше: сохрани или отмени её.');
+  if (!focus || !focus.pending) {
+    await store.setFocus(chat, pub.section, pub.photo);
+    throw new Say('Выбрал это изделие. Скажи, что в нём поменять.');
+  }
+  const current = fromItem(await readItem(deps, pub), pub.section);
+  return applyRequest(deps, chat, pub, current, focus.pending);
 }
 
 /* «Убрать с сайта» под найденным изделием. Само сообщение с фото и
@@ -434,6 +517,7 @@ async function onButton(deps, cq) {
 
   if (!(await allowed(store, cq.from))) return tg.answer(cq.id);
   if (act === 'rm') return removeFound(deps, chat, cq);
+  if (act === 'pick') return pickFound(deps, chat, cq);
 
   const draft = await store.getDraft(chat);
   if (!draft || String(draft.ver) !== arg) {
@@ -563,7 +647,11 @@ async function publish(deps, chat, draft, from) {
   try {
     await store.deleteDraft(chat);
     const msg = await tg.send(chat, text + (d.kind === 'delete' ? '' : hint));
-    if (d.kind !== 'delete') await store.addPublished(chat, msg, section, photo);
+    if (d.kind !== 'delete') {
+      await store.addPublished(chat, msg, section, photo);
+      // «Цену поставь пять тысяч» следующим сообщением — про это изделие.
+      await store.setFocus(chat, section, photo);
+    }
   } catch (e) {
     await tg.send(ADMIN, `⚠️ Записано на сайт, но после этого ошибка:\n<code>${esc(String(e && e.stack || e)).slice(0, 2000)}</code>`).catch(() => {});
     throw new Say(text + '\n\n(Записано. Повторно жать не нужно.)');

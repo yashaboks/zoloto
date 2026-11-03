@@ -26,7 +26,7 @@ import { handleUpdate, ADMIN } from '../../bot/bot.js';
 import { makeStore } from '../../bot/store.js';
 import { makeTelegram } from '../../bot/telegram.js';
 import { makeGithub, bytesToBase64 } from '../../bot/github.js';
-import { understand, transcribe } from '../../bot/understand.js';
+import { understand, understandSite, transcribe } from '../../bot/understand.js';
 
 /* Настоящий сайт — только эти адреса. С любого другого (копия
    ветки для проверки) бот пишет в ветку bot-sandbox: что бы ни
@@ -65,6 +65,7 @@ export async function onRequestPost(context) {
     gh: makeGithub(env.GITHUB_TOKEN, branch),
     store: makeStore(env.DB),
     understand: args => understand(env, args),
+    understandSite: args => understandSite(env, args),
     transcribe: bytes => transcribe(env.AI, bytes, bytesToBase64),
     sleep: ms => new Promise(r => setTimeout(r, ms)),
     // Откуда Telegram возьмёт фото найденных изделий: у тестовой копии
