@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261103-220704-ctx3-1.jpg"
+      ],
+      "name_uk": "Годинник жіночий, Чайка",
+      "proba": 583,
+      "weight": "18",
+      "length": "18",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-220602-srke-1.jpg"
       ],
       "name_uk": "Годинники жіночі, чайка",
