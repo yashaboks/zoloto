@@ -113,6 +113,7 @@ async function onMessage(deps, m) {
   if (text.startsWith('/')) {
     const cmd = text.split(/[\s@]/)[0].toLowerCase();
     if (cmd === '/otmena' || cmd === '/cancel') return cancelAll(deps, chat);
+    if (cmd === '/zhurnal' && m.from.id === ADMIN) return showJournal(deps, chat);
     return tg.send(chat, HELP);
   }
 
@@ -133,6 +134,19 @@ async function onMessage(deps, m) {
 
   if (text) return onWords(deps, m, text);
   return tg.send(chat, HELP);
+}
+
+/* Последние фразы и как их понял Claude — только Артёму. Чтобы
+   разбираться, почему бот что-то понял не так, не залезая в базу. */
+async function showJournal({ tg, store }, chat) {
+  const rows = await store.recentLog(6);
+  if (!rows.length) return tg.send(chat, 'Журнал пуст.');
+  const parts = rows.map(r => {
+    const res = JSON.parse(r.result || '{}');
+    const short = Object.entries(res).filter(([, v]) => v != null && v !== '').map(([k, v]) => `${k}=${v}`).join(', ');
+    return `<b>${new Date(r.ts).toISOString().slice(11, 16)} ${r.mode}</b> «${esc(r.text)}»\n→ ${esc(short)}`;
+  });
+  return tg.send(chat, parts.join('\n\n').slice(0, 4000));
 }
 
 async function cancelAll({ tg, store }, chat) {
@@ -315,11 +329,16 @@ async function findOnSite(deps, chat, text) {
     const buttons = [[{ text: '🗑 Убрать с сайта', data: 'rm' }]];
     let msg;
     try {
-      msg = await tg.sendPhoto(chat, deps.siteUrl + item.photos[0], caption, buttons);
-    } catch {
-      // Фото по ссылке Telegram может не взять (например, webp) —
-      // тогда хотя бы текстом, искать всё равно можно.
+      const r = await fetch(deps.siteUrl + item.photos[0], { signal: AbortSignal.timeout(8000) });
+      if (!r.ok) throw new Error(`фото с сайта: ${r.status}`);
+      const type = r.headers.get('content-type') || 'image/jpeg';
+      const bytes = new Uint8Array(await r.arrayBuffer());
+      msg = await tg.sendPhotoFile(chat, bytes, item.photos[0].split('/').pop(), type, caption, buttons);
+    } catch (e) {
+      // Без фото найденное всё равно можно убрать или поправить —
+      // присылаем текстом, а Артёму причину, чтобы починить.
       msg = await tg.send(chat, caption, buttons);
+      if (chat !== ADMIN || deps.testing) await tg.send(ADMIN, `⚠️ Не отправилось фото ${esc(item.photos[0])}: ${esc(String(e && e.message || e))}`).catch(() => {});
     }
     await store.addPublished(chat, msg, section, item.photos[0]);
   }

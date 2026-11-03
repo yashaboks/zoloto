@@ -153,6 +153,8 @@ export function makeStore(db) {
 
     forgetPublished: photo => q(`DELETE FROM published WHERE photo = ?`, photo).run(),
 
+    recentLog: async n => (await q(`SELECT * FROM journal ORDER BY id DESC LIMIT ?`, n).all()).results,
+
     log: e => q(`INSERT INTO journal (ts, chat, mode, text, model, result) VALUES (?, ?, ?, ?, ?, ?)`,
       now(), e.chat, e.mode, e.text, e.model, JSON.stringify(e.result)).run()
   };
