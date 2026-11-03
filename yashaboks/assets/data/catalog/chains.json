@@ -2,17 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_1968.webp"
-      ],
-      "name_uk": "Лан",
-      "proba": 585,
-      "weight": "25",
-      "length": "70",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_1962.webp"
       ],
       "name_uk": "Лан",
