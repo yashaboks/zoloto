@@ -79,10 +79,14 @@ const SCHEMA = {
 
 /* mode: 'new' — новое изделие; 'fix' — исправление карточки до
    публикации; 'site' — изделие уже на сайте, Саша ответил на
-   «Опубликовано». current — поля, которые есть сейчас. */
+   «Опубликовано»; 'search' — фото нет, Саша говорит о чём-то, что
+   уже на сайте, и его надо найти. current — поля, которые есть сейчас. */
 function prompt(mode, text, current) {
   const cur = current ? JSON.stringify(current, null, 1) : null;
   if (mode === 'new') return `New item. The owner's message:\n<message>\n${text}\n</message>`;
+  if (mode === 'search') {
+    return `No photo was sent, so the owner most likely means an item that is already on the site. Fill the fields that DESCRIBE that item (section, name, proba, weight, length), so the bot can find it. Set action to "delete" if he wants it removed or says it is sold, "fill" if he wants to change something in it or just find it, and "unclear" if the message is not about an existing item. Leave price null.\n<message>\n${text}\n</message>`;
+  }
   if (mode === 'fix') {
     return `The card currently says:\n${cur}\n\nThe owner's correction. It changes only what he mentions; keep every other field exactly as it is:\n<message>\n${text}\n</message>`;
   }

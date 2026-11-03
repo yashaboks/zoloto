@@ -229,3 +229,43 @@ export function replaceItem(text, photo, item) {
   data.items[i] = item;
   return serialize(data);
 }
+
+/* ---------- Поиск изделия на сайте ----------
+
+   Для изделий, которые бот не публиковал (их добавили через панель),
+   у Саши нет сообщения «Опубликовано», на которое можно ответить.
+   Поэтому их ищем по описанию: «убери часы, тридцать грамм».
+
+   Решает вес — он почти у всех изделий разный. Раздел, проба и
+   слова из названия только сужают и упорядочивают. Возвращает
+   лучшие совпадения, самые свежие (верхние в разделе) — первыми. */
+const words = s => String(s || '').toLowerCase().split(/[^a-zа-яіїєґ0-9]+/i).filter(w => w.length >= 3);
+
+export function searchCatalog(catalogs, q, limit = 5) {
+  const qWords = words(q.name_uk);
+  const qWeight = q.weight ? Number.parseFloat(q.weight) : null;
+  const found = [];
+  for (const [section, data] of Object.entries(catalogs)) {
+    if (q.section && section !== q.section) continue;
+    data.items.forEach((item, order) => {
+      if (!Array.isArray(item.photos) || !item.photos[0]) return;
+      let score = 0;
+      const w = Number.parseFloat(item.weight);
+      if (qWeight != null) {
+        if (Math.abs(w - qWeight) < 0.005) score += 10;
+        else if (Math.abs(w - qWeight) <= 0.3) score += 3;
+        else score -= 5;
+      }
+      if (q.proba) score += item.proba === q.proba ? 3 : -3;
+      if (q.length && String(item.length) === String(q.length)) score += 2;
+      const iw = words(item.name_uk);
+      for (const w2 of qWords) if (iw.some(x => x.slice(0, 4) === w2.slice(0, 4))) score += 2;
+      found.push({ section, item, score, order });
+    });
+  }
+  // Есть точное совпадение по весу — показываем только такие.
+  const exact = found.filter(f => f.score >= 10);
+  const pool = exact.length ? exact : found.filter(f => f.score > (qWeight != null || q.proba ? 0 : -1));
+  pool.sort((a, b) => b.score - a.score || a.order - b.order);
+  return { total: pool.length, items: pool.slice(0, limit) };
+}

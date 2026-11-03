@@ -67,6 +67,9 @@ export async function onRequestPost(context) {
     understand: args => understand(env, args),
     transcribe: bytes => transcribe(env.AI, bytes, bytesToBase64),
     sleep: ms => new Promise(r => setTimeout(r, ms)),
+    // Откуда Telegram возьмёт фото найденных изделий: у тестовой копии
+    // свой адрес, там лежат и фото, добавленные на тесте.
+    siteUrl: branch === 'main' ? 'https://yashaboks.com' : `https://${SANDBOX_BRANCH}.yashaboks.pages.dev`,
     testing: branch !== 'main'
   };
 

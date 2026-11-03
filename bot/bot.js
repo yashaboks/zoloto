@@ -17,7 +17,7 @@
 
 import {
   SECTIONS, normalize, check, cardText, esc, fieldLines,
-  parseCatalog, findIndex, toItem, fromItem, insertItem, removeItem, replaceItem, NotFound
+  parseCatalog, findIndex, toItem, fromItem, insertItem, removeItem, replaceItem, NotFound, searchCatalog
 } from './rules.js';
 
 /* Артём: ему бот доступен всегда, и он решает, кого ещё пустить. */
@@ -42,6 +42,7 @@ const HELP = [
   '',
   'Ошибся бот — просто скажи или напиши, что исправить.',
   'Изделие уже на сайте — ответь на его сообщение «Опубликовано» и скажи «продано», новую цену или пришли новые фото.',
+  'Не можешь найти сообщение — скажи без фото, например «убери часы, тридцать грамм»: бот найдёт изделие на сайте и покажет.',
   '',
   '/otmena — выбросить текущую карточку и неотправленные фото.'
 ].join('\n');
@@ -232,7 +233,7 @@ async function think(deps, chat, mode, text, current) {
 async function newItem(deps, chat, text) {
   const { tg, store } = deps;
   const free = await store.freePhotos(chat);
-  if (!free.length) throw new Say('Сначала пришли фото изделия (1–3 одним сообщением), потом голосовое.');
+  if (!free.length) return findOnSite(deps, chat, text);
 
   await tg.typing(chat);
   const r = await think(deps, chat, 'new', text, null);
@@ -277,6 +278,77 @@ async function readItem({ gh }, pub) {
   const i = findIndex(data, pub.photo);
   if (i < 0) throw new Say('Не нашёл это изделие на сайте — похоже, его уже убрали через панель.');
   return data.items[i];
+}
+
+/* Фото нет — значит, Саша говорит о том, что уже на сайте: «убери
+   часы», «у печатки на 12 грамм поменяй цену». Находим и присылаем
+   кандидатов с фото. Каждое такое сообщение работает как
+   «Опубликовано»: под ним кнопка «Убрать», а ответом на него можно
+   поменять поля или фото. */
+async function findOnSite(deps, chat, text) {
+  const { tg, gh, store } = deps;
+  await tg.typing(chat);
+  const r = await think(deps, chat, 'search', text, null);
+  const q = normalize(r);
+  if (r.action === 'unclear' || (!q.section && !q.weight && !q.proba && !r.name_uk)) {
+    throw new Say('Новое изделие — сначала пришли фото (1–3 одним сообщением), потом голосовое.\n\n' +
+      'Убрать или поменять то, что уже на сайте, — скажи, что это и вес, например «убери часы, тридцать грамм».');
+  }
+
+  const catalogs = {};
+  for (const section of q.section ? [q.section] : Object.keys(SECTIONS)) {
+    catalogs[section] = parseCatalog(await gh.read(catalogPath(section)));
+  }
+  const { total, items } = searchCatalog(catalogs, { ...q, name_uk: r.name_uk });
+  if (!items.length) throw new Say('Не нашёл такого на сайте 🤔 Скажи по-другому: что это, проба, вес.');
+
+  const wantDelete = r.action === 'delete';
+  await tg.send(chat, total > items.length
+    ? `Нашёл ${total}, показываю первые ${items.length}. Чтобы найти точнее — скажи вес.`
+    : `Нашёл ${total === 1 ? 'одно' : total}:`);
+
+  for (const { section, item } of items) {
+    const f = fromItem(item, section);
+    const caption = [...fieldLines(f), '',
+      wantDelete ? '<i>Это оно? Жми «Убрать».</i>' : '<i>Чтобы поменять — ответь на это сообщение. Убрать — кнопка ниже.</i>'
+    ].join('\n');
+    const buttons = [[{ text: '🗑 Убрать с сайта', data: 'rm' }]];
+    let msg;
+    try {
+      msg = await tg.sendPhoto(chat, deps.siteUrl + item.photos[0], caption, buttons);
+    } catch {
+      // Фото по ссылке Telegram может не взять (например, webp) —
+      // тогда хотя бы текстом, искать всё равно можно.
+      msg = await tg.send(chat, caption, buttons);
+    }
+    await store.addPublished(chat, msg, section, item.photos[0]);
+  }
+}
+
+/* «Убрать с сайта» под найденным изделием. Само сообщение с фото и
+   есть подтверждение, поэтому второй карточки «точно?» не нужно. */
+async function removeFound(deps, chat, cq) {
+  const { tg, store } = deps;
+  const pub = await store.getPublished(chat, cq.message.message_id);
+  if (!pub) {
+    await tg.answer(cq.id, 'Уже убрано');
+    return tg.stripButtons(chat, cq.message.message_id);
+  }
+  if (await store.getDraft(chat)) {
+    await tg.answer(cq.id);
+    throw new Say('Сначала закончи с карточкой выше: опубликуй или отмени её.');
+  }
+  const item = await readItem(deps, pub);
+  const ver = await store.saveDraft(chat, { kind: 'delete', fields: fromItem(item, pub.section), target: pub });
+  if (!(await store.claimDraft(chat, ver))) return tg.answer(cq.id, 'Уже убираю…');
+  await tg.answer(cq.id, 'Убираю…');
+  try {
+    await publish(deps, chat, await store.getDraft(chat), cq.from);
+  } catch (e) {
+    await store.deleteDraft(chat);
+    throw e;
+  }
+  await tg.stripButtons(chat, cq.message.message_id);
 }
 
 async function replacePhotosCard(deps, chat, target, photos) {
@@ -342,6 +414,7 @@ async function onButton(deps, cq) {
   }
 
   if (!(await allowed(store, cq.from))) return tg.answer(cq.id);
+  if (act === 'rm') return removeFound(deps, chat, cq);
 
   const draft = await store.getDraft(chat);
   if (!draft || String(draft.ver) !== arg) {
