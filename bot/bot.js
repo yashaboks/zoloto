@@ -16,7 +16,7 @@
    ============================================================ */
 
 import {
-  SECTIONS, normalize, check, cardText, esc, fieldLines,
+  SECTIONS, normalize, check, cardText, esc, fieldLines, fmtWeight,
   parseCatalog, findIndex, toItem, fromItem, insertItem, removeItem, replaceItem, NotFound, searchCatalog
 } from './rules.js';
 
@@ -197,7 +197,7 @@ async function onPhoto(deps, m) {
    повторять Саше не придётся. */
 async function askAboutOldCard({ tg, store }, chat, draft, next) {
   const name = draft.data.fields ? draft.data.fields.name_uk : '';
-  const save = { new: '✅ Опубликовать её', edit: '✅ Сохранить её', delete: '🗑 Да, убрать', photos: '✅ Заменить фото' }[draft.data.kind];
+  const save = { new: '✅ Опубликовать её', edit: '✅ Сохранить её', delete: '🗑 Да, убрать', delete_many: '🗑 Убрать все', photos: '✅ Заменить фото' }[draft.data.kind];
   if (next) await store.setDraftNext(chat, draft.ver, next);
   const why = next ? `Понял, займусь: «${esc(next)}».\nНо сначала: карточка` : 'Новые фото получил. Но прошлая карточка';
   return tg.send(chat, `${why}${name ? ` «${esc(name)}»` : ''} ещё не сохранена. Что с ней?`, [[
@@ -366,17 +366,33 @@ async function applyRequest(deps, chat, pub, current, r) {
 
 /* Найти изделие по приметам. Одно — сразу к делу; несколько —
    присылаем их с фото, а правку запоминаем до выбора. */
-async function searchAndShow(deps, chat, r) {
-  const { tg, gh, store } = deps;
-  const find = r.find || {};
-  const q = normalize({ section: find.section, proba: find.proba, weight: find.weight, length: find.length });
-  if (!q.section && !q.weight && !q.proba && !find.name) throw unclear(r);
+const MAX_MANY = 10;
 
+/* Приметы из ответа Claude → запрос для поиска; null, если примет нет. */
+function toQuery(find) {
+  const q = normalize({ section: find.section, proba: find.proba, weight: find.weight, length: find.length });
+  if (!q.section && !q.weight && !q.proba && !find.name) return null;
+  return { ...q, name_uk: find.name };
+}
+
+async function readCatalogs({ gh }, sections) {
   const catalogs = {};
-  for (const section of q.section ? [q.section] : Object.keys(SECTIONS)) {
-    catalogs[section] = parseCatalog(await gh.read(catalogPath(section)));
+  for (const section of sections) catalogs[section] = parseCatalog(await gh.read(catalogPath(section)));
+  return catalogs;
+}
+
+async function searchAndShow(deps, chat, r) {
+  const { tg, store } = deps;
+  const finds = (r.finds || []).filter(f => toQuery(f));
+  if (finds.length > 1) {
+    if (r.action === 'delete') return deleteMany(deps, chat, finds.slice(0, MAX_MANY), r);
+    throw new Say('Менять — по одному изделию за раз, у каждого свои значения. Скажи про первое.');
   }
-  const { total, items } = searchCatalog(catalogs, { ...q, name_uk: find.name });
+  const q = finds.length ? toQuery(finds[0]) : null;
+  if (!q) throw unclear(r);
+
+  const catalogs = await readCatalogs(deps, q.section ? [q.section] : Object.keys(SECTIONS));
+  const { total, items } = searchCatalog(catalogs, q);
   if (!items.length) throw new Say('Не нашёл такого на сайте 🤔 Скажи по-другому: что это, проба, вес.');
 
   const hasChange = r.action === 'change' && Object.entries(r.set || {}).some(([k, v]) => k === 'clear_price' ? v : v != null && v !== '');
@@ -399,6 +415,44 @@ async function searchAndShow(deps, chat, r) {
   else await store.setFocus(chat, null, null, hasChange ? r : null);
 }
 
+/* «Убери часы, цепочку бисмарк и кольцо три шестнадцать».
+   Каждое описание ищем отдельно. Однозначные собираем в одну
+   карточку «убрать все» — одним сохранением. Неоднозначные
+   показываем с кнопкой «Убрать» под каждым: выберет сам. */
+async function deleteMany(deps, chat, finds, r) {
+  const { tg } = deps;
+  const catalogs = await readCatalogs(deps, Object.keys(SECTIONS));
+  const sure = [], unsure = [], missing = [];
+  for (const find of finds) {
+    const q = toQuery(find);
+    const label = [find.name, q.section && SECTIONS[q.section].uk.toLowerCase(), q.weight && fmtWeight(q.weight) + ' г'].filter(Boolean).join(', ');
+    const { total, items } = searchCatalog(q.section ? { [q.section]: catalogs[q.section] } : catalogs, q);
+    if (!total) missing.push(label);
+    else if (total === 1) {
+      // Одно и то же изделие могли назвать дважды.
+      if (!sure.some(x => x.item.photos[0] === items[0].item.photos[0])) sure.push(items[0]);
+    } else unsure.push({ label, total, items });
+  }
+
+  /* У бота около 30 секунд на всё, а каждое фото — секунда-две.
+     Поэтому при длинном списке фото не шлём, хватит списка в
+     карточке, а похожих показываем по 3, а не по 5. */
+  if (sure.length) {
+    if (sure.length <= 4) for (const { section, item } of sure) await sendItem(deps, chat, section, item, fieldLines(fromItem(item, section)).join('\n'), null, false);
+    await showCard(deps, chat, {
+      kind: 'delete_many',
+      targets: sure.map(({ section, item }) => ({ section, photo: item.photos[0], name: item.name_uk || SECTIONS[section].one, weight: item.weight })),
+      missing
+    });
+  } else if (missing.length) {
+    await tg.send(chat, `Не нашёл на сайте: ${missing.map(esc).join('; ')}.`);
+  }
+  for (const u of unsure) {
+    await tg.send(chat, `По «${esc(u.label)}» нашёл ${u.total}${u.total > 3 ? ', показываю 3' : ''} — убери нужное кнопкой под фото. Не то — скажи точнее, с весом.`);
+    await showFound(deps, chat, u.items.slice(0, 3), 'delete');
+  }
+}
+
 /* Найденные изделия — каждое отдельным сообщением с фото. Каждое
    работает как «Опубликовано»: на него можно ответить. */
 async function showFound(deps, chat, items, mode) {
@@ -415,21 +469,29 @@ async function showFound(deps, chat, items, mode) {
       ...(mode === 'pick' ? [{ text: '✏️ Это оно', data: 'pick' }] : []),
       { text: '🗑 Убрать с сайта', data: 'rm' }
     ]];
-    let msg;
-    try {
-      const resp = await fetch(deps.siteUrl + item.photos[0], { signal: AbortSignal.timeout(8000) });
-      if (!resp.ok) throw new Error(`фото с сайта: ${resp.status}`);
-      const type = resp.headers.get('content-type') || 'image/jpeg';
-      const bytes = new Uint8Array(await resp.arrayBuffer());
-      msg = await tg.sendPhotoFile(chat, bytes, item.photos[0].split('/').pop(), type, caption, buttons);
-    } catch (e) {
-      // Без фото найденное всё равно можно убрать или поправить —
-      // присылаем текстом, а Артёму причину, чтобы починить.
-      msg = await tg.send(chat, caption, buttons);
-      await tg.send(ADMIN, `⚠️ Не отправилось фото ${esc(item.photos[0])}: ${esc(String(e && e.message || e))}`).catch(() => {});
-    }
-    await store.addPublished(chat, msg, section, item.photos[0]);
+    await sendItem(deps, chat, section, item, caption, buttons, true);
   }
+}
+
+/* Одно изделие с сайта — фото с подписью. remember — запомнить
+   сообщение, чтобы на него можно было ответить, как на «Опубликовано». */
+async function sendItem(deps, chat, section, item, caption, buttons, remember) {
+  const { tg, store } = deps;
+  let msg;
+  try {
+    const resp = await fetch(deps.siteUrl + item.photos[0], { signal: AbortSignal.timeout(8000) });
+    if (!resp.ok) throw new Error(`фото с сайта: ${resp.status}`);
+    const type = resp.headers.get('content-type') || 'image/jpeg';
+    const bytes = new Uint8Array(await resp.arrayBuffer());
+    msg = await tg.sendPhotoFile(chat, bytes, item.photos[0].split('/').pop(), type, caption, buttons);
+  } catch (e) {
+    // Без фото найденное всё равно можно убрать или поправить —
+    // присылаем текстом, а Артёму причину, чтобы починить.
+    msg = await tg.send(chat, caption, buttons);
+    await tg.send(ADMIN, `⚠️ Не отправилось фото ${esc(item.photos[0])}: ${esc(String(e && e.message || e))}`).catch(() => {});
+  }
+  if (remember) await store.addPublished(chat, msg, section, item.photos[0]);
+  return msg;
 }
 
 /* «Это оно» под одним из нескольких найденных: применяем правку,
@@ -507,6 +569,12 @@ async function showCard(deps, chat, data, oldDraft) {
     const ok = check(f).ok;
     const buttons = [[...(ok ? [{ text: '✅ Сохранить', data: `ok:${ver}` }] : []), { text: '❌ Отмена', data: `no:${ver}` }]];
     msg = await tg.send(chat, cardText({ title: '✏️ <b>Изменить на сайте</b>' + testing, fields: f, before: data.before, note: data.note }), buttons);
+  } else if (data.kind === 'delete_many') {
+    const list = data.targets.map((t, i) => `${i + 1}. <b>${esc(t.name)}</b> — ${SECTIONS[t.section].uk}${t.weight ? `, ${esc(fmtWeight(t.weight))} г` : ''}`);
+    const miss = data.missing && data.missing.length ? ['', `Не нашёл: ${data.missing.map(esc).join('; ')}.`] : [];
+    msg = await tg.send(chat, [`🗑 <b>Убрать с сайта ${data.targets.length}?</b>` + testing, '', ...list, ...miss].join('\n'), [[
+      { text: `🗑 Убрать ${data.targets.length === 1 ? '' : 'все '}${data.targets.length}`, data: `ok:${ver}` }, { text: '❌ Отмена', data: `no:${ver}` }
+    ]]);
   } else if (data.kind === 'delete') {
     msg = await tg.send(chat, ['🗑 <b>Убрать с сайта?</b>' + testing, '', ...fieldLines(f)].join('\n'), [[
       { text: '🗑 Да, убрать', data: `ok:${ver}` }, { text: '❌ Отмена', data: `no:${ver}` }
@@ -558,7 +626,7 @@ async function onButton(deps, cq) {
     if (!(await store.claimDraft(chat, draft.ver))) return tg.answer(cq.id, 'Уже сохраняю…');
     await tg.answer(cq.id, 'Сохраняю…');
     try {
-      await publish(deps, chat, draft, cq.from);
+      await (draft.data.kind === 'delete_many' ? publishMany : publish)(deps, chat, draft, cq.from);
     } catch (e) {
       await store.releaseDraft(chat);
       throw e;
@@ -578,6 +646,38 @@ async function onButton(deps, cq) {
 }
 
 /* ---------- Запись на сайт ---------- */
+
+/* Убрать несколько изделий одним сохранением. То, что уже убрали
+   (например, через панель), пропускаем и честно называем. */
+async function publishMany(deps, chat, draft, from) {
+  const { tg, gh, store } = deps;
+  const d = draft.data;
+  const gone = new Set();
+  await gh.commit({
+    message: `Бот: убрано ${d.targets.length} шт.: ${d.targets.map(t => t.name).join(', ')}`,
+    change: async read => {
+      gone.clear();
+      const files = [];
+      for (const section of [...new Set(d.targets.map(t => t.section))]) {
+        let text = await read(catalogPath(section));
+        for (const t of d.targets.filter(x => x.section === section)) {
+          try { text = removeItem(text, t.photo).text; } catch (e) { if (e instanceof NotFound) gone.add(t.photo); else throw e; }
+        }
+        files.push({ path: catalogPath(section), text });
+      }
+      return files;
+    }
+  });
+  for (const t of d.targets) await store.forgetPublished(t.photo);
+  await store.deleteDraft(chat);
+
+  const done = d.targets.filter(t => !gone.has(t.photo));
+  const where = deps.testing ? ' (в тестовой копии сайта)' : '';
+  const text = [`🗑 Убрано с сайта${where}: ${done.length}.`, ...done.map(t => `• ${esc(t.name)}`),
+    ...(gone.size ? ['', `Уже не было на сайте: ${d.targets.filter(t => gone.has(t.photo)).map(t => esc(t.name)).join(', ')}.`] : [])].join('\n');
+  await tg.send(chat, text);
+  if (chat !== ADMIN) await tg.send(ADMIN, `📋 ${esc(userName(from))}:\n${text}`);
+}
 
 function stamp() {
   return new Date().toISOString().replace(/[-:]/g, '').replace('T', '-').slice(0, 15);

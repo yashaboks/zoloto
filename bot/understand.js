@@ -123,7 +123,8 @@ export function understand(env, { mode, text, current }) {
    Здесь главная трудность — отличить, КАК НАЙТИ изделие, от того,
    ЧТО В НЁМ ПОМЕНЯТЬ. «Поменяй вес цепочки на 24» — 24 это новый
    вес, а не тот, по которому искать. Поэтому у ответа две части:
-   find (приметы) и set (новые значения). */
+   finds (приметы; несколько — когда Саша убирает сразу несколько
+   изделий) и set (новые значения). */
 
 const SITE_SYSTEM = `You help the owner of ЯШАБОКС, a small shop in Ukraine that sells used gold and silver jewelry, manage items that are ALREADY on the shop's website. He speaks Russian, Ukrainian or a mix; you get a speech-to-text transcript.
 
@@ -134,7 +135,8 @@ Anything else → action "unclear".
 
 You may be given the item that the conversation is currently about. Set about to "this" when the message refers to that item — including short messages that name no item at all («цену поставь пять тысяч», «продано», «вес не тот, двадцать четыре»). Set about to "other" when he clearly describes a different item, or when no current item is given.
 
-find — what identifies the item he refers to, as it is on the site now. Only facts he states about the item itself:
+finds — one entry per item he refers to, usually exactly one. When he lists several items to remove («убери часы, цепочку бисмарк и кольцо три шестнадцать»), one entry for each. With a current item and about "this", finds may be empty.
+Each entry identifies an item as it is on the site now. Only facts he states about the item itself:
 - section: rings (кольцо, перстень, печатка, каблучка), pendants (подвеска, кулон, ладанка, крестик), chains (цепочка, цепь, ланцюжок), bracelets (браслет), earrings (серьги, сережки), watches (часы, годинник), coins (монета), other (anything else);
 - name: distinctive words of its name as they would be written on the Ukrainian site («бісмарк», «печатка», «з діамантом», «мама»), or null;
 - proba, weight (grams, string with a dot: "23.32"), length (ring size or chain length, string): only if he says them as the item's CURRENT values.
@@ -142,9 +144,10 @@ find — what identifies the item he refers to, as it is on the site now. Only f
 set — only the NEW values he wants. Every field he does not ask to change is null. section/name_uk/proba/weight/length as for find; name_uk is a short shop-style Ukrainian name; price in whole hryvnias («пять тысяч» → 5000). clear_price is true only if he wants the price removed («цену убери», «без цены», «договорная»).
 
 Examples:
-«поменяй вес цепочки бисмарк на двадцать четыре» → change, other, find {section chains, name "бісмарк"}, set {weight "24"}.
-«у цепочки на двадцать три грамма вес не тот, двадцать четыре» → change, other, find {section chains, weight "23"}, set {weight "24"}.
-«часы продал» → delete, other, find {section watches}.
+«поменяй вес цепочки бисмарк на двадцать четыре» → change, other, finds [{section chains, name "бісмарк"}], set {weight "24"}.
+«у цепочки на двадцать три грамма вес не тот, двадцать четыре» → change, other, finds [{section chains, weight "23"}], set {weight "24"}.
+«часы продал» → delete, other, finds [{section watches}].
+«убери часы, цепочку бисмарк на двадцать три и кольцо три шестнадцать» → delete, other, finds [{section watches}, {section chains, name "бісмарк", weight "23"}, {section rings, weight "3.16"}].
 «цену поставь двенадцать тысяч» (with a current item) → change, this, set {price 12000}.
 
 question — a short question in Russian only when it is genuinely unclear what he wants; otherwise null.
@@ -162,11 +165,11 @@ const findSchema = {
 const SITE_SCHEMA = {
   type: 'object',
   additionalProperties: false,
-  required: ['action', 'about', 'find', 'set', 'question'],
+  required: ['action', 'about', 'finds', 'set', 'question'],
   properties: {
     action: { type: 'string', enum: ['change', 'delete', 'unclear'] },
     about: { type: 'string', enum: ['this', 'other'] },
-    find: findSchema,
+    finds: { type: 'array', items: findSchema },
     set: {
       type: 'object', additionalProperties: false,
       required: ['section', 'name_uk', 'proba', 'weight', 'length', 'price', 'clear_price'],
