@@ -1,3 +1,16 @@
 {
-  "items": []
+  "items": [
+    {
+      "photos": [
+        "/assets/img/tg-20261103-225714-ax0m-1.jpg",
+        "/assets/img/tg-20261103-225714-ax0m-2.jpg"
+      ],
+      "name_uk": "Монета 10 рублів",
+      "proba": 900,
+      "weight": "8.6",
+      "length": "",
+      "price": null,
+      "status": "available"
+    }
+  ]
 }
