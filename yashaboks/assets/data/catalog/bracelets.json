@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261103-215811-7vyd-1.jpg"
+      ],
+      "name_uk": "Браслет жіночий з каменем",
+      "proba": 585,
+      "weight": "10.54",
+      "length": "18",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-215708-x4xo-1.jpg"
       ],
       "name_uk": "Браслет жіночий",
