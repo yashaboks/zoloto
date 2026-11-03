@@ -1,3 +1,15 @@
 {
-  "items": []
+  "items": [
+    {
+      "photos": [
+        "/assets/img/tg-20261103-220602-srke-1.jpg"
+      ],
+      "name_uk": "Годинники жіночі, чайка",
+      "proba": 585,
+      "weight": "16",
+      "length": "17",
+      "price": null,
+      "status": "available"
+    }
+  ]
 }
