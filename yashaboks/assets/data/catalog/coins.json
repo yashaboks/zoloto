@@ -2,6 +2,18 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261103-230339-viwu-1.jpg",
+        "/assets/img/tg-20261103-230339-viwu-2.jpg"
+      ],
+      "name_uk": "Монета",
+      "proba": 900,
+      "weight": "10.19",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-230217-qfri-1.jpg",
         "/assets/img/tg-20261103-230217-qfri-2.jpg"
       ],
