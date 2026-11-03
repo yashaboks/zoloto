@@ -2,6 +2,18 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261103-225959-0asu-1.jpg",
+        "/assets/img/tg-20261103-225959-0asu-2.jpg"
+      ],
+      "name_uk": "Монета 4 дуката",
+      "proba": 960,
+      "weight": "13.96",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-225839-h978-1.jpg",
         "/assets/img/tg-20261103-225839-h978-2.jpg"
       ],
