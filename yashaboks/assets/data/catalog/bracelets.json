@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261103-191602-05t1-1.jpg"
+      ],
+      "name_uk": "Браслет жіночий",
+      "proba": 585,
+      "weight": "12.71",
+      "length": "18",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/IMG_1980.webp"
       ],
       "name_uk": "Бр",
