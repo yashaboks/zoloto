@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261103-222743-677z-1.jpg"
+      ],
+      "name_uk": "Сережки",
+      "proba": 583,
+      "weight": "6.05",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-222708-5hep-1.jpg"
       ],
       "name_uk": "Сережки з камінцями",
