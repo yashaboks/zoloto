@@ -1,3 +1,15 @@
 {
-  "items": []
+  "items": [
+    {
+      "photos": [
+        "/assets/img/tg-20261103-213352-e0rl-1.jpg"
+      ],
+      "name_uk": "Ланцюжок",
+      "proba": 585,
+      "weight": "80.5",
+      "length": "65",
+      "price": null,
+      "status": "available"
+    }
+  ]
 }
