@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261103-214108-uc6g-1.jpg"
+      ],
+      "name_uk": "Ланцюжок, плетіння бісмарк",
+      "proba": 585,
+      "weight": "11.42",
+      "length": "53",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-213945-fp48-1.jpg"
       ],
       "name_uk": "Ланцюжок жіночий, колье",
