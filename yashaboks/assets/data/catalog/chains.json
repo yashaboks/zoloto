@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261103-214247-ysii-1.jpg"
+      ],
+      "name_uk": "Ланцюжок",
+      "proba": 583,
+      "weight": "51.11",
+      "length": "60",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-214108-uc6g-1.jpg"
       ],
       "name_uk": "Ланцюжок, плетіння бісмарк",
