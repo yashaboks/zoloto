@@ -140,6 +140,9 @@ export function makeStore(db) {
       return r.meta.changes === 1;
     },
 
+    setDraftNext: (chat, ver, text) => q(
+      `UPDATE drafts SET data = json_set(data, '$.next', ?) WHERE chat = ? AND ver = ?`, text, chat, ver).run(),
+
     releaseDraft: chat => q(`UPDATE drafts SET state = 'card' WHERE chat = ?`, chat).run(),
 
     async markAsked(chat) {

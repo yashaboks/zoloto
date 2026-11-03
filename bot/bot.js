@@ -190,10 +190,18 @@ async function onPhoto(deps, m) {
   return tg.send(chat, '📷 Фото есть. Теперь скажи голосом: что это, проба, вес (и длина или цена, если есть).');
 }
 
-async function askAboutOldCard({ tg }, chat, draft) {
+/* Карточка висит несохранённой, а Саша уже о другом: прислал новые
+   фото или говорит про другое изделие. Молча выбросить карточку
+   нельзя (там его правка), молча сохранить — тоже. Спрашиваем, а
+   сказанное (next) запоминаем и выполняем сразу после ответа —
+   повторять Саше не придётся. */
+async function askAboutOldCard({ tg, store }, chat, draft, next) {
   const name = draft.data.fields ? draft.data.fields.name_uk : '';
-  return tg.send(chat, `Новые фото получил. Но прошлая карточка${name ? ` «${esc(name)}»` : ''} ещё не закончена. Что с ней?`, [[
-    { text: '✅ Опубликовать её', data: `ok:${draft.ver}` },
+  const save = { new: '✅ Опубликовать её', edit: '✅ Сохранить её', delete: '🗑 Да, убрать', photos: '✅ Заменить фото' }[draft.data.kind];
+  if (next) await store.setDraftNext(chat, draft.ver, next);
+  const why = next ? `Понял, займусь: «${esc(next)}».\nНо сначала: карточка` : 'Новые фото получил. Но прошлая карточка';
+  return tg.send(chat, `${why}${name ? ` «${esc(name)}»` : ''} ещё не сохранена. Что с ней?`, [[
+    { text: save, data: `ok:${draft.ver}` },
     { text: '🗑 Выбросить', data: `no:${draft.ver}` }
   ]]);
 }
@@ -217,10 +225,9 @@ async function onWords(deps, m, text) {
       await store.markAsked(chat);
       return askAboutOldCard(deps, chat, draft);
     }
-    if (draft.data.kind === 'delete' || draft.data.kind === 'photos') {
-      throw new Say('Нажми кнопку под карточкой выше: подтвердить или отмена.');
-    }
-    return fixDraft(deps, chat, draft, text);
+    if (draft.data.kind === 'new') return fixDraft(deps, chat, draft, text);
+    if (draft.data.kind === 'edit') return fixEdit(deps, chat, draft, text);
+    return askAboutOldCard(deps, chat, draft, text);
   }
 
   return newItem(deps, chat, text);
@@ -266,9 +273,24 @@ async function newItem(deps, chat, text) {
 async function fixDraft(deps, chat, draft, text) {
   await deps.tg.typing(chat);
   const r = await think(deps, chat, 'fix', text, draft.data.fields);
-  if (r.action === 'unclear') throw new Say(r.question ? esc(r.question) : 'Не понял, что исправить 🤔');
+  // Не исправление этой карточки — значит, про другое изделие.
+  if (r.action !== 'fill') return askAboutOldCard(deps, chat, draft, text);
   const fields = normalize(merge(draft.data.fields, r));
   return showCard(deps, chat, { ...draft.data, fields, note: r.question ? '❓ ' + esc(r.question) : '' }, draft);
+}
+
+/* Несохранённая правка изделия с сайта: дополнить её («и размер
+   шестьдесят»), превратить в «убрать» («нет, его продали») или,
+   если речь о другом изделии, спросить про эту карточку. */
+async function fixEdit(deps, chat, draft, text) {
+  await deps.tg.typing(chat);
+  const d = draft.data;
+  const r = await thinkSite(deps, chat, text, d.fields);
+  if (r.action === 'unclear' || r.about !== 'this') return askAboutOldCard(deps, chat, draft, text);
+  if (r.action === 'delete') return showCard(deps, chat, { kind: 'delete', fields: d.before, target: d.target }, draft);
+  const fields = applySet(d.fields, r.set);
+  if (JSON.stringify(fields) === JSON.stringify(d.fields)) throw new Say('Не понял, что ещё поменять 🤔');
+  return showCard(deps, chat, { ...d, fields }, draft);
 }
 
 async function readItem({ gh }, pub) {
@@ -525,6 +547,7 @@ async function onButton(deps, cq) {
     return tg.stripButtons(chat, cq.message.message_id);
   }
 
+  const next = draft.data.next;
   if (act === 'no') {
     await store.deleteDraft(chat);
     await tg.answer(cq.id, 'Отменено');
@@ -546,7 +569,9 @@ async function onButton(deps, cq) {
     return tg.answer(cq.id);
   }
 
-  // Карточку закрыли, а новые фото уже ждут — подсказать, что дальше.
+  // Карточку закрыли — теперь то, что Саша сказал, пока она висела.
+  if (next) return siteRequest(deps, chat, next, await store.getFocus(chat), false);
+  // Или новые фото уже ждут — подсказать, что дальше.
   if ((await store.freePhotos(chat)).length) {
     await tg.send(chat, '📷 Новые фото на месте. Теперь скажи про них голосом: что это, проба, вес.');
   }
