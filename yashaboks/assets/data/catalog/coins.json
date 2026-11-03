@@ -1,26 +1,3 @@
 {
-  "items": [
-    {
-      "photos": [
-        "/assets/img/IMG_1987.webp"
-      ],
-      "name_uk": "М",
-      "proba": 916,
-      "weight": "13.94",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6896.webp"
-      ],
-      "name_uk": "Кітай",
-      "proba": 9999,
-      "weight": "10.37",
-      "length": "",
-      "price": null,
-      "status": "available"
-    }
-  ]
+  "items": []
 }
