@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261103-221738-248o-1.jpg"
+      ],
+      "name_uk": "Ланцюжок жіночий",
+      "proba": 750,
+      "weight": "5.76",
+      "length": "45",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-221344-rqii-1.jpg"
       ],
       "name_uk": "Ланцюжок",
