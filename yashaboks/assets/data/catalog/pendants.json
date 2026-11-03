@@ -2,17 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/IMG_1994.webp"
-      ],
-      "name_uk": "К",
-      "proba": 585,
-      "weight": "3.93",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/IMG_1990.webp"
       ],
       "name_uk": "К",
@@ -62,17 +51,6 @@
       "name_uk": "Хрест",
       "proba": 585,
       "weight": "1",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_6903.webp"
-      ],
-      "name_uk": "Підвіска",
-      "proba": 585,
-      "weight": "1.64",
       "length": "",
       "price": null,
       "status": "available"
