@@ -2,6 +2,18 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261104-082227-izjr-1.jpg",
+        "/assets/img/tg-20261104-082227-izjr-2.jpg"
+      ],
+      "name_uk": "Монета срібна",
+      "proba": 9999,
+      "weight": "31.1",
+      "length": "",
+      "price": 4000,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-230339-viwu-1.jpg",
         "/assets/img/tg-20261103-230339-viwu-2.jpg"
       ],
