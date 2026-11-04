@@ -11,7 +11,7 @@
        Страница-переходник на Viber.
 
        Зачем она нужна.
-       Telegram (t.me) и WhatsApp (wa.me) держат настоящие сайты: по их
+       Telegram (t.me) держит настоящий сайт: по его
        ссылке открывается обычная веб-страница, и уже она предлагает
        перейти в приложение. У Viber такого сайта нет — есть только
        команда системе «viber://chat?number=…», а это не адрес страницы.
@@ -217,10 +217,6 @@
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 5.3 18.8 19c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.4-.9.4l.3-4.5 8.2-7.4c.4-.3-.1-.5-.6-.2L7.1 13.4l-4.4-1.4c-1-.3-1-.9.2-1.4l17.2-6.6c.8-.3 1.5.2 1.2 1.3z"/></svg>
         <span>Telegram<small>@yashaboks</small></span>
       </a>
-      <a class="alt" id="altWhatsapp" href="https://wa.me/380979122665" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.1a9.9 9.9 0 0 0-8.4 15.1L2.1 22l4.9-1.4A9.9 9.9 0 1 0 12 2.1zm0 1.8a8.1 8.1 0 0 1 6.8 12.5l-.2.3.6 2.1-2.2-.6-.3.2A8.1 8.1 0 1 1 12 3.9zM8.9 7.3c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.4 1 2.5c.1.2 1.7 2.7 4.2 3.7 2.1.9 2.5.7 2.9.7.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3l-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.8c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2.1-1.6-.2-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.6c-.2-.4-.3-.4-.5-.4h-.4z"/></svg>
-        <span>WhatsApp<small id="altWaSub">+380 97 912 26 65</small></span>
-      </a>
     </div>
 
     <a class="back" href="index.html">← Повернутися на сайт</a>
@@ -237,8 +233,7 @@
       phone: "+380979122665",
       phoneDisplay: "+380 97 912 26 65",
       viber: "viber://chat?number=%2B380979122665",
-      telegram: "https://t.me/yashaboks",
-      whatsapp: "https://wa.me/380979122665"
+      telegram: "https://t.me/yashaboks"
     };
 
     function $(id) { return document.getElementById(id); }
@@ -345,9 +340,7 @@
       $("numText").textContent = S.phoneDisplay;
       $("altPhone").href = "tel:" + S.phone;
       $("altPhoneSub").textContent = S.phoneDisplay;
-      $("altWaSub").textContent = S.phoneDisplay;
       $("altTelegram").href = S.telegram;
-      $("altWhatsapp").href = S.whatsapp;
       $("openViber").addEventListener("click", function (e) {
         e.preventDefault();
         openViber();
@@ -387,7 +380,7 @@
           .then(function (r) { return r.ok ? r.json() : null; })
           .then(function (data) {
             if (data) {
-              ["phone", "phoneDisplay", "viber", "telegram", "whatsapp"]
+              ["phone", "phoneDisplay", "viber", "telegram"]
                 .forEach(function (k) { if (data[k]) S[k] = data[k]; });
             }
           })

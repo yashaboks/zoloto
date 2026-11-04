@@ -18,8 +18,7 @@ const CONFIG = {
     // TODO: replace the placeholder number with the real one (digits only for links)
     phone: "+380000000000",
     phoneDisplay: "+380 00 000 00 00",
-    viber: "viber://chat?number=%2B380000000000",
-    whatsapp: "https://wa.me/380000000000"
+    viber: "viber://chat?number=%2B380000000000"
   }
 };
 

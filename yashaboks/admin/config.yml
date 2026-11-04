@@ -526,7 +526,6 @@ collections:
           - { name: "phoneDisplay", label: "Телефон как показывать (+380 00 000 00 00)", widget: "string" }
           - { name: "telegram", label: "Telegram — ссылка (https://t.me/имя)", widget: "string" }
           - { name: "channel", label: "Telegram-канал — ссылка (https://t.me/имя_канала), кнопка в шапке сайта", widget: "string" }
-          - { name: "whatsapp", label: "WhatsApp — ссылка (https://wa.me/380…)", widget: "string" }
           - { name: "viber", label: "Viber — ссылка (viber://chat?number=%2B380…)", widget: "string" }
           - { name: "tiktok", label: "TikTok — ссылка", widget: "string" }
           - { name: "instagram", label: "Instagram — ссылка", widget: "string" }
