@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261104-193311-2jd4-1.jpg"
+      ],
+      "name_uk": "Монета Олімпіада Китай",
+      "proba": 999,
+      "weight": "10.39",
+      "length": "",
+      "price": 75000,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261104-193205-h02w-1.jpg"
       ],
       "name_uk": "Монета Олімпіада Китай",
