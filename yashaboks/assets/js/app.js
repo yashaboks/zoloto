@@ -71,6 +71,11 @@
     $all("[data-i18n]").forEach(function (el) {
       var key = el.getAttribute("data-i18n");
       var val = t(key, lang);
+      /* Перевода нет — оставляем текст, вписанный в разметку, а не
+         показываем людям служебное имя. Так было в браузере ТикТока:
+         он держал старый i18n.js без новых подписей, и на кнопке
+         стояло «nav.channel_full». */
+      if (val === key) return;
       var attr = el.getAttribute("data-i18n-attr");
       if (attr) el.setAttribute(attr, val);
       else el.textContent = val;
