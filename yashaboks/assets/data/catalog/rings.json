@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261104-165356-7nop-1.jpg"
+      ],
+      "name_uk": "Каблучка",
+      "proba": 585,
+      "weight": "5.02",
+      "length": "19",
+      "price": 3800,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261104-133313-hsaj-1.jpg"
       ],
       "name_uk": "Каблучка",
