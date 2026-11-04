@@ -25,7 +25,7 @@
        обновления сайта может подсунуть старые. Цифра в адресе делает файл
        для него новым, и он забирает свежий. Правило: поменял файл — подними
        цифру у него на единицу. -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=6" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=7" />
 </head>
 <body>
   <a class="skip-link" href="#contact" data-i18n="nav.contact">Контакти</a>
@@ -55,33 +55,19 @@
       </nav>
 
       <div class="header-actions">
-        <!-- Viber закреплён в шапке: это основной способ, которым пишут.
-             В родном фиолетовом цвете, с надписью и значком — по просьбе
-             заказчика, чтобы узнавался с одного взгляда.
-
-             Ведёт не прямо на viber://…, а на viber.html — свою страницу-
-             переходник. Прямая ссылка не работает во встроенных браузерах
-             соцсетей: они пропускают только http и https, а незнакомую
-             приставку отменяют молча. Подробно — в шапке viber.html.
-
-             Адрес записан прямо здесь, чтобы кнопка работала, даже если
-             скрипты не загрузятся; при загрузке его подтвердит app.js
-             (VIBER_PAGE). Значок рисуется тем же кодом, что и в блоке
-             контактов внизу, см. GLYPHS в assets/js/app.js. -->
-        <!-- Telegram-канал — рядом с Viber. Саша зовёт туда из ТикТока,
-             и люди, пришедшие с сайта, должны найти канал сразу, а не
-             в контактах внизу. На телефоне — только значок: подписи
-             не помещаются (подробно — в styles.css, «Канал в шапке»).
+        <!-- В шапке одна кнопка связи — Telegram-канал. Раньше тут был
+             Viber; Саша попросил оставить только канал: он зовёт туда
+             из ТикТока, и с сайта люди должны попадать туда же. Viber
+             остался в блоке контактов внизу.
+             Подпись на компьютере полная, на телефоне короткая —
+             «Telegram-канал» рядом с логотипом и бургером не влезает.
              Значок вписан прямо сюда, а не скриптом: кнопка должна
              узнаваться, даже если скрипты не загрузятся. Адрес при
              загрузке подтверждает app.js из настроек панели. -->
         <a href="https://t.me/yashaboks_channel" id="channelTop" class="btn btn-tg" target="_blank" rel="noopener noreferrer" aria-label="Telegram-канал">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 5.3 18.8 19c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.4-.9.4l.3-4.5 8.2-7.4c.4-.3-.1-.5-.6-.2L7.1 13.4l-4.4-1.4c-1-.3-1-.9.2-1.4l17.2-6.6c.8-.3 1.5.2 1.2 1.3z"/></svg>
-          <span class="btn-label" data-i18n="nav.channel">Канал</span>
-        </a>
-        <a href="viber.html" id="viberTop" class="btn btn-viber" aria-label="Viber">
-          <span class="btn-viber-icon" aria-hidden="true"></span>
-          <span class="btn-label">Viber</span>
+          <span class="btn-label label-full" data-i18n="nav.channel_full">Telegram-канал</span>
+          <span class="btn-label label-short" data-i18n="nav.channel">Канал</span>
         </a>
         <a href="#contact" class="btn btn-gold btn-sm" data-i18n="nav.write">Написати</a>
         <button type="button" class="nav-toggle" aria-controls="mobileMenu" aria-expanded="false" data-i18n-attr="aria-label" data-i18n="nav.menu_toggle" aria-label="Меню">
@@ -265,6 +251,6 @@
 
   <script src="assets/js/data.js?v=3"></script>
   <script src="assets/js/i18n.js?v=3"></script>
-  <script src="assets/js/app.js?v=5"></script>
+  <script src="assets/js/app.js?v=6"></script>
 </body>
 </html>

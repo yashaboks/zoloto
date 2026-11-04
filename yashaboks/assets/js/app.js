@@ -410,7 +410,7 @@
   }
 
   /* ---------- Viber идёт через свою страницу ----------
-     Кнопки Viber — и в шапке, и в блоке контактов внизу — ведут не
+     Кнопка Viber в блоке контактов внизу ведёт не
      на viber://…, а на viber.html — обычный https-адрес на нашем же
      сайте, который уже сам пробует запустить приложение. Причина:
      встроенные браузеры соцсетей (TikTok, Instagram, Facebook)
@@ -446,14 +446,6 @@
           "</a>"
         );
       }).join("");
-    }
-
-    /* Viber в шапке. Адрес и значок — те же, что у кнопки Viber внизу. */
-    var vTop = $("#viberTop");
-    if (vTop) {
-      vTop.href = VIBER_PAGE;
-      var vIcon = vTop.querySelector(".btn-viber-icon");
-      if (vIcon && !vIcon.firstChild) vIcon.innerHTML = glyph("viber");
     }
 
     /* Канал в шапке и в меню — адрес из настроек панели. */
