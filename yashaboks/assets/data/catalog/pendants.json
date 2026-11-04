@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261104-114222-963x-1.jpg"
+      ],
+      "name_uk": "Підвіска «Хрест»",
+      "proba": 585,
+      "weight": "2.71",
+      "length": "",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-225427-1pt5-1.jpg"
       ],
       "name_uk": "Підвіска",
