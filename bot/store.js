@@ -85,6 +85,8 @@ export function makeStore(db) {
       return r.meta.changes === 1;
     },
 
+    pendingUsers: async n => (await q(`SELECT id, name FROM users WHERE status = 'pending' ORDER BY rowid DESC LIMIT ?`, n).all()).results,
+
     setUserStatus: (id, status) => q(`UPDATE users SET status = ? WHERE id = ?`, status, id).run(),
 
     addPhoto: p => q(`INSERT OR IGNORE INTO photos (chat, msg, grp, file_id, caption, ts) VALUES (?, ?, ?, ?, ?, ?)`,

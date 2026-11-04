@@ -24,6 +24,10 @@ import * as channel from './channel.js';
 /* Артём: ему бот доступен всегда, и он решает, кого ещё пустить. */
 export const ADMIN = 240611165;
 
+/* Канал магазина: сюда уходят посты, и сюда же отправляем
+   покупателей, которые случайно нашли бота. */
+export const CHANNEL = '@yashaboks_channel';
+
 const MAX_PHOTOS = 3;
 
 /* Сколько ждать остальные фото альбома. Telegram присылает их
@@ -88,17 +92,33 @@ function userName(u) {
   return [u.first_name, u.last_name].filter(Boolean).join(' ') + (u.username ? ` (@${u.username})` : '');
 }
 
-/* Незнакомцу бот ничего не делает, а Артёму присылает вопрос с
-   кнопками. Так Сашин номер в Telegram не надо узнавать заранее:
-   Саша пишет боту, Артём жмёт «Разрешить». Один раз на человека. */
-async function onStranger({ tg, store }, m) {
-  const isNew = await store.addPendingUser(m.from.id, userName(m.from));
-  if (!isNew) return;
-  await tg.send(m.chat.id, 'Это рабочий бот магазина ЯШАБОКС. Я передал владельцу, что ты написал.');
-  await tg.send(ADMIN, `👤 Боту написал(а): <b>${esc(userName(m.from))}</b>, ID ${m.from.id}.\nРазрешить пользоваться ботом?`, [[
-    { text: '✅ Разрешить', data: `allow:${m.from.id}` },
-    { text: '🚫 Нет', data: `deny:${m.from.id}` }
-  ]]);
+/* Незнакомцу бот ничего не делает. Пишут ему в основном покупатели:
+   ищут в Telegram «yashaboks» и попадают сюда, а не в канал. Им —
+   куда на самом деле обращаться, с телефоном и каналом, и так на
+   каждое сообщение: иначе человек ждёт ответа, которого не будет.
+   Артёма не дёргаем — после запуска таких десятки, а нужных людей
+   (помощник Саши) он пустит сам командой /dopusk. */
+async function onStranger(deps, m) {
+  const { tg, store } = deps;
+  await store.addPendingUser(m.from.id, userName(m.from));
+  const c = await channel.contacts(deps);
+  const lines = ['Вітаю! Це службовий бот магазину <b>ЯШАБОКС</b> — через нього оновлюється сайт, повідомлення тут ніхто не читає.', '', 'Щоб купити або продати золото:'];
+  if (c.phone) lines.push(`📞 ${esc(c.phone)}`);
+  if (c.telegram) lines.push(`💬 <a href="${esc(c.telegram)}">Написати в Telegram</a>`);
+  lines.push(`📣 <a href="https://t.me/${CHANNEL.slice(1)}">Наш канал</a> — нові вироби`);
+  lines.push(`🌐 <a href="${c.site}/#catalog">Каталог на сайті</a>`);
+  await tg.send(m.chat.id, lines.join('\n'));
+}
+
+/* /dopusk — кто писал боту и ещё не допущен, с кнопкой «Разрешить»
+   под каждым. Артём узнаёт нужного человека по имени. */
+async function showPending({ tg, store }, chat) {
+  const rows = await store.pendingUsers(15);
+  if (!rows.length) return tg.send(chat, 'Никто не ждёт допуска.');
+  await tg.send(chat, `Ждут допуска: ${rows.length}. Разрешай <b>только своим</b> — допущенный может менять сайт.`);
+  for (const u of rows) {
+    await tg.send(chat, `👤 <b>${esc(u.name || '')}</b>, ID ${u.id}`, [[{ text: '✅ Разрешить', data: `allow:${u.id}` }]]);
+  }
 }
 
 /* ---------- Сообщения ---------- */
@@ -116,6 +136,7 @@ async function onMessage(deps, m) {
     if (cmd === '/otmena' || cmd === '/cancel') return cancelAll(deps, chat);
     if (cmd === '/zhurnal' && m.from.id === ADMIN) return showJournal(deps, chat);
     if (cmd === '/kanal' && m.from.id === ADMIN) return refreshChannel(deps, chat);
+    if (cmd === '/dopusk' && m.from.id === ADMIN) return showPending(deps, chat);
     return tg.send(chat, HELP);
   }
 

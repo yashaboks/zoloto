@@ -22,7 +22,7 @@
    — бот начнёт слушать именно этот адрес.
    ============================================================ */
 
-import { handleUpdate, ADMIN } from '../../bot/bot.js';
+import { handleUpdate, ADMIN, CHANNEL } from '../../bot/bot.js';
 import { makeStore } from '../../bot/store.js';
 import { makeTelegram } from '../../bot/telegram.js';
 import { makeGithub, bytesToBase64 } from '../../bot/github.js';
@@ -33,10 +33,6 @@ import { understand, understandSite, transcribe } from '../../bot/understand.js'
    случилось на тесте, живой каталог Саши не тронут. */
 const LIVE_HOSTS = ['yashaboks.com', 'www.yashaboks.com', 'yashaboks.pages.dev'];
 const SANDBOX_BRANCH = 'bot-sandbox';
-
-/* Сашин канал. Бот в нём администратор (публикация и редактирование
-   сообщений). С тестовой копии посты идут Артёму в личку. */
-const CHANNEL = '@yashaboks_channel';
 
 function branchFor(host) {
   return LIVE_HOSTS.includes(host) ? 'main' : SANDBOX_BRANCH;
@@ -76,6 +72,8 @@ export async function onRequestPost(context) {
     // свой адрес, там лежат и фото, добавленные на тесте.
     siteUrl: branch === 'main' ? 'https://yashaboks.com' : `https://${SANDBOX_BRANCH}.yashaboks.pages.dev`,
     testing: branch !== 'main',
+    // Сашин канал: бот в нём администратор. С тестовой копии посты
+    // идут Артёму в личку.
     channel: branch === 'main' ? CHANNEL : ADMIN,
     admin: ADMIN
   };

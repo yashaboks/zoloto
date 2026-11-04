@@ -58,8 +58,9 @@ export function postText(f, { contacts, sold, testing } = {}) {
 }
 
 /* Телефон и Telegram берём из настроек сайта, которые Саша правит в
-   панели: сменит номер — новые посты пойдут уже с новым. */
-async function contacts(deps) {
+   панели: сменит номер — новые посты пойдут уже с новым. Те же
+   контакты бот даёт незнакомцам, которые пишут ему вместо Саши. */
+export async function contacts(deps) {
   try {
     const s = JSON.parse(await deps.gh.read(SETTINGS));
     const phone = String(s.phone || s.phoneDisplay || '').replace(/[^\d+]/g, '');
