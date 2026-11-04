@@ -433,7 +433,10 @@
 
     var actions = [
       { icon: "phone",     href: "tel:" + s.phone,   label: t("contact.call", lang), sub: s.phoneDisplay, primary: true, ext: false },
-      { icon: "telegram",  href: s.telegram,         label: "Telegram", sub: handle,        ext: true },
+      /* Вместо лички Саши — канал: люди не узнавали канал в кнопке
+         шапки и писали Саше «где витрина». Подпись под названием — имя
+         канала из его же адреса, чтобы совпадало с тем, что в ТикТоке. */
+      { icon: "telegram",  href: s.channel,          label: t("nav.channel_full", lang), sub: "@" + String(s.channel).split("/").pop(), ext: true },
       { icon: "viber",     href: VIBER_PAGE,         label: "Viber",    sub: s.phoneDisplay, ext: false },
       { icon: "tiktok",    href: s.tiktok,           label: t("contact.write_tiktok", lang),    sub: handle,        ext: true },
       { icon: "instagram", href: s.instagram,        label: t("contact.write_instagram", lang), sub: handle,        ext: true }
