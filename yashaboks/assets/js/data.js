@@ -13,6 +13,8 @@ const CONFIG = {
     instagram: "https://www.instagram.com/yashaboks",
     // TODO: replace the placeholder Telegram username with the real one
     telegram: "https://t.me/yashaboks",
+    // канал, куда Саша зовёт из ТикТока; кнопка в шапке
+    channel: "https://t.me/yashaboks_channel",
     // TODO: replace the placeholder number with the real one (digits only for links)
     phone: "+380000000000",
     phoneDisplay: "+380 00 000 00 00",

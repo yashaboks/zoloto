@@ -184,7 +184,7 @@ input { font: inherit; }
    нажатия по рекомендациям Apple. Меньше делать нельзя: промахиваться
    пальцем по главной кнопке связи — худшее, что тут может быть. */
 .btn-viber {
-  gap: .45rem; padding: .62rem .95rem; font-size: .86rem;
+  gap: .4rem; padding: .62rem .8rem; font-size: .84rem; min-height: 44px;
   white-space: nowrap; flex-shrink: 0; color: #fff;
   background: linear-gradient(180deg, #8b7bf5, #7360f2);
   /* светлый ободок изнутри: на почти чёрном фоне сплошная заливка без
@@ -196,6 +196,25 @@ input { font: inherit; }
 }
 .btn-viber-icon { display: inline-flex; flex-shrink: 0; }
 .btn-viber svg { width: 17px; height: 17px; display: block; }
+
+/* ---------- Канал в шапке ----------
+   Telegram-канал рядом с Viber, в родном голубом Telegram — по той же
+   причине, что и Viber в фиолетовом: узнаётся с одного взгляда. Устроен
+   так же, как Viber (светлый ободок, мягкая цветная тень), чтобы две
+   кнопки читались парой, а не спорили.
+
+   Высота 44 px задана явно (min-height): подпись мельче, чем у Viber
+   раньше, и без этого кнопка стала бы ниже минимальной цели нажатия. */
+.btn-tg {
+  gap: .4rem; padding: .62rem .85rem; font-size: .84rem; min-height: 44px;
+  white-space: nowrap; flex-shrink: 0; color: #fff;
+  background: linear-gradient(180deg, #3fb6ef, #229ed9);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2), 0 6px 18px rgba(34, 158, 217, .3);
+}
+.btn-tg:hover {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .32), 0 10px 26px rgba(34, 158, 217, .42);
+}
+.btn-tg svg { width: 17px; height: 17px; display: block; flex-shrink: 0; margin-left: -1px; }
 
 .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; }
 .lang-switch button {
@@ -526,6 +545,11 @@ body.lb-open { overflow: hidden; }
   .cmp-vs { transform: rotate(90deg); }
   .item-name { font-size: 1rem; }
   .header-actions .btn-sm { display: none; }
+  /* Канал на телефоне — круглый значок 44×44. С подписью шапка не
+     влезает уже на 414 px: логотип, две кнопки связи и бургер. Подпись
+     «Telegram-канал» есть в меню под бургером. */
+  .btn-tg { width: 44px; height: 44px; padding: 0; }
+  .btn-tg .btn-label { display: none; }
   .hero-chips li { font-size: .78rem; padding: .38rem .75rem; }
 }
 
@@ -545,6 +569,15 @@ body.lb-open { overflow: hidden; }
    поджимаем промежутки и сам бургер. Кнопку Viber не трогаем — её
    высота 45 px, это минимальный размер цели нажатия, и выгадывать на
    ней пиксели нельзя. */
+/* Ниже 360 px не помещается и подпись «Viber»: логотип, канал, Viber
+   и бургер вместе шире экрана. Viber тоже становится круглым значком —
+   высоту 44 px не трогаем, ужимаем только ширину. Фирменный фиолетовый
+   и значок узнаются и без слова. */
+@media (max-width: 359px) {
+  .btn-viber { width: 44px; height: 44px; padding: 0; }
+  .btn-viber .btn-label { display: none; }
+}
+
 @media (max-width: 340px) {
   .brand-name { font-size: .95rem; }
   .header-actions { gap: .4rem; }

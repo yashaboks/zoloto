@@ -223,7 +223,7 @@
     if (typeof data.rate === "number") CONFIG.rate = data.rate;
     if (typeof data.pawnRate === "number") CONFIG.pawnRate = data.pawnRate;
     var s = CONFIG.social;
-    ["phone", "phoneDisplay", "telegram", "whatsapp", "viber", "tiktok", "instagram"]
+    ["phone", "phoneDisplay", "telegram", "channel", "whatsapp", "viber", "tiktok", "instagram"]
       .forEach(function (k) { if (data[k]) s[k] = data[k]; });
   }
 
@@ -455,6 +455,12 @@
       var vIcon = vTop.querySelector(".btn-viber-icon");
       if (vIcon && !vIcon.firstChild) vIcon.innerHTML = glyph("viber");
     }
+
+    /* Канал в шапке и в меню — адрес из настроек панели. */
+    ["#channelTop", "#channelMenu"].forEach(function (sel) {
+      var a = $(sel);
+      if (a && s.channel) a.href = s.channel;
+    });
 
     var foot = $("#footerSocials");
     if (foot) {

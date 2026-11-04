@@ -13,6 +13,8 @@ const I18N = {
     "nav.catalog": "В наявності",
     "nav.contact": "Контакти",
     "nav.write": "Написати",
+    "nav.channel": "Канал",
+    "nav.channel_full": "Telegram-канал",
     "nav.menu_toggle": "Меню",
 
     "hero.eyebrow": "Приватна скупка і продаж золота · Харків і область",
