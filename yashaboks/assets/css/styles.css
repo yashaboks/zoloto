@@ -189,7 +189,7 @@ input { font: inherit; }
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .32), 0 10px 26px rgba(34, 158, 217, .42);
 }
 .btn-tg svg { width: 18px; height: 18px; display: block; flex-shrink: 0; margin-left: -1px; }
-.btn-tg .label-short { display: none; }
+.btn-tg .label-mid, .btn-tg .label-short { display: none; }
 
 .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; }
 .lang-switch button {
@@ -520,9 +520,21 @@ body.lb-open { overflow: hidden; }
   .cmp-vs { transform: rotate(90deg); }
   .item-name { font-size: 1rem; }
   .header-actions .btn-sm { display: none; }
-  /* На телефоне подпись короче: «Telegram-канал» рядом с логотипом и
-     бургером не помещается уже на 375 px. Полная — в меню под бургером. */
+  /* На телефоне кнопка чуть плотнее, чтобы полная подпись
+     «Telegram-канал» помещалась рядом с логотипом и бургером хотя бы
+     на больших телефонах (от 400 px). Уже — см. ниже. */
+  .btn-tg { font-size: .82rem; padding-inline: .8rem; gap: .4rem; }
+}
+
+/* Подпись канала по ширине экрана — замерено: между логотипом и
+   бургером свободно 105 px на 320, 132 на 360, 149 на 390, 173 на 414.
+   «Telegram-канал» занимает ~155, «ТГ-канал» ~115, «Канал» ~100. */
+@media (max-width: 399px) {
   .btn-tg .label-full { display: none; }
+  .btn-tg .label-mid { display: inline; }
+}
+@media (max-width: 359px) {
+  .btn-tg .label-mid { display: none; }
   .btn-tg .label-short { display: inline; }
   .hero-chips li { font-size: .78rem; padding: .38rem .75rem; }
 }
