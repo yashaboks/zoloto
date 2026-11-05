@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261105-111831-jtm4-1.jpg"
+      ],
+      "name_uk": "Монета червонець Микола",
+      "proba": 900,
+      "weight": "8.6",
+      "length": "",
+      "price": 67000,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261104-193311-2jd4-1.jpg"
       ],
       "name_uk": "Монета Олімпіада Китай",
