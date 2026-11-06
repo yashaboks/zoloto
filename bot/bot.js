@@ -817,9 +817,9 @@ async function publish(deps, chat, draft, from) {
 
   // Канал — уже после ответа Саше: пост не должен задерживать
   // «Опубликовано», а его ошибка — пугать Сашу (её видит Артём).
-  if (d.kind === 'new') await channel.post(deps, f, d.photos[0], photo);
+  if (d.kind === 'new') await channel.post(deps, f, d.photos, photo);
   else if (d.kind === 'delete') await channel.sold(deps, f, d.target.photo);
-  else await channel.update(deps, f, photo, d.kind === 'photos' ? d.photos[0] : null);
+  else await channel.update(deps, f, photo, d.kind === 'photos' ? d.photos : null);
 
   // Первое время Артём видит каждую публикацию — чтобы заметить,
   // если бот где-то понимает Сашу неправильно.

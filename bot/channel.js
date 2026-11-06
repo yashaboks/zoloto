@@ -79,31 +79,71 @@ async function tell(deps, what, e) {
   await deps.tg.send(deps.admin, `⚠️ Канал: ${what} — ${esc(String(e && e.message || e))}`).catch(() => {});
 }
 
-/* Новое изделие на сайте → пост. photo — Telegram-файл обложки,
-   key — адрес фото на сайте, по нему пост потом находим. */
-export async function post(deps, f, fileId, key) {
+/* Новое изделие на сайте → пост. fileIds — Telegram-файлы фото, как
+   Саша их прислал (1–3, первое — обложка): сколько фото на сайте,
+   столько и в посте. key — адрес обложки на сайте, по нему пост
+   потом находим. */
+export async function post(deps, f, fileIds, key) {
   try {
     const caption = postText(f, { contacts: await contacts(deps), testing: deps.testing });
-    const msg = await deps.tg.sendPhoto(deps.channel, fileId, caption);
-    await deps.store.addChannelPost(key, msg);
+    const msgs = await deps.tg.sendAlbum(deps.channel, fileIds, caption);
+    await deps.store.addChannelPost(key, msgs);
   } catch (e) {
     await tell(deps, `пост «${esc(f.name_uk)}» не вышел`, e);
   }
 }
 
-/* Изделие изменили. newFileId — если сменили фото: тогда меняем и
-   картинку в посте. Пост, которого нет (изделие добавлено до бота
+/* Замена фото в посте. Число фото в альбоме Telegram менять не даёт:
+   можно только подменить каждое по отдельности. Поэтому:
+   — фото столько же, сколько было, — подменяем по одному;
+   — иначе выкладываем пост заново, а старый удаляем. Удалить бот
+     может только свой пост младше 48 часов, но фото обычно меняют
+     сразу, заметив неудачный снимок;
+   — пост старше — подменяем, сколько влезает, и говорим Артёму, что
+     осталось поправить руками. Саша этого не видит: на сайте фото
+     уже правильные. */
+async function replacePhotos(deps, f, key, row, fileIds, caption) {
+  const media = (id, i) => i ? { type: 'photo', media: id } : { type: 'photo', media: id, caption, parse_mode: 'HTML' };
+  const swap = n => Promise.all(fileIds.slice(0, n).map((id, i) =>
+    deps.tg.call('editMessageMedia', { chat_id: deps.channel, message_id: row.msgs[i], media: media(id, i) })
+      .catch(e => { if (!harmless(e)) throw e; })));
+
+  if (fileIds.length === row.msgs.length) return swap(fileIds.length);
+
+  // Сначала одно первое сообщение: на нём видно, можно ли ещё
+  // удалять. Удалилось — остальные того же возраста, удалятся тоже.
+  // Пачкой сразу не проверить: она пропускает то, чего не нашла,
+  // и по ответу не понять, удалила ли что-нибудь.
+  let deleted = false;
+  try {
+    await deps.tg.call('deleteMessage', { chat_id: deps.channel, message_id: row.msg });
+    deleted = true;
+  } catch { /* старше 48 часов — ниже подменим, что можно */ }
+  if (deleted) {
+    if (row.msgs.length > 1) {
+      await deps.tg.call('deleteMessages', { chat_id: deps.channel, message_ids: row.msgs.slice(1) })
+        .catch(e => tell(deps, `старые фото поста «${esc(f.name_uk)}» не удалились`, e));
+    }
+    const msgs = await deps.tg.sendAlbum(deps.channel, fileIds, caption);
+    return deps.store.addChannelPost(key, msgs);
+  }
+
+  const n = Math.min(fileIds.length, row.msgs.length);
+  await swap(n);
+  await tell(deps, `в посте «${esc(f.name_uk)}» было ${row.msgs.length} фото, стало ${fileIds.length}`,
+    fileIds.length > n ? `в канал поместились только первые ${n}` : `лишние ${row.msgs.length - n} старых фото удали в канале руками`);
+}
+
+/* Изделие изменили. newFileIds — если сменили фото: тогда меняем и
+   картинки в посте. Пост, которого нет (изделие добавлено до бота
    или через панель), просто пропускаем. */
-export async function update(deps, f, key, newFileId) {
+export async function update(deps, f, key, newFileIds) {
   const row = await deps.store.getChannelPost(key);
   if (!row) return;
   try {
     const caption = postText(f, { contacts: await contacts(deps), testing: deps.testing });
-    if (newFileId) {
-      await deps.tg.call('editMessageMedia', {
-        chat_id: deps.channel, message_id: row.msg,
-        media: { type: 'photo', media: newFileId, caption, parse_mode: 'HTML' }
-      });
+    if (newFileIds) {
+      await replacePhotos(deps, f, key, row, newFileIds, caption);
     } else {
       await deps.tg.call('editMessageCaption', { chat_id: deps.channel, message_id: row.msg, caption, parse_mode: 'HTML' });
     }

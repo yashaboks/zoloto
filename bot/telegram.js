@@ -51,6 +51,21 @@ export function makeTelegram(token) {
       return m.message_id;
     },
 
+    /* Несколько фото одним постом. В ленте Telegram сам складывает
+       их плиткой, а по нажатию каждое открывается крупно — лучше
+       склеенной картинки, где фото мелкие. Подпись — на первом фото,
+       её Telegram и показывает под альбомом. Альбом бывает только от
+       двух фото, поэтому одно уходит обычным sendPhoto. Возвращает
+       номера всех сообщений альбома, первым — с подписью. */
+    async sendAlbum(chat, fileIds, caption) {
+      if (fileIds.length < 2) return [await this.sendPhoto(chat, fileIds[0], caption)];
+      const ms = await call('sendMediaGroup', {
+        chat_id: chat,
+        media: fileIds.map((id, i) => i ? { type: 'photo', media: id } : { type: 'photo', media: id, caption, parse_mode: 'HTML' })
+      });
+      return ms.map(m => m.message_id);
+    },
+
     /* Отправить фото файлом, а не ссылкой: по ссылке Telegram качает
        сам, и с фото сайта это было ненадёжно — бот зависал. */
     async sendPhotoFile(chat, bytes, name, type, caption, buttons) {

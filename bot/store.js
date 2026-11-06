@@ -36,6 +36,12 @@ const SCHEMA = [
   // Пост в канале про изделие на сайте: по нему пост исправляется
   // при правке и помечается «продано», когда изделие убирают.
   `CREATE TABLE IF NOT EXISTS channel (photo TEXT PRIMARY KEY, msg INTEGER, ts INTEGER)`,
+  // Остальные фото поста-альбома: номера сообщений после первого,
+  // списком. Отдельной таблицей, а не новым столбцом в channel:
+  // столбец пришлось бы добавлять в живую базу руками, а таблица
+  // заводится сама. Ключ — первое сообщение: оно у поста не меняется,
+  // даже когда у изделия сменилось фото-обложка.
+  `CREATE TABLE IF NOT EXISTS channel_album (msg INTEGER PRIMARY KEY, rest TEXT)`,
   `CREATE TABLE IF NOT EXISTS journal (id INTEGER PRIMARY KEY AUTOINCREMENT, ts INTEGER, chat INTEGER, mode TEXT, text TEXT, model TEXT, result TEXT)`
 ];
 
@@ -175,10 +181,23 @@ export function makeStore(db) {
       q(`DELETE FROM focus WHERE photo = ?`, photo)
     ]),
 
-    addChannelPost: (photo, msg) => q(`INSERT OR REPLACE INTO channel (photo, msg, ts) VALUES (?, ?, ?)`, photo, msg, now()).run(),
-    getChannelPost: photo => q(`SELECT * FROM channel WHERE photo = ?`, photo).first(),
+    /* msgs — все сообщения поста, первое с подписью. У поста из
+       одного фото оно одно, и в channel_album ничего не пишем. */
+    addChannelPost: (photo, msgs) => db.batch([
+      q(`DELETE FROM channel_album WHERE msg IN (SELECT msg FROM channel WHERE photo = ?)`, photo),
+      q(`INSERT OR REPLACE INTO channel (photo, msg, ts) VALUES (?, ?, ?)`, photo, msgs[0], now()),
+      ...(msgs.length > 1 ? [q(`INSERT OR REPLACE INTO channel_album (msg, rest) VALUES (?, ?)`, msgs[0], JSON.stringify(msgs.slice(1)))] : [])
+    ]),
+    async getChannelPost(photo) {
+      const row = await q(`SELECT c.*, a.rest FROM channel c LEFT JOIN channel_album a ON a.msg = c.msg WHERE c.photo = ?`, photo).first();
+      if (row) row.msgs = [row.msg, ...(row.rest ? JSON.parse(row.rest) : [])];
+      return row;
+    },
     allChannelPosts: async () => (await q(`SELECT * FROM channel ORDER BY ts`).all()).results,
-    forgetChannelPost: photo => q(`DELETE FROM channel WHERE photo = ?`, photo).run(),
+    forgetChannelPost: photo => db.batch([
+      q(`DELETE FROM channel_album WHERE msg IN (SELECT msg FROM channel WHERE photo = ?)`, photo),
+      q(`DELETE FROM channel WHERE photo = ?`, photo)
+    ]),
 
     setFocus: (chat, section, photo, pending = null) => q(
       `INSERT OR REPLACE INTO focus (chat, section, photo, pending, ts) VALUES (?, ?, ?, ?, ?)`,
