@@ -147,7 +147,9 @@ export function cardText({ title, fields, before, photoCount, note }) {
   } else {
     lines.push(...fieldLines(fields));
   }
-  if (photoCount) lines.push(`📷 Фото: ${photoCount}`);
+  // Карточка показывает одну обложку: к альбому Telegram не даёт
+  // приделать кнопки. Поэтому словами — что уйдут все.
+  if (photoCount) lines.push(photoCount > 1 ? `📷 Фото: ${photoCount} — на сайт и в канал уйдут все` : `📷 Фото: 1`);
 
   const c = check(fields);
   if (c.warnings.length) lines.push('', ...c.warnings.map(w => '⚠️ ' + esc(w)));
