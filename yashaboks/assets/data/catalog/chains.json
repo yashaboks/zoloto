@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261106-134627-cs8o-1.jpg"
+      ],
+      "name_uk": "Ланцюжок чоловічий",
+      "proba": 750,
+      "weight": "142.78",
+      "length": "65",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261105-141020-nnd0-1.jpg"
       ],
       "name_uk": "Ланцюжок жіночий",
