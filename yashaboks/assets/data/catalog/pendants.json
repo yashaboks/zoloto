@@ -2,6 +2,18 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261106-200048-5bei-1.jpg",
+        "/assets/img/tg-20261106-200048-5bei-2.jpg"
+      ],
+      "name_uk": "тест",
+      "proba": 999,
+      "weight": "10",
+      "length": "",
+      "price": 10000,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261106-185602-gta9-1.jpg",
         "/assets/img/tg-20261106-185602-gta9-2.jpg",
         "/assets/img/tg-20261106-185602-gta9-3.jpg"
