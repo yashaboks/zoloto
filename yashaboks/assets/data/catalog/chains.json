@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261107-155132-jr54-1.jpg",
+        "/assets/img/tg-20261107-155132-jr54-2.jpg",
+        "/assets/img/tg-20261107-155132-jr54-3.jpg"
+      ],
+      "name_uk": "Ланцюжок, біле золото",
+      "proba": 585,
+      "weight": "6.39",
+      "length": "53",
+      "price": 25000,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261107-083238-2b0x-1.jpg",
         "/assets/img/tg-20261107-083238-2b0x-2.jpg",
         "/assets/img/tg-20261107-083238-2b0x-3.jpg"
