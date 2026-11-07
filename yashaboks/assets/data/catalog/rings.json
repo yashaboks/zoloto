@@ -2,19 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/tg-20261107-084413-16cj-1.jpg",
-        "/assets/img/tg-20261107-084413-16cj-2.jpg",
-        "/assets/img/tg-20261107-084413-16cj-3.jpg"
-      ],
-      "name_uk": "маркиз",
-      "proba": 585,
-      "weight": "6.6",
-      "length": "21",
-      "price": 23000,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/tg-20261104-133313-hsaj-1.jpg"
       ],
       "name_uk": "Каблучка",
