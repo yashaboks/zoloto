@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261109-151840-6ad2-1.jpg"
+      ],
+      "name_uk": "Ланцюжок з білого золота",
+      "proba": 585,
+      "weight": "34.63",
+      "length": "63",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261106-134627-cs8o-1.jpg"
       ],
       "name_uk": "Ланцюжок чоловічий",
