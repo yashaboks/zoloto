@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261109-201659-lwwo-1.jpg",
+        "/assets/img/tg-20261109-201659-lwwo-2.jpg",
+        "/assets/img/tg-20261109-201659-lwwo-3.jpg"
+      ],
+      "name_uk": "Годинники чоловічі",
+      "proba": 583,
+      "weight": "12.5",
+      "length": "",
+      "price": 52000,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-220953-j7vb-1.jpg",
         "/assets/img/tg-20261103-220953-j7vb-2.jpg"
       ],
