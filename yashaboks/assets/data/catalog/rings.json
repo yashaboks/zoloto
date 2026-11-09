@@ -2,6 +2,17 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261109-112037-4me1-1.jpg"
+      ],
+      "name_uk": "Каблучка, комплект",
+      "proba": 585,
+      "weight": "7.02",
+      "length": "17.5",
+      "price": 25000,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261104-133313-hsaj-1.jpg"
       ],
       "name_uk": "Каблучка",
