@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261110-200330-fxdp-1.jpg",
+        "/assets/img/tg-20261110-200330-fxdp-2.jpg",
+        "/assets/img/tg-20261110-200330-fxdp-3.jpg"
+      ],
+      "name_uk": "Серебряные предметы",
+      "proba": 875,
+      "weight": "663",
+      "length": "20",
+      "price": 90,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261106-192941-u0yq-1.jpg"
       ],
       "name_uk": "Підстаканник срібний",
