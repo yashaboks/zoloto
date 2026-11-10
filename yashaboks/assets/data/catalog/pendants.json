@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261110-115009-p9oe-1.jpg",
+        "/assets/img/tg-20261110-115009-p9oe-2.jpg",
+        "/assets/img/tg-20261110-115009-p9oe-3.jpg"
+      ],
+      "name_uk": "Хрестик",
+      "proba": 585,
+      "weight": "21.6",
+      "length": "",
+      "price": 4000,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261107-112707-tdff-1.jpg",
         "/assets/img/tg-20261107-112707-tdff-2.jpg",
         "/assets/img/tg-20261107-112707-tdff-3.jpg"
