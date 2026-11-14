@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261114-081811-z2xo-1.jpg",
+        "/assets/img/tg-20261114-081811-z2xo-2.jpg",
+        "/assets/img/tg-20261114-081811-z2xo-3.jpg"
+      ],
+      "name_uk": "Ланцюжок",
+      "proba": 585,
+      "weight": "1",
+      "length": "54",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261111-104759-6dbj-1.jpg",
         "/assets/img/tg-20261111-104759-6dbj-2.jpg",
         "/assets/img/tg-20261111-104759-6dbj-3.jpg"
