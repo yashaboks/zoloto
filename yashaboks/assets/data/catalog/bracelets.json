@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261114-081413-uizd-1.jpg",
+        "/assets/img/tg-20261114-081413-uizd-2.jpg",
+        "/assets/img/tg-20261114-081413-uizd-3.jpg"
+      ],
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "16.16",
+      "length": "24",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261106-123725-akc5-1.jpg"
       ],
       "name_uk": "Браслет жіночий, Шанель",
