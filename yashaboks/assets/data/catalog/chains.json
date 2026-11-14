@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261114-123158-h46d-1.jpg",
+        "/assets/img/tg-20261114-123158-h46d-2.jpg",
+        "/assets/img/tg-20261114-123158-h46d-3.jpg"
+      ],
+      "name_uk": "Ланцюжок, плетіння якір",
+      "proba": 585,
+      "weight": "41.23",
+      "length": "60",
+      "price": 170000,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261114-081811-z2xo-1.jpg",
         "/assets/img/tg-20261114-081811-z2xo-2.jpg",
         "/assets/img/tg-20261114-081811-z2xo-3.jpg"
