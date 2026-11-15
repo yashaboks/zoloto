@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261115-135303-gh1b-1.jpg",
+        "/assets/img/tg-20261115-135303-gh1b-2.jpg",
+        "/assets/img/tg-20261115-135303-gh1b-3.jpg"
+      ],
+      "name_uk": "Підвіска, хрестик",
+      "proba": 585,
+      "weight": "8.8",
+      "length": "5.8",
+      "price": 33500,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261107-112707-tdff-1.jpg",
         "/assets/img/tg-20261107-112707-tdff-2.jpg",
         "/assets/img/tg-20261107-112707-tdff-3.jpg"
