@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261115-135017-545z-1.jpg",
+        "/assets/img/tg-20261115-135017-545z-2.jpg",
+        "/assets/img/tg-20261115-135017-545z-3.jpg"
+      ],
+      "name_uk": "Обручалка",
+      "proba": 585,
+      "weight": "8.6",
+      "length": "17",
+      "price": 35000,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261115-134705-8dpj-1.jpg",
         "/assets/img/tg-20261115-134705-8dpj-2.jpg",
         "/assets/img/tg-20261115-134705-8dpj-3.jpg"
