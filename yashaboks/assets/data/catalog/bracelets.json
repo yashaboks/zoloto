@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261118-083606-bgnq-1.jpg",
+        "/assets/img/tg-20261118-083606-bgnq-2.jpg",
+        "/assets/img/tg-20261118-083606-bgnq-3.jpg"
+      ],
+      "name_uk": "Браслет",
+      "proba": 583,
+      "weight": "70",
+      "length": "22",
+      "price": null,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261117-154322-n3q4-1.jpg",
         "/assets/img/tg-20261117-154322-n3q4-2.jpg",
         "/assets/img/tg-20261117-154322-n3q4-3.jpg"
