@@ -2,19 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/tg-20261118-133050-ul53-1.jpg",
-        "/assets/img/tg-20261118-133050-ul53-2.jpg",
-        "/assets/img/tg-20261118-133050-ul53-3.jpg"
-      ],
-      "name_uk": "Ланцюжок",
-      "proba": 585,
-      "weight": "9.83",
-      "length": "55",
-      "price": 37500,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/tg-20261111-104759-6dbj-1.jpg",
         "/assets/img/tg-20261111-104759-6dbj-2.jpg",
         "/assets/img/tg-20261111-104759-6dbj-3.jpg"
