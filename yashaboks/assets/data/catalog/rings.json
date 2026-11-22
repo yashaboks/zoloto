@@ -2,17 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/tg-20261118-135523-5u4l-1.jpg"
-      ],
-      "name_uk": "Обручалка",
-      "proba": 585,
-      "weight": "1",
-      "length": "",
-      "price": 3500,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/tg-20261115-135151-y1gy-1.jpg",
         "/assets/img/tg-20261115-135151-y1gy-2.jpg",
         "/assets/img/tg-20261115-135151-y1gy-3.jpg"
@@ -47,17 +36,6 @@
       "proba": 583,
       "weight": "10.3",
       "length": "22",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/IMG_2151.webp"
-      ],
-      "name_uk": "К",
-      "proba": 585,
-      "weight": "1",
-      "length": "",
       "price": null,
       "status": "available"
     }
