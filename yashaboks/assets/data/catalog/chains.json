@@ -28,30 +28,6 @@
     },
     {
       "photos": [
-        "/assets/img/tg-20261111-104759-6dbj-1.jpg",
-        "/assets/img/tg-20261111-104759-6dbj-2.jpg",
-        "/assets/img/tg-20261111-104759-6dbj-3.jpg"
-      ],
-      "name_uk": "Ланцюжок",
-      "proba": 585,
-      "weight": "18.73",
-      "length": "60",
-      "price": 4000,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/tg-20261109-151840-6ad2-1.jpg"
-      ],
-      "name_uk": "Ланцюжок з білого золота",
-      "proba": 585,
-      "weight": "34.63",
-      "length": "63",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/tg-20261106-134627-cs8o-1.jpg"
       ],
       "name_uk": "Ланцюжок чоловічий",
@@ -74,17 +50,6 @@
     },
     {
       "photos": [
-        "/assets/img/tg-20261103-221344-rqii-1.jpg"
-      ],
-      "name_uk": "Ланцюжок",
-      "proba": 585,
-      "weight": "12.87",
-      "length": "18",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/tg-20261103-215131-syhc-1.jpg"
       ],
       "name_uk": "Ланцюжок",
@@ -102,17 +67,6 @@
       "proba": 585,
       "weight": "66.9",
       "length": "60",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/tg-20261103-214633-3mbu-1.jpg"
-      ],
-      "name_uk": "Ланцюжок",
-      "proba": 585,
-      "weight": "25",
-      "length": "65",
       "price": null,
       "status": "available"
     },
