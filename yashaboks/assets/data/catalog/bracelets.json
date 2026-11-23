@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261123-200052-ut55-1.jpg",
+        "/assets/img/tg-20261123-200052-ut55-2.jpg",
+        "/assets/img/tg-20261123-200052-ut55-3.jpg"
+      ],
+      "name_uk": "Браслет",
+      "proba": 585,
+      "weight": "4.5",
+      "length": "18",
+      "price": 17000,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261119-144244-cnkz-1.jpg",
         "/assets/img/tg-20261119-144244-cnkz-2.jpg",
         "/assets/img/tg-20261119-144244-cnkz-3.jpg"
