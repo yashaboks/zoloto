@@ -41,17 +41,6 @@
     },
     {
       "photos": [
-        "/assets/img/tg-20261106-123725-akc5-1.jpg"
-      ],
-      "name_uk": "Браслет жіночий, Шанель",
-      "proba": 585,
-      "weight": "25.25",
-      "length": "21",
-      "price": 4000,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/tg-20261103-221459-lpsy-1.jpg"
       ],
       "name_uk": "Браслет жіночий",
@@ -70,17 +59,6 @@
       "proba": 585,
       "weight": "12.71",
       "length": "18",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/tg-20261103-220526-d7dh-1.jpg"
-      ],
-      "name_uk": "Браслет жіночий старий",
-      "proba": 583,
-      "weight": "13",
-      "length": "22",
       "price": null,
       "status": "available"
     },
