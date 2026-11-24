@@ -2,19 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/tg-20261124-154545-vygq-1.jpg",
-        "/assets/img/tg-20261124-154545-vygq-2.jpg",
-        "/assets/img/tg-20261124-154545-vygq-3.jpg"
-      ],
-      "name_uk": "Браслет",
-      "proba": 585,
-      "weight": "14.36",
-      "length": "21",
-      "price": 53000,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/tg-20261119-144244-cnkz-1.jpg",
         "/assets/img/tg-20261119-144244-cnkz-2.jpg",
         "/assets/img/tg-20261119-144244-cnkz-3.jpg"
