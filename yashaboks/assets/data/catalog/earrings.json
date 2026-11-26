@@ -2,17 +2,6 @@
   "items": [
     {
       "photos": [
-        "/assets/img/tg-20261103-223959-xfog-1.jpg"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "1.4",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/tg-20261103-223931-75rx-1.jpg"
       ],
       "name_uk": "Сережки",
@@ -35,33 +24,11 @@
     },
     {
       "photos": [
-        "/assets/img/tg-20261103-223631-78qp-1.jpg"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "1.12",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
         "/assets/img/tg-20261103-223320-itew-1.jpg"
       ],
       "name_uk": "Сережки",
       "proba": 585,
       "weight": "3.94",
-      "length": "",
-      "price": null,
-      "status": "available"
-    },
-    {
-      "photos": [
-        "/assets/img/tg-20261103-223152-rlrs-1.jpg"
-      ],
-      "name_uk": "Сережки",
-      "proba": 585,
-      "weight": "2.75",
       "length": "",
       "price": null,
       "status": "available"
