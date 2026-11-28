@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261128-101722-uija-1.jpg",
+        "/assets/img/tg-20261128-101722-uija-2.jpg",
+        "/assets/img/tg-20261128-101722-uija-3.jpg"
+      ],
+      "name_uk": "Каблучка",
+      "proba": 585,
+      "weight": "3.16",
+      "length": "16",
+      "price": 11000,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261115-135151-y1gy-1.jpg",
         "/assets/img/tg-20261115-135151-y1gy-2.jpg",
         "/assets/img/tg-20261115-135151-y1gy-3.jpg"
