@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261128-102104-3spp-1.jpg",
+        "/assets/img/tg-20261128-102104-3spp-2.jpg",
+        "/assets/img/tg-20261128-102104-3spp-3.jpg"
+      ],
+      "name_uk": "Підвіска",
+      "proba": 585,
+      "weight": "1.89",
+      "length": "",
+      "price": 6200,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261128-100738-7ioh-1.jpg",
         "/assets/img/tg-20261128-100738-7ioh-2.jpg"
       ],
