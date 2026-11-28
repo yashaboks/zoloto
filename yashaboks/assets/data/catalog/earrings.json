@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261128-100216-zi7j-1.jpg",
+        "/assets/img/tg-20261128-100216-zi7j-2.jpg",
+        "/assets/img/tg-20261128-100216-zi7j-3.jpg"
+      ],
+      "name_uk": "Сережки радянські",
+      "proba": 583,
+      "weight": "5.19",
+      "length": "",
+      "price": 19000,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-223931-75rx-1.jpg"
       ],
       "name_uk": "Сережки",
