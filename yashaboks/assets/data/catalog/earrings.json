@@ -2,6 +2,19 @@
   "items": [
     {
       "photos": [
+        "/assets/img/tg-20261128-100948-ay67-1.jpg",
+        "/assets/img/tg-20261128-100948-ay67-2.jpg",
+        "/assets/img/tg-20261128-100948-ay67-3.jpg"
+      ],
+      "name_uk": "Сережки",
+      "proba": 585,
+      "weight": "2.27",
+      "length": "",
+      "price": 8100,
+      "status": "available"
+    },
+    {
+      "photos": [
         "/assets/img/tg-20261103-223931-75rx-1.jpg"
       ],
       "name_uk": "Сережки",
